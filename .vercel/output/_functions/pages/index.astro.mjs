@@ -290,7 +290,7 @@ function HowIWork() {
           /* @__PURE__ */ jsxs("div", { className: "space-y-12", children: [
             /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-8", children: [
               /* @__PURE__ */ jsxs("div", { className: "flex-1 text-right", children: [
-                /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-gray-600 mb-1", children: "MONTH 1" }),
+                /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-gray-600 mb-1", children: "WEEK 1" }),
                 /* @__PURE__ */ jsx("div", { className: "text-xl font-bold text-white", children: "Junior hire" })
               ] }),
               /* @__PURE__ */ jsx("div", { className: "relative z-10 w-4 h-4 rounded-full bg-gray-700 border-4 border-black flex-shrink-0" }),
@@ -298,7 +298,7 @@ function HowIWork() {
             ] }),
             /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-8", children: [
               /* @__PURE__ */ jsxs("div", { className: "flex-1 text-right", children: [
-                /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-[#2D5BFF] mb-1", children: "MONTH 2" }),
+                /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-[#2D5BFF] mb-1", children: "WEEK 2" }),
                 /* @__PURE__ */ jsx("div", { className: "text-xl font-bold text-white", children: "Teammate" })
               ] }),
               /* @__PURE__ */ jsx("div", { className: "relative z-10 w-4 h-4 rounded-full bg-[#2D5BFF] border-4 border-black flex-shrink-0 shadow-lg shadow-[#2D5BFF]/50" }),
@@ -306,7 +306,7 @@ function HowIWork() {
             ] }),
             /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-8", children: [
               /* @__PURE__ */ jsxs("div", { className: "flex-1 text-right", children: [
-                /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-[#00D4FF] mb-1", children: "MONTH 3" }),
+                /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-[#00D4FF] mb-1", children: "WEEK 3" }),
                 /* @__PURE__ */ jsx("div", { className: "text-xl font-bold text-white", children: "Co-founder" })
               ] }),
               /* @__PURE__ */ jsx("div", { className: "relative z-10 w-4 h-4 rounded-full bg-[#00D4FF] border-4 border-black flex-shrink-0 shadow-lg shadow-[#00D4FF]/50" }),
