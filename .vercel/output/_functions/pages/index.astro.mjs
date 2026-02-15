@@ -46,98 +46,116 @@ function Navbar() {
 }
 
 function Hero() {
-  return /* @__PURE__ */ jsxs("section", { className: "relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-24 sm:py-32", children: [
-    /* @__PURE__ */ jsx("div", { className: "absolute inset-0 -z-10 overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute left-[50%] top-0 -translate-x-[50%] w-[1000px] h-[1000px] rounded-full bg-gradient-to-br from-blue-400/20 to-indigo-400/20 blur-3xl" }) }),
-    /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: /* @__PURE__ */ jsxs("div", { className: "text-center", children: [
-      /* @__PURE__ */ jsxs("div", { className: "inline-flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-full text-blue-700 text-sm font-medium mb-8", children: [
+  return /* @__PURE__ */ jsxs("section", { className: "relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-16", children: [
+    /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 overflow-hidden", children: [
+      /* @__PURE__ */ jsx("div", { className: "absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-[#2D5BFF]/20 to-transparent rounded-full blur-3xl animate-pulse" }),
+      /* @__PURE__ */ jsx("div", { className: "absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-[#00D4FF]/20 to-transparent rounded-full blur-3xl animate-pulse", style: { animationDelay: "1s" } })
+    ] }),
+    /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:64px_64px]" }),
+    /* @__PURE__ */ jsx("div", { className: "relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20", children: /* @__PURE__ */ jsxs("div", { className: "text-center max-w-5xl mx-auto", children: [
+      /* @__PURE__ */ jsxs("div", { className: "inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 mb-8", children: [
         /* @__PURE__ */ jsxs("span", { className: "relative flex h-2 w-2", children: [
-          /* @__PURE__ */ jsx("span", { className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" }),
-          /* @__PURE__ */ jsx("span", { className: "relative inline-flex rounded-full h-2 w-2 bg-blue-500" })
+          /* @__PURE__ */ jsx("span", { className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00D4FF] opacity-75" }),
+          /* @__PURE__ */ jsx("span", { className: "relative inline-flex rounded-full h-2 w-2 bg-[#00D4FF]" })
         ] }),
-        "Early Access Now Open"
+        /* @__PURE__ */ jsx("span", { className: "text-gray-300 text-sm font-medium tracking-wide", children: "BETA ACCESS AVAILABLE" })
       ] }),
-      /* @__PURE__ */ jsxs("h1", { className: "text-5xl sm:text-7xl font-bold text-gray-900 mb-6 leading-tight", children: [
-        "Your AI Co-founder for",
+      /* @__PURE__ */ jsxs("h1", { className: "text-6xl sm:text-8xl font-black text-white mb-8 leading-[0.9] tracking-tight", children: [
+        "Growth on",
         /* @__PURE__ */ jsx("br", {}),
-        /* @__PURE__ */ jsx("span", { className: "bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent", children: "Automated Growth" })
+        /* @__PURE__ */ jsx("span", { className: "bg-gradient-to-r from-[#2D5BFF] via-[#00D4FF] to-[#2D5BFF] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient", children: "Autopilot" })
       ] }),
-      /* @__PURE__ */ jsx("p", { className: "text-xl sm:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed", children: "Focus on building. Let CrossMind handle social media, content marketing, user acquisition, and analytics—automatically." }),
-      /* @__PURE__ */ jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center items-center mb-12", children: [
-        /* @__PURE__ */ jsxs(
-          "a",
-          {
-            href: "#waitlist",
-            className: "group relative inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
-            children: [
-              "Join Early Access",
-              /* @__PURE__ */ jsx("svg", { className: "w-5 h-5 group-hover:translate-x-1 transition-transform", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M13 7l5 5m0 0l-5 5m5-5H6" }) })
-            ]
-          }
-        ),
-        /* @__PURE__ */ jsx(
-          "a",
-          {
-            href: "#how-it-works",
-            className: "inline-flex items-center gap-2 bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all border border-gray-200 shadow hover:shadow-md",
-            children: "See How It Works"
-          }
-        )
+      /* @__PURE__ */ jsxs("p", { className: "text-xl sm:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed", children: [
+        "While you build, your AI co-founder handles content, outreach, and analytics.",
+        /* @__PURE__ */ jsx("span", { className: "block mt-2 text-white font-medium", children: "Zero manual work required." })
       ] }),
-      /* @__PURE__ */ jsxs("div", { className: "flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-600", children: [
-        /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2", children: [
-          /* @__PURE__ */ jsx("svg", { className: "w-5 h-5 text-green-500", fill: "currentColor", viewBox: "0 0 20 20", children: /* @__PURE__ */ jsx("path", { fillRule: "evenodd", d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z", clipRule: "evenodd" }) }),
-          /* @__PURE__ */ jsx("span", { children: "Early Bird: 40% off first month" })
+      /* @__PURE__ */ jsx("div", { className: "flex flex-col sm:flex-row gap-4 justify-center items-center mb-16", children: /* @__PURE__ */ jsxs(
+        "a",
+        {
+          href: "#waitlist",
+          className: "group relative px-8 py-4 bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white rounded-full font-bold text-lg hover:shadow-2xl hover:shadow-[#2D5BFF]/50 transition-all duration-300 transform hover:scale-105",
+          children: [
+            /* @__PURE__ */ jsx("span", { className: "relative z-10", children: "Get Early Access" }),
+            /* @__PURE__ */ jsx("div", { className: "absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity" })
+          ]
+        }
+      ) }),
+      /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-8 border-t border-white/10", children: [
+        /* @__PURE__ */ jsxs("div", { children: [
+          /* @__PURE__ */ jsx("div", { className: "text-3xl font-bold text-white mb-1", children: "40%" }),
+          /* @__PURE__ */ jsx("div", { className: "text-sm text-gray-500 uppercase tracking-wide", children: "Early bird discount" })
         ] }),
-        /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2", children: [
-          /* @__PURE__ */ jsx("svg", { className: "w-5 h-5 text-green-500", fill: "currentColor", viewBox: "0 0 20 20", children: /* @__PURE__ */ jsx("path", { fillRule: "evenodd", d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z", clipRule: "evenodd" }) }),
-          /* @__PURE__ */ jsx("span", { children: "No credit card required" })
+        /* @__PURE__ */ jsxs("div", { children: [
+          /* @__PURE__ */ jsx("div", { className: "text-3xl font-bold text-white mb-1", children: "24/7" }),
+          /* @__PURE__ */ jsx("div", { className: "text-sm text-gray-500 uppercase tracking-wide", children: "Automated execution" })
+        ] }),
+        /* @__PURE__ */ jsxs("div", { children: [
+          /* @__PURE__ */ jsx("div", { className: "text-3xl font-bold text-white mb-1", children: "0" }),
+          /* @__PURE__ */ jsx("div", { className: "text-sm text-gray-500 uppercase tracking-wide", children: "Manual effort" })
         ] })
       ] })
-    ] }) })
+    ] }) }),
+    /* @__PURE__ */ jsx("div", { className: "absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" })
   ] });
 }
 
 const features = [
   {
-    icon: "📱",
-    title: "Social Media Automation",
-    description: "Research trending topics, generate content calendars, draft and publish to Twitter/LinkedIn, track engagement metrics—all on autopilot."
+    icon: "→",
+    title: "Social Media",
+    subtitle: "Auto-publish 24/7",
+    description: "Research trends, generate content calendars, draft posts, publish to Twitter/LinkedIn—all while you sleep."
   },
   {
-    icon: "✍️",
-    title: "Content Marketing",
-    description: "Generate blog posts, SEO content, and landing page copy tailored to your product positioning. Boost rankings and conversions effortlessly."
+    icon: "→",
+    title: "Content",
+    subtitle: "SEO on autopilot",
+    description: "Generate blog posts, SEO copy, and landing pages tailored to your positioning. Boost rankings effortlessly."
   },
   {
-    icon: "🎯",
-    title: "User Acquisition",
-    description: "Identify and reach target users on LinkedIn, Twitter, and Reddit. Send personalized invitations and track conversion rates automatically."
+    icon: "→",
+    title: "Outreach",
+    subtitle: "Find & convert users",
+    description: "Identify targets on LinkedIn/Twitter/Reddit. Send personalized invites and track conversions automatically."
   },
   {
-    icon: "📊",
-    title: "Analytics & Insights",
-    description: "Aggregate user feedback, competitor moves, and growth metrics. Get prioritized recommendations to make faster, better decisions."
+    icon: "→",
+    title: "Analytics",
+    subtitle: "Data-driven decisions",
+    description: "Aggregate feedback, monitor competitors, track metrics. Get actionable recommendations instantly."
   }
 ];
 function Features() {
-  return /* @__PURE__ */ jsx("section", { id: "how-it-works", className: "py-24 bg-white", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: [
-    /* @__PURE__ */ jsxs("div", { className: "text-center mb-16", children: [
-      /* @__PURE__ */ jsx("h2", { className: "text-4xl sm:text-5xl font-bold text-gray-900 mb-4", children: "Your Fully Automated Growth Engine" }),
-      /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-600 max-w-2xl mx-auto", children: "Not just a tool—a true AI co-founder that executes growth tasks while you focus on building" })
-    ] }),
-    /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-2 gap-6", children: features.map((feature) => /* @__PURE__ */ jsxs(
-      "div",
-      {
-        className: "group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-gray-200 hover:border-[#2D5BFF]/30 hover:shadow-xl transition-all duration-300",
-        children: [
-          /* @__PURE__ */ jsx("div", { className: "text-5xl mb-4", children: feature.icon }),
-          /* @__PURE__ */ jsx("h3", { className: "text-2xl font-bold mb-3 text-gray-900", children: feature.title }),
-          /* @__PURE__ */ jsx("p", { className: "text-gray-600 leading-relaxed", children: feature.description })
-        ]
-      },
-      feature.title
-    )) })
-  ] }) });
+  return /* @__PURE__ */ jsxs("section", { id: "how-it-works", className: "py-32 bg-black relative overflow-hidden", children: [
+    /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:64px_64px]" }),
+    /* @__PURE__ */ jsxs("div", { className: "relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: [
+      /* @__PURE__ */ jsxs("div", { className: "text-center mb-20", children: [
+        /* @__PURE__ */ jsx("h2", { className: "text-5xl sm:text-6xl font-black text-white mb-6", children: "What we automate" }),
+        /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-400 max-w-2xl mx-auto", children: "Four core growth pillars. Zero manual effort required." })
+      ] }),
+      /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-2 gap-6", children: features.map((feature, index) => /* @__PURE__ */ jsxs(
+        "div",
+        {
+          className: "group relative p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-[#00D4FF]/50 transition-all duration-300 hover:bg-white/10",
+          children: [
+            /* @__PURE__ */ jsx("div", { className: "absolute inset-0 rounded-2xl bg-gradient-to-br from-[#2D5BFF]/0 to-[#00D4FF]/0 group-hover:from-[#2D5BFF]/10 group-hover:to-[#00D4FF]/10 transition-all duration-300" }),
+            /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+              /* @__PURE__ */ jsxs("div", { className: "flex items-start justify-between mb-4", children: [
+                /* @__PURE__ */ jsxs("div", { children: [
+                  /* @__PURE__ */ jsx("div", { className: "text-[#00D4FF] text-sm font-bold uppercase tracking-wider mb-2", children: String(index + 1).padStart(2, "0") }),
+                  /* @__PURE__ */ jsx("h3", { className: "text-3xl font-bold text-white mb-1", children: feature.title }),
+                  /* @__PURE__ */ jsx("p", { className: "text-gray-400 text-sm font-medium", children: feature.subtitle })
+                ] }),
+                /* @__PURE__ */ jsx("div", { className: "text-4xl text-[#00D4FF] group-hover:translate-x-2 transition-transform duration-300", children: feature.icon })
+              ] }),
+              /* @__PURE__ */ jsx("p", { className: "text-gray-300 leading-relaxed", children: feature.description })
+            ] })
+          ]
+        },
+        feature.title
+      )) })
+    ] })
+  ] });
 }
 
 const plans = [
