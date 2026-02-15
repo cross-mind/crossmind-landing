@@ -15,9 +15,9 @@ const $$Layout = createComponent(($$result, $$props, $$slots) => {
 }, "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/layouts/Layout.astro", void 0);
 
 function Navbar() {
-  return /* @__PURE__ */ jsx("nav", { className: "fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50", children: /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between h-16", children: [
+  return /* @__PURE__ */ jsx("nav", { className: "fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-xl border-b border-white/10", children: /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between h-16", children: [
     /* @__PURE__ */ jsxs("a", { href: "/", className: "flex items-center gap-3 group", children: [
-      /* @__PURE__ */ jsxs("svg", { viewBox: "0 0 200 200", fill: "none", width: "32", height: "32", className: "transform group-hover:scale-110 transition-transform", children: [
+      /* @__PURE__ */ jsxs("svg", { viewBox: "0 0 200 200", fill: "none", width: "28", height: "28", className: "transform group-hover:scale-110 transition-transform", children: [
         /* @__PURE__ */ jsx("polygon", { points: "28,22 54,22 108,84 100,100 92,84", fill: "#2D5BFF" }),
         /* @__PURE__ */ jsx("polygon", { points: "92,116 100,100 108,116 172,178 146,178", fill: "#2D5BFF" }),
         /* @__PURE__ */ jsx("polygon", { points: "54,22 74,40 108,84", fill: "#1A3FC7", opacity: "0.7" }),
@@ -27,21 +27,21 @@ function Navbar() {
         /* @__PURE__ */ jsx("polygon", { points: "146,22 126,40 92,84", fill: "#00939B", opacity: "0.65" }),
         /* @__PURE__ */ jsx("polygon", { points: "28,178 28,160 92,116", fill: "#00939B", opacity: "0.65" })
       ] }),
-      /* @__PURE__ */ jsx("span", { className: "text-xl font-bold bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent", children: "CrossMind" })
+      /* @__PURE__ */ jsx("span", { className: "text-lg font-bold text-white", children: "CrossMind" })
     ] }),
     /* @__PURE__ */ jsxs("div", { className: "hidden md:flex items-center gap-8", children: [
-      /* @__PURE__ */ jsx("a", { href: "#how-it-works", className: "text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium", children: "How it works" }),
-      /* @__PURE__ */ jsx("a", { href: "#pricing", className: "text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium", children: "Pricing" }),
+      /* @__PURE__ */ jsx("a", { href: "#how-it-works", className: "text-gray-400 hover:text-white transition-colors text-sm font-medium", children: "How it works" }),
+      /* @__PURE__ */ jsx("a", { href: "#pricing", className: "text-gray-400 hover:text-white transition-colors text-sm font-medium", children: "Pricing" }),
       /* @__PURE__ */ jsx(
         "a",
         {
           href: "#waitlist",
-          className: "bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-6 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-[#2D5BFF]/25 transition-all",
+          className: "bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-5 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-[#2D5BFF]/50 transition-all transform hover:scale-105",
           children: "Join Waitlist"
         }
       )
     ] }),
-    /* @__PURE__ */ jsx("button", { className: "md:hidden p-2", children: /* @__PURE__ */ jsx("svg", { className: "w-6 h-6", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M4 6h16M4 12h16M4 18h16" }) }) })
+    /* @__PURE__ */ jsx("button", { className: "md:hidden p-2 text-white", children: /* @__PURE__ */ jsx("svg", { className: "w-6 h-6", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M4 6h16M4 12h16M4 18h16" }) }) })
   ] }) }) });
 }
 
