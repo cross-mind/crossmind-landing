@@ -79,19 +79,11 @@ function Hero() {
           ]
         }
       ) }),
-      /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-3 gap-8 max-w-3xl mx-auto pt-8 border-t border-white/10", children: [
-        /* @__PURE__ */ jsxs("div", { children: [
-          /* @__PURE__ */ jsx("div", { className: "text-3xl font-bold text-white mb-1", children: "20hrs" }),
-          /* @__PURE__ */ jsx("div", { className: "text-sm text-gray-400", children: "Growth work I handle weekly" })
-        ] }),
-        /* @__PURE__ */ jsxs("div", { children: [
-          /* @__PURE__ */ jsx("div", { className: "text-3xl font-bold bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent mb-1", children: "60%" }),
-          /* @__PURE__ */ jsx("div", { className: "text-sm text-gray-400", children: "More time for building" })
-        ] }),
-        /* @__PURE__ */ jsxs("div", { children: [
-          /* @__PURE__ */ jsx("div", { className: "text-3xl font-bold text-white mb-1", children: "2wks" }),
-          /* @__PURE__ */ jsx("div", { className: "text-sm text-gray-400", children: "To learn your workflow" })
-        ] })
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap justify-center gap-6 max-w-3xl mx-auto pt-8 border-t border-white/10", children: [
+        /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Competitor tracking" }) }),
+        /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Content creation" }) }),
+        /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "User interviews" }) }),
+        /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Legal docs" }) })
       ] })
     ] }) }),
     /* @__PURE__ */ jsx("div", { className: "absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" })
