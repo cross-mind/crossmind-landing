@@ -46,19 +46,19 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Stats bar */}
-          <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto pt-8 border-t border-white/10">
-            <div>
-              <div className="text-3xl font-bold text-white mb-1">20hrs</div>
-              <div className="text-sm text-gray-400">Growth work I handle weekly</div>
+          {/* Simple value props */}
+          <div className="flex flex-wrap justify-center gap-6 max-w-3xl mx-auto pt-8 border-t border-white/10">
+            <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10">
+              <span className="text-sm text-gray-400">Competitor tracking</span>
             </div>
-            <div>
-              <div className="text-3xl font-bold bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent mb-1">60%</div>
-              <div className="text-sm text-gray-400">More time for building</div>
+            <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10">
+              <span className="text-sm text-gray-400">Content creation</span>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-white mb-1">2wks</div>
-              <div className="text-sm text-gray-400">To learn your workflow</div>
+            <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10">
+              <span className="text-sm text-gray-400">User interviews</span>
+            </div>
+            <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10">
+              <span className="text-sm text-gray-400">Legal docs</span>
             </div>
           </div>
         </div>

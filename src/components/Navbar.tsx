@@ -22,11 +22,8 @@ export default function Navbar() {
 
           {/* Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#how-it-works" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
-              How it works
-            </a>
-            <a href="#pricing" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
-              Pricing
+            <a href="#what-i-do" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
+              What I do
             </a>
             <a
               href="#waitlist"
