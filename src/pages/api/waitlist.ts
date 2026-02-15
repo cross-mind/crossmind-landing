@@ -11,21 +11,32 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    // 使用 Web3Forms 免费服务发送邮件
-    const response = await fetch('https://api.web3forms.com/submit', {
+    // 获取 UTM 参数
+    const url = new URL(request.url);
+    const utmSource = url.searchParams.get('utm_source') || 'direct';
+
+    // 保存到 CrossMind database
+    const response = await fetch('https://agent.linktion.cn/api/public/artifacts/waitlist-leads/rows', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Authorization': 'Bearer aat_b37e65e9b430ed0f008f20ac2d23f85ee83f3bf48a1ee4bf0de04b78bec41a03',
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
-        access_key: import.meta.env.WEB3FORMS_ACCESS_KEY,
-        subject: `CrossMind Waitlist: ${name}`,
-        from_name: 'CrossMind Landing',
-        to: 'cestivan@163.com',
-        message: `新用户加入 Waitlist:\n\n姓名: ${name}\n邮箱: ${email}\n提交时间: ${new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })}`
+        row: {
+          name: name,
+          email: email,
+          submitted_at: new Date().toISOString(),
+          utm_source: utmSource,
+          notes: `来自 landing page,IP: ${request.headers.get('x-forwarded-for') || 'unknown'}`
+        }
       })
     });
 
     if (!response.ok) {
-      throw new Error('发送邮件失败');
+      const errorText = await response.text();
+      console.error('Database API error:', errorText);
+      throw new Error('保存数据失败');
     }
 
     return new Response(
