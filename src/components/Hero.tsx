@@ -1,37 +1,72 @@
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-b from-blue-50 to-white py-20 sm:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-6">
-            AI 联合创始人
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-16">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-[#2D5BFF]/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-[#00D4FF]/20 to-transparent rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+      </div>
+
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center max-w-5xl mx-auto">
+          {/* Subtle badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 mb-8">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00D4FF] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00D4FF]"></span>
+            </span>
+            <span className="text-gray-300 text-sm font-medium tracking-wide">BETA ACCESS AVAILABLE</span>
+          </div>
+
+          {/* Bold statement headline */}
+          <h1 className="text-6xl sm:text-8xl font-black text-white mb-8 leading-[0.9] tracking-tight">
+            Growth on
             <br />
-            <span className="text-blue-600">帮你处理增长工作</span>
+            <span className="bg-gradient-to-r from-[#2D5BFF] via-[#00D4FF] to-[#2D5BFF] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+              Autopilot
+            </span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            CrossMind 自动化执行 growth 任务 —— Social Media 运营、内容营销、用户获取、数据分析。
-            <br />
-            让你专注构建产品,我们帮你获取用户。
+
+          {/* Impactful subheadline */}
+          <p className="text-xl sm:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            While you build, your AI co-founder handles content, outreach, and analytics.
+            <span className="block mt-2 text-white font-medium">Zero manual work required.</span>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
+          {/* Strong CTA */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <a
               href="#waitlist"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition"
+              className="group relative px-8 py-4 bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white rounded-full font-bold text-lg hover:shadow-2xl hover:shadow-[#2D5BFF]/50 transition-all duration-300 transform hover:scale-105"
             >
-              抢占早鸟名额
-            </a>
-            <a
-              href="#pricing"
-              className="border-2 border-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-400 transition"
-            >
-              查看定价
+              <span className="relative z-10">Get Early Access</span>
+              <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
             </a>
           </div>
-          <p className="mt-6 text-sm text-gray-500">
-            早鸟用户专享:首月 6 折 · 年付 5 折
-          </p>
+
+          {/* Stats bar */}
+          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-8 border-t border-white/10">
+            <div>
+              <div className="text-3xl font-bold text-white mb-1">40%</div>
+              <div className="text-sm text-gray-500 uppercase tracking-wide">Early bird discount</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-white mb-1">24/7</div>
+              <div className="text-sm text-gray-500 uppercase tracking-wide">Automated execution</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-white mb-1">0</div>
+              <div className="text-sm text-gray-500 uppercase tracking-wide">Manual effort</div>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent"></div>
     </section>
   );
 }

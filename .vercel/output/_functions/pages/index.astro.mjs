@@ -11,161 +11,218 @@ const $$Layout = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Layout;
   const { title } = Astro2.props;
-  return renderTemplate`<html lang="zh-CN"> <head><meta charset="UTF-8"><meta name="description" content="CrossMind - AI 联合创始人,自动化处理增长工作,让创始人专注构建产品"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator"${addAttribute(Astro2.generator, "content")}><title>${title}</title>${renderHead()}</head> <body class="bg-gray-50 text-gray-900"> ${renderSlot($$result, $$slots["default"])} <footer class="bg-gray-900 text-gray-400 py-12"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> <p>&copy; 2026 CrossMind. All rights reserved.</p> </div> </footer> </body></html>`;
+  return renderTemplate`<html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="CrossMind - Your AI Co-Founder for Automated Growth. Handle social media, content marketing, user acquisition, and analytics automatically."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator"${addAttribute(Astro2.generator, "content")}><title>${title}</title>${renderHead()}</head> <body class="bg-white text-gray-900 antialiased"> ${renderSlot($$result, $$slots["default"])} <footer class="bg-gray-900 text-gray-400 py-16"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex flex-col md:flex-row justify-between items-center gap-8"> <div class="flex items-center gap-2"> <svg viewBox="0 0 200 200" fill="none" width="28" height="28"> <polygon points="28,22 54,22 108,84 100,100 92,84" fill="#2D5BFF"></polygon> <polygon points="92,116 100,100 108,116 172,178 146,178" fill="#2D5BFF"></polygon> <polygon points="172,22 146,22 92,84 100,100 108,84" fill="#00D4FF"></polygon> <polygon points="108,116 100,100 92,116 28,178 54,178" fill="#00D4FF"></polygon> </svg> <span class="text-lg font-bold text-white">CrossMind</span> </div> <div class="flex flex-col md:flex-row gap-6 text-sm text-gray-400"> <a href="mailto:hello@crossmind.io" class="hover:text-white transition">Contact</a> <a href="#pricing" class="hover:text-white transition">Pricing</a> <a href="#how-it-works" class="hover:text-white transition">How it Works</a> </div> <p class="text-sm">&copy; 2026 CrossMind. All rights reserved.</p> </div> </div> </footer> </body></html>`;
 }, "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/layouts/Layout.astro", void 0);
 
-function Hero() {
-  return /* @__PURE__ */ jsx("section", { className: "relative bg-gradient-to-b from-blue-50 to-white py-20 sm:py-32", children: /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: /* @__PURE__ */ jsxs("div", { className: "text-center", children: [
-    /* @__PURE__ */ jsxs("h1", { className: "text-4xl sm:text-6xl font-bold text-gray-900 mb-6", children: [
-      "AI 联合创始人",
-      /* @__PURE__ */ jsx("br", {}),
-      /* @__PURE__ */ jsx("span", { className: "text-blue-600", children: "帮你处理增长工作" })
+function Navbar() {
+  return /* @__PURE__ */ jsx("nav", { className: "fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50", children: /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between h-16", children: [
+    /* @__PURE__ */ jsxs("a", { href: "/", className: "flex items-center gap-3 group", children: [
+      /* @__PURE__ */ jsxs("svg", { viewBox: "0 0 200 200", fill: "none", width: "32", height: "32", className: "transform group-hover:scale-110 transition-transform", children: [
+        /* @__PURE__ */ jsx("polygon", { points: "28,22 54,22 108,84 100,100 92,84", fill: "#2D5BFF" }),
+        /* @__PURE__ */ jsx("polygon", { points: "92,116 100,100 108,116 172,178 146,178", fill: "#2D5BFF" }),
+        /* @__PURE__ */ jsx("polygon", { points: "54,22 74,40 108,84", fill: "#1A3FC7", opacity: "0.7" }),
+        /* @__PURE__ */ jsx("polygon", { points: "172,178 172,160 108,116", fill: "#1A3FC7", opacity: "0.7" }),
+        /* @__PURE__ */ jsx("polygon", { points: "172,22 146,22 92,84 100,100 108,84", fill: "#00D4FF" }),
+        /* @__PURE__ */ jsx("polygon", { points: "108,116 100,100 92,116 28,178 54,178", fill: "#00D4FF" }),
+        /* @__PURE__ */ jsx("polygon", { points: "146,22 126,40 92,84", fill: "#00939B", opacity: "0.65" }),
+        /* @__PURE__ */ jsx("polygon", { points: "28,178 28,160 92,116", fill: "#00939B", opacity: "0.65" })
+      ] }),
+      /* @__PURE__ */ jsx("span", { className: "text-xl font-bold bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent", children: "CrossMind" })
     ] }),
-    /* @__PURE__ */ jsxs("p", { className: "text-xl text-gray-600 mb-8 max-w-3xl mx-auto", children: [
-      "CrossMind 自动化执行 growth 任务 —— Social Media 运营、内容营销、用户获取、数据分析。",
-      /* @__PURE__ */ jsx("br", {}),
-      "让你专注构建产品,我们帮你获取用户。"
-    ] }),
-    /* @__PURE__ */ jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center items-center", children: [
+    /* @__PURE__ */ jsxs("div", { className: "hidden md:flex items-center gap-8", children: [
+      /* @__PURE__ */ jsx("a", { href: "#how-it-works", className: "text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium", children: "How it works" }),
+      /* @__PURE__ */ jsx("a", { href: "#pricing", className: "text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium", children: "Pricing" }),
       /* @__PURE__ */ jsx(
         "a",
         {
           href: "#waitlist",
-          className: "bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition",
-          children: "抢占早鸟名额"
-        }
-      ),
-      /* @__PURE__ */ jsx(
-        "a",
-        {
-          href: "#pricing",
-          className: "border-2 border-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-400 transition",
-          children: "查看定价"
+          className: "bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-6 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-[#2D5BFF]/25 transition-all",
+          children: "Join Waitlist"
         }
       )
     ] }),
-    /* @__PURE__ */ jsx("p", { className: "mt-6 text-sm text-gray-500", children: "早鸟用户专享:首月 6 折 · 年付 5 折" })
+    /* @__PURE__ */ jsx("button", { className: "md:hidden p-2", children: /* @__PURE__ */ jsx("svg", { className: "w-6 h-6", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M4 6h16M4 12h16M4 18h16" }) }) })
   ] }) }) });
+}
+
+function Hero() {
+  return /* @__PURE__ */ jsxs("section", { className: "relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-24 sm:py-32", children: [
+    /* @__PURE__ */ jsx("div", { className: "absolute inset-0 -z-10 overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute left-[50%] top-0 -translate-x-[50%] w-[1000px] h-[1000px] rounded-full bg-gradient-to-br from-blue-400/20 to-indigo-400/20 blur-3xl" }) }),
+    /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: /* @__PURE__ */ jsxs("div", { className: "text-center", children: [
+      /* @__PURE__ */ jsxs("div", { className: "inline-flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-full text-blue-700 text-sm font-medium mb-8", children: [
+        /* @__PURE__ */ jsxs("span", { className: "relative flex h-2 w-2", children: [
+          /* @__PURE__ */ jsx("span", { className: "animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" }),
+          /* @__PURE__ */ jsx("span", { className: "relative inline-flex rounded-full h-2 w-2 bg-blue-500" })
+        ] }),
+        "Early Access Now Open"
+      ] }),
+      /* @__PURE__ */ jsxs("h1", { className: "text-5xl sm:text-7xl font-bold text-gray-900 mb-6 leading-tight", children: [
+        "Your AI Co-founder for",
+        /* @__PURE__ */ jsx("br", {}),
+        /* @__PURE__ */ jsx("span", { className: "bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent", children: "Automated Growth" })
+      ] }),
+      /* @__PURE__ */ jsx("p", { className: "text-xl sm:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed", children: "Focus on building. Let CrossMind handle social media, content marketing, user acquisition, and analytics—automatically." }),
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center items-center mb-12", children: [
+        /* @__PURE__ */ jsxs(
+          "a",
+          {
+            href: "#waitlist",
+            className: "group relative inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5",
+            children: [
+              "Join Early Access",
+              /* @__PURE__ */ jsx("svg", { className: "w-5 h-5 group-hover:translate-x-1 transition-transform", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M13 7l5 5m0 0l-5 5m5-5H6" }) })
+            ]
+          }
+        ),
+        /* @__PURE__ */ jsx(
+          "a",
+          {
+            href: "#how-it-works",
+            className: "inline-flex items-center gap-2 bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-50 transition-all border border-gray-200 shadow hover:shadow-md",
+            children: "See How It Works"
+          }
+        )
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-600", children: [
+        /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2", children: [
+          /* @__PURE__ */ jsx("svg", { className: "w-5 h-5 text-green-500", fill: "currentColor", viewBox: "0 0 20 20", children: /* @__PURE__ */ jsx("path", { fillRule: "evenodd", d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z", clipRule: "evenodd" }) }),
+          /* @__PURE__ */ jsx("span", { children: "Early Bird: 40% off first month" })
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2", children: [
+          /* @__PURE__ */ jsx("svg", { className: "w-5 h-5 text-green-500", fill: "currentColor", viewBox: "0 0 20 20", children: /* @__PURE__ */ jsx("path", { fillRule: "evenodd", d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z", clipRule: "evenodd" }) }),
+          /* @__PURE__ */ jsx("span", { children: "No credit card required" })
+        ] })
+      ] })
+    ] }) })
+  ] });
 }
 
 const features = [
   {
     icon: "📱",
-    title: "Social Media 自动化",
-    description: "自动研究热门话题,生成内容日历,起草并发布 Twitter/LinkedIn 内容,跟踪互动效果"
+    title: "Social Media Automation",
+    description: "Research trending topics, generate content calendars, draft and publish to Twitter/LinkedIn, track engagement metrics—all on autopilot."
   },
   {
     icon: "✍️",
-    title: "内容营销",
-    description: "基于产品定位生成博客文章、SEO 内容、landing page 文案,提升搜索排名和转化"
+    title: "Content Marketing",
+    description: "Generate blog posts, SEO content, and landing page copy tailored to your product positioning. Boost rankings and conversions effortlessly."
   },
   {
     icon: "🎯",
-    title: "用户获取",
-    description: "主动识别目标用户,通过 LinkedIn/Twitter/Reddit 触达,个性化邀请测试,追踪转化率"
+    title: "User Acquisition",
+    description: "Identify and reach target users on LinkedIn, Twitter, and Reddit. Send personalized invitations and track conversion rates automatically."
   },
   {
     icon: "📊",
-    title: "数据分析",
-    description: "聚合用户反馈、竞品动态、增长指标,生成优先级建议,让你快速做出正确决策"
+    title: "Analytics & Insights",
+    description: "Aggregate user feedback, competitor moves, and growth metrics. Get prioritized recommendations to make faster, better decisions."
   }
 ];
 function Features() {
-  return /* @__PURE__ */ jsx("section", { id: "features", className: "py-20 bg-white", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: [
+  return /* @__PURE__ */ jsx("section", { id: "how-it-works", className: "py-24 bg-white", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: [
     /* @__PURE__ */ jsxs("div", { className: "text-center mb-16", children: [
-      /* @__PURE__ */ jsx("h2", { className: "text-3xl sm:text-5xl font-bold text-gray-900 mb-4", children: "全自动增长引擎" }),
-      /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-600", children: "不只是工具,而是一个真正为你执行的 AI 联合创始人" })
+      /* @__PURE__ */ jsx("h2", { className: "text-4xl sm:text-5xl font-bold text-gray-900 mb-4", children: "Your Fully Automated Growth Engine" }),
+      /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-600 max-w-2xl mx-auto", children: "Not just a tool—a true AI co-founder that executes growth tasks while you focus on building" })
     ] }),
-    /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-2 gap-8", children: features.map((feature) => /* @__PURE__ */ jsxs("div", { className: "bg-gray-50 p-8 rounded-xl hover:shadow-lg transition", children: [
-      /* @__PURE__ */ jsx("div", { className: "text-5xl mb-4", children: feature.icon }),
-      /* @__PURE__ */ jsx("h3", { className: "text-2xl font-bold mb-3", children: feature.title }),
-      /* @__PURE__ */ jsx("p", { className: "text-gray-600", children: feature.description })
-    ] }, feature.title)) })
+    /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-2 gap-6", children: features.map((feature) => /* @__PURE__ */ jsxs(
+      "div",
+      {
+        className: "group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-gray-200 hover:border-[#2D5BFF]/30 hover:shadow-xl transition-all duration-300",
+        children: [
+          /* @__PURE__ */ jsx("div", { className: "text-5xl mb-4", children: feature.icon }),
+          /* @__PURE__ */ jsx("h3", { className: "text-2xl font-bold mb-3 text-gray-900", children: feature.title }),
+          /* @__PURE__ */ jsx("p", { className: "text-gray-600 leading-relaxed", children: feature.description })
+        ]
+      },
+      feature.title
+    )) })
   ] }) });
 }
 
 const plans = [
   {
-    name: "按量付费",
-    price: "¥0.5",
-    unit: "/ 每次任务执行",
-    description: "适合刚开始验证想法的创始人",
+    name: "Pay As You Go",
+    price: "$0.10",
+    unit: "/ task execution",
+    description: "Perfect for validating your idea",
     features: [
-      "所有 growth 自动化功能",
-      "Twitter/LinkedIn 自动发布",
-      "用户触达与反馈收集",
-      "数据分析与建议",
-      "按实际使用量计费"
+      "All growth automation features",
+      "Twitter/LinkedIn auto-publishing",
+      "User outreach & feedback collection",
+      "Analytics & insights",
+      "Pay only for what you use"
     ],
-    cta: "开始使用",
+    cta: "Get Started",
     highlight: false
   },
   {
-    name: "月度套餐",
-    price: "¥299",
-    unit: "/ 月",
-    originalPrice: "¥499",
-    discount: "早鸟 6 折",
-    description: "适合需要持续增长的产品",
+    name: "Monthly",
+    price: "$49",
+    unit: "/ month",
+    originalPrice: "$79",
+    discount: "40% OFF Early Bird",
+    description: "For products needing consistent growth",
     features: [
-      "包含 1000 次任务执行",
-      "所有按量付费功能",
-      "优先技术支持",
-      "定制化增长策略",
-      "超出部分 ¥0.4/次"
+      "1,000 task executions included",
+      "All Pay-As-You-Go features",
+      "Priority support",
+      "Custom growth strategies",
+      "Overages at $0.08/task"
     ],
-    cta: "抢占早鸟名额",
+    cta: "Claim Early Bird",
     highlight: true
   },
   {
-    name: "年度套餐",
-    price: "¥2,988",
-    unit: "/ 年",
-    originalPrice: "¥5,988",
-    discount: "早鸟 5 折",
-    description: "长期增长的最佳选择",
+    name: "Annual",
+    price: "$499",
+    unit: "/ year",
+    originalPrice: "$948",
+    discount: "50% OFF Early Bird",
+    description: "Best value for long-term growth",
     features: [
-      "包含 15,000 次任务执行",
-      "所有月度套餐功能",
-      "专属增长顾问",
-      "ROI 分析报告",
-      "超出部分 ¥0.3/次"
+      "15,000 task executions included",
+      "All Monthly plan features",
+      "Dedicated growth advisor",
+      "ROI analysis reports",
+      "Overages at $0.05/task"
     ],
-    cta: "立即购买",
+    cta: "Get Annual Deal",
     highlight: false
   }
 ];
 function Pricing() {
-  return /* @__PURE__ */ jsx("section", { id: "pricing", className: "py-20 bg-gray-50", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: [
+  return /* @__PURE__ */ jsx("section", { id: "pricing", className: "py-24 bg-gradient-to-br from-slate-50 to-white", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: [
     /* @__PURE__ */ jsxs("div", { className: "text-center mb-16", children: [
-      /* @__PURE__ */ jsx("h2", { className: "text-3xl sm:text-5xl font-bold text-gray-900 mb-4", children: "透明定价,早鸟优惠" }),
-      /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-600", children: "选择适合你的方案,随时可调整" })
+      /* @__PURE__ */ jsx("h2", { className: "text-4xl sm:text-5xl font-bold text-gray-900 mb-4", children: "Simple, Transparent Pricing" }),
+      /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-600", children: "Choose the plan that fits your growth stage. Switch anytime." })
     ] }),
-    /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-3 gap-8", children: plans.map((plan) => /* @__PURE__ */ jsxs(
+    /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-3 gap-6", children: plans.map((plan) => /* @__PURE__ */ jsxs(
       "div",
       {
-        className: `bg-white p-8 rounded-xl ${plan.highlight ? "ring-2 ring-blue-600 shadow-xl scale-105" : "shadow-lg"}`,
+        className: `bg-white p-8 rounded-2xl border transition-all duration-300 ${plan.highlight ? "border-[#2D5BFF] shadow-2xl shadow-[#2D5BFF]/10 scale-105 relative" : "border-gray-200 shadow-lg hover:shadow-xl"}`,
         children: [
-          plan.discount && /* @__PURE__ */ jsx("span", { className: "inline-block bg-blue-600 text-white text-sm px-3 py-1 rounded-full mb-4", children: plan.discount }),
-          /* @__PURE__ */ jsx("h3", { className: "text-2xl font-bold mb-2", children: plan.name }),
+          plan.highlight && /* @__PURE__ */ jsx("div", { className: "absolute -top-4 left-1/2 -translate-x-1/2", children: /* @__PURE__ */ jsx("span", { className: "inline-block bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white text-sm font-semibold px-4 py-1 rounded-full", children: "MOST POPULAR" }) }),
+          plan.discount && /* @__PURE__ */ jsx("span", { className: "inline-block bg-[#2D5BFF]/10 text-[#2D5BFF] text-sm font-medium px-3 py-1 rounded-full mb-4", children: plan.discount }),
+          /* @__PURE__ */ jsx("h3", { className: "text-2xl font-bold mb-2 text-gray-900", children: plan.name }),
           /* @__PURE__ */ jsxs("div", { className: "mb-4", children: [
-            /* @__PURE__ */ jsx("span", { className: "text-4xl font-bold", children: plan.price }),
-            /* @__PURE__ */ jsx("span", { className: "text-gray-600", children: plan.unit }),
+            /* @__PURE__ */ jsx("span", { className: "text-5xl font-bold text-gray-900", children: plan.price }),
+            /* @__PURE__ */ jsx("span", { className: "text-gray-500 ml-1", children: plan.unit }),
             plan.originalPrice && /* @__PURE__ */ jsxs("div", { className: "text-sm text-gray-400 line-through mt-1", children: [
-              "原价 ",
+              "was ",
               plan.originalPrice
             ] })
           ] }),
           /* @__PURE__ */ jsx("p", { className: "text-gray-600 mb-6", children: plan.description }),
-          /* @__PURE__ */ jsx("ul", { className: "space-y-3 mb-8", children: plan.features.map((feature) => /* @__PURE__ */ jsxs("li", { className: "flex items-start", children: [
-            /* @__PURE__ */ jsx("span", { className: "text-blue-600 mr-2", children: "✓" }),
-            /* @__PURE__ */ jsx("span", { children: feature })
+          /* @__PURE__ */ jsx("ul", { className: "space-y-3 mb-8", children: plan.features.map((feature) => /* @__PURE__ */ jsxs("li", { className: "flex items-start text-sm", children: [
+            /* @__PURE__ */ jsx("svg", { className: "w-5 h-5 text-[#00D4FF] mr-2 flex-shrink-0 mt-0.5", fill: "currentColor", viewBox: "0 0 20 20", children: /* @__PURE__ */ jsx("path", { fillRule: "evenodd", d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z", clipRule: "evenodd" }) }),
+            /* @__PURE__ */ jsx("span", { className: "text-gray-700", children: feature })
           ] }, feature)) }),
           /* @__PURE__ */ jsx(
             "a",
             {
               href: "#waitlist",
-              className: `block text-center py-3 px-6 rounded-lg font-semibold transition ${plan.highlight ? "bg-blue-600 text-white hover:bg-blue-700" : "border-2 border-gray-300 hover:border-gray-400"}`,
+              className: `block text-center py-3 px-6 rounded-xl font-semibold transition-all ${plan.highlight ? "bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white hover:shadow-lg hover:shadow-[#2D5BFF]/25" : "bg-white text-gray-900 border-2 border-gray-300 hover:border-[#2D5BFF]/50 hover:bg-slate-50"}`,
               children: plan.cta
             }
           )
@@ -192,69 +249,75 @@ function Waitlist() {
       });
       if (response.ok) {
         setStatus("success");
-        setMessage("🎉 成功加入 waitlist!我们会尽快联系你。");
+        setMessage("🎉 Success! Check your inbox for next steps.");
         setEmail("");
         setName("");
       } else {
-        throw new Error("提交失败");
+        throw new Error("Submission failed");
       }
     } catch (error) {
       setStatus("error");
-      setMessage("提交失败,请稍后重试或直接邮件联系 cestivan@163.com");
+      setMessage("Oops! Please try again or email us at hello@crossmind.io");
     }
   };
-  return /* @__PURE__ */ jsx("section", { id: "waitlist", className: "py-20 bg-blue-600", children: /* @__PURE__ */ jsxs("div", { className: "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8", children: [
-    /* @__PURE__ */ jsxs("div", { className: "text-center mb-12", children: [
-      /* @__PURE__ */ jsx("h2", { className: "text-3xl sm:text-5xl font-bold text-white mb-4", children: "抢占早鸟名额" }),
-      /* @__PURE__ */ jsx("p", { className: "text-xl text-blue-100", children: "前 100 名用户享受首月 6 折 + 年付 5 折优惠" })
-    ] }),
-    /* @__PURE__ */ jsxs("form", { onSubmit: handleSubmit, className: "max-w-md mx-auto", children: [
-      /* @__PURE__ */ jsxs("div", { className: "space-y-4", children: [
-        /* @__PURE__ */ jsx(
-          "input",
+  return /* @__PURE__ */ jsxs("section", { id: "waitlist", className: "relative py-24 bg-gradient-to-br from-[#2D5BFF] to-[#1A3FC7] overflow-hidden", children: [
+    /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-10", children: /* @__PURE__ */ jsx("div", { className: "absolute top-0 left-0 w-full h-full", style: {
+      backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+    } }) }),
+    /* @__PURE__ */ jsxs("div", { className: "relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8", children: [
+      /* @__PURE__ */ jsxs("div", { className: "text-center mb-12", children: [
+        /* @__PURE__ */ jsx("h2", { className: "text-4xl sm:text-5xl font-bold text-white mb-4", children: "Join the Waitlist" }),
+        /* @__PURE__ */ jsx("p", { className: "text-xl text-blue-100", children: "Get early access + 40% off for first 100 users" })
+      ] }),
+      /* @__PURE__ */ jsxs("form", { onSubmit: handleSubmit, className: "max-w-md mx-auto", children: [
+        /* @__PURE__ */ jsxs("div", { className: "space-y-4", children: [
+          /* @__PURE__ */ jsx(
+            "input",
+            {
+              type: "text",
+              placeholder: "Your name",
+              value: name,
+              onChange: (e) => setName(e.target.value),
+              required: true,
+              className: "w-full px-5 py-4 rounded-xl bg-white/95 backdrop-blur-sm border-2 border-transparent focus:border-[#00D4FF] focus:bg-white focus:outline-none transition-all shadow-lg"
+            }
+          ),
+          /* @__PURE__ */ jsx(
+            "input",
+            {
+              type: "email",
+              placeholder: "Your email",
+              value: email,
+              onChange: (e) => setEmail(e.target.value),
+              required: true,
+              className: "w-full px-5 py-4 rounded-xl bg-white/95 backdrop-blur-sm border-2 border-transparent focus:border-[#00D4FF] focus:bg-white focus:outline-none transition-all shadow-lg"
+            }
+          ),
+          /* @__PURE__ */ jsx(
+            "button",
+            {
+              type: "submit",
+              disabled: status === "loading",
+              className: "w-full bg-white text-[#2D5BFF] px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-all disabled:opacity-50 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5",
+              children: status === "loading" ? "Submitting..." : "Get Early Access →"
+            }
+          )
+        ] }),
+        message && /* @__PURE__ */ jsx(
+          "p",
           {
-            type: "text",
-            placeholder: "你的名字",
-            value: name,
-            onChange: (e) => setName(e.target.value),
-            required: true,
-            className: "w-full px-4 py-3 rounded-lg border-2 border-blue-400 focus:border-white focus:outline-none"
-          }
-        ),
-        /* @__PURE__ */ jsx(
-          "input",
-          {
-            type: "email",
-            placeholder: "你的邮箱",
-            value: email,
-            onChange: (e) => setEmail(e.target.value),
-            required: true,
-            className: "w-full px-4 py-3 rounded-lg border-2 border-blue-400 focus:border-white focus:outline-none"
-          }
-        ),
-        /* @__PURE__ */ jsx(
-          "button",
-          {
-            type: "submit",
-            disabled: status === "loading",
-            className: "w-full bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition disabled:opacity-50",
-            children: status === "loading" ? "提交中..." : "加入 Waitlist"
+            className: `mt-6 text-center font-medium ${status === "success" ? "text-white" : "text-yellow-200"}`,
+            children: message
           }
         )
       ] }),
-      message && /* @__PURE__ */ jsx(
-        "p",
-        {
-          className: `mt-4 text-center ${status === "success" ? "text-white" : "text-yellow-200"}`,
-          children: message
-        }
-      )
+      /* @__PURE__ */ jsx("p", { className: "text-center text-blue-100 text-sm mt-6", children: "No credit card required • Cancel anytime" })
     ] })
-  ] }) });
+  ] });
 }
 
 const $$Index = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "CrossMind - AI Co-founder That Handles Growth" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Hero", Hero, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/components/Hero.tsx", "client:component-export": "default" })} ${renderComponent($$result2, "Features", Features, {})} ${renderComponent($$result2, "Pricing", Pricing, {})} ${renderComponent($$result2, "Waitlist", Waitlist, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/components/Waitlist.tsx", "client:component-export": "default" })} ` })}`;
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "CrossMind - Your AI Co-Founder for Automated Growth" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Navbar", Navbar, {})} ${renderComponent($$result2, "Hero", Hero, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/components/Hero.tsx", "client:component-export": "default" })} ${renderComponent($$result2, "Features", Features, {})} ${renderComponent($$result2, "Pricing", Pricing, {})} ${renderComponent($$result2, "Waitlist", Waitlist, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/components/Waitlist.tsx", "client:component-export": "default" })} ` })}`;
 }, "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/pages/index.astro", void 0);
 
 const $$file = "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/pages/index.astro";

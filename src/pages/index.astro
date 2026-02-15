@@ -1,12 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.tsx';
 import Hero from '../components/Hero.tsx';
 import Features from '../components/Features.tsx';
 import Pricing from '../components/Pricing.tsx';
 import Waitlist from '../components/Waitlist.tsx';
 ---
 
-<Layout title="CrossMind - AI Co-founder That Handles Growth">
+<Layout title="CrossMind - Your AI Co-Founder for Automated Growth">
+	<Navbar />
 	<Hero client:load />
 	<Features />
 	<Pricing />
