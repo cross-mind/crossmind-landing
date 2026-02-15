@@ -79,11 +79,35 @@ function Hero() {
           ]
         }
       ) }),
-      /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap justify-center gap-6 max-w-3xl mx-auto pt-8 border-t border-white/10", children: [
-        /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Competitor tracking" }) }),
-        /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Content creation" }) }),
-        /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "User interviews" }) }),
-        /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Legal docs" }) })
+      /* @__PURE__ */ jsxs("div", { className: "relative w-full pt-8 border-t border-white/10 overflow-hidden", children: [
+        /* @__PURE__ */ jsx("div", { className: "absolute left-0 top-8 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" }),
+        /* @__PURE__ */ jsx("div", { className: "absolute right-0 top-8 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" }),
+        /* @__PURE__ */ jsxs("div", { className: "flex gap-4 animate-scroll", children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex gap-4 flex-shrink-0", children: [
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Competitor tracking" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Content creation" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "User interviews" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Legal docs" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Social media posts" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "SEO optimization" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Email campaigns" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Product analytics" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Landing pages" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Feature requests" }) })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "flex gap-4 flex-shrink-0", children: [
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Competitor tracking" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Content creation" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "User interviews" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Legal docs" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Social media posts" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "SEO optimization" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Email campaigns" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Product analytics" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Landing pages" }) }),
+            /* @__PURE__ */ jsx("div", { className: "px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap", children: /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-400", children: "Feature requests" }) })
+          ] })
+        ] })
       ] })
     ] }) }),
     /* @__PURE__ */ jsx("div", { className: "absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" })

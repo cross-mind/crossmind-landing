@@ -46,19 +46,81 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Simple value props */}
-          <div className="flex flex-wrap justify-center gap-6 max-w-3xl mx-auto pt-8 border-t border-white/10">
-            <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10">
-              <span className="text-sm text-gray-400">Competitor tracking</span>
-            </div>
-            <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10">
-              <span className="text-sm text-gray-400">Content creation</span>
-            </div>
-            <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10">
-              <span className="text-sm text-gray-400">User interviews</span>
-            </div>
-            <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10">
-              <span className="text-sm text-gray-400">Legal docs</span>
+          {/* Infinite scroll capabilities */}
+          <div className="relative w-full pt-8 border-t border-white/10 overflow-hidden">
+            {/* Fade edges */}
+            <div className="absolute left-0 top-8 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-8 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+
+            {/* Scrolling container */}
+            <div className="flex gap-4 animate-scroll">
+              {/* First set */}
+              <div className="flex gap-4 flex-shrink-0">
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Competitor tracking</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Content creation</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">User interviews</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Legal docs</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Social media posts</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">SEO optimization</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Email campaigns</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Product analytics</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Landing pages</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Feature requests</span>
+                </div>
+              </div>
+
+              {/* Duplicate set for seamless loop */}
+              <div className="flex gap-4 flex-shrink-0">
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Competitor tracking</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Content creation</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">User interviews</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Legal docs</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Social media posts</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">SEO optimization</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Email campaigns</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Product analytics</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Landing pages</span>
+                </div>
+                <div className="px-6 py-3 rounded-full bg-white/5 border border-white/10 whitespace-nowrap">
+                  <span className="text-sm text-gray-400">Feature requests</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
