@@ -101,10 +101,10 @@ export default function HowIWork() {
             <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gray-800 via-[#2D5BFF] to-[#00D4FF]"></div>
 
             <div className="space-y-12">
-              {/* Week 1 */}
+              {/* Month 1 */}
               <div className="flex items-start gap-8">
                 <div className="flex-1 text-right">
-                  <div className="text-sm font-bold text-gray-600 mb-1">WEEK 1</div>
+                  <div className="text-sm font-bold text-gray-600 mb-1">MONTH 1</div>
                   <div className="text-xl font-bold text-white">Junior hire</div>
                 </div>
                 <div className="relative z-10 w-4 h-4 rounded-full bg-gray-700 border-4 border-black flex-shrink-0"></div>
@@ -113,10 +113,10 @@ export default function HowIWork() {
                 </div>
               </div>
 
-              {/* Week 4 */}
+              {/* Month 2 */}
               <div className="flex items-start gap-8">
                 <div className="flex-1 text-right">
-                  <div className="text-sm font-bold text-[#2D5BFF] mb-1">WEEK 4</div>
+                  <div className="text-sm font-bold text-[#2D5BFF] mb-1">MONTH 2</div>
                   <div className="text-xl font-bold text-white">Teammate</div>
                 </div>
                 <div className="relative z-10 w-4 h-4 rounded-full bg-[#2D5BFF] border-4 border-black flex-shrink-0 shadow-lg shadow-[#2D5BFF]/50"></div>
@@ -125,10 +125,10 @@ export default function HowIWork() {
                 </div>
               </div>
 
-              {/* Week 12 */}
+              {/* Month 3 */}
               <div className="flex items-start gap-8">
                 <div className="flex-1 text-right">
-                  <div className="text-sm font-bold text-[#00D4FF] mb-1">WEEK 12</div>
+                  <div className="text-sm font-bold text-[#00D4FF] mb-1">MONTH 3</div>
                   <div className="text-xl font-bold text-white">Co-founder</div>
                 </div>
                 <div className="relative z-10 w-4 h-4 rounded-full bg-[#00D4FF] border-4 border-black flex-shrink-0 shadow-lg shadow-[#00D4FF]/50"></div>
