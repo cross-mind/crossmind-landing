@@ -1,15 +1,15 @@
 const scenarios = [
   {
     label: '01',
-    title: 'Build in Public',
-    problem: 'Content consistency is hard',
+    title: 'Content Marketing',
+    problem: 'Posting consistently is hard',
     visual: 'commits',
     result: 'Tue 9am → 3 posts ready',
     example: 'Your Friday commit became Monday\'s tweet thread'
   },
   {
     label: '02',
-    title: 'Competitor Intel',
+    title: 'Competitor Tracking',
     problem: 'Markets move fast',
     visual: 'price-change',
     result: '$99→$79 noticed in 2hrs',
@@ -17,7 +17,7 @@ const scenarios = [
   },
   {
     label: '03',
-    title: 'User Feedback',
+    title: 'User Interviews',
     problem: '8 interviews piling up',
     visual: 'feedback-loop',
     result: '5 booked, questions ready',
@@ -25,7 +25,7 @@ const scenarios = [
   },
   {
     label: '04',
-    title: 'Compliance Docs',
+    title: 'Legal Docs',
     problem: 'Privacy policy outdated',
     visual: 'docs',
     result: 'GDPR update drafted',

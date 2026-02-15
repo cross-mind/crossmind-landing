@@ -102,15 +102,15 @@ function Hero() {
 const scenarios = [
   {
     label: "01",
-    title: "Build in Public",
-    problem: "Content consistency is hard",
+    title: "Content Marketing",
+    problem: "Posting consistently is hard",
     visual: "commits",
     result: "Tue 9am → 3 posts ready",
     example: "Your Friday commit became Monday's tweet thread"
   },
   {
     label: "02",
-    title: "Competitor Intel",
+    title: "Competitor Tracking",
     problem: "Markets move fast",
     visual: "price-change",
     result: "$99→$79 noticed in 2hrs",
@@ -118,7 +118,7 @@ const scenarios = [
   },
   {
     label: "03",
-    title: "User Feedback",
+    title: "User Interviews",
     problem: "8 interviews piling up",
     visual: "feedback-loop",
     result: "5 booked, questions ready",
@@ -126,7 +126,7 @@ const scenarios = [
   },
   {
     label: "04",
-    title: "Compliance Docs",
+    title: "Legal Docs",
     problem: "Privacy policy outdated",
     visual: "docs",
     result: "GDPR update drafted",
@@ -230,16 +230,16 @@ function HowIWork() {
         /* @__PURE__ */ jsxs("div", { children: [
           /* @__PURE__ */ jsx("div", { className: "text-4xl font-black text-gray-700 mb-6", children: "Before" }),
           /* @__PURE__ */ jsxs("div", { className: "space-y-2", children: [
-            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
-              /* @__PURE__ */ jsx("div", { className: "flex-1 h-14 bg-gray-800 rounded-lg relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-gray-400", children: "Building" }) }) }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-3", children: [
+              /* @__PURE__ */ jsx("div", { style: { width: "40%" }, className: "h-14 bg-gray-800 rounded-lg relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-gray-400", children: "Building" }) }) }),
               /* @__PURE__ */ jsx("span", { className: "text-2xl font-black text-gray-600 w-16", children: "40%" })
             ] }),
-            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
-              /* @__PURE__ */ jsx("div", { className: "flex-1 h-14 bg-red-900/30 rounded-lg border border-red-500/30 relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-red-400", children: "Growth work" }) }) }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-3", children: [
+              /* @__PURE__ */ jsx("div", { style: { width: "40%" }, className: "h-14 bg-red-900/30 rounded-lg border border-red-500/30 relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-red-400", children: "Growth work" }) }) }),
               /* @__PURE__ */ jsx("span", { className: "text-2xl font-black text-red-400 w-16", children: "40%" })
             ] }),
-            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
-              /* @__PURE__ */ jsx("div", { className: "flex-1 h-14 bg-gray-800 rounded-lg relative overflow-hidden", style: { width: "50%" }, children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-gray-400", children: "Thinking" }) }) }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-3", children: [
+              /* @__PURE__ */ jsx("div", { style: { width: "20%" }, className: "h-14 bg-gray-800 rounded-lg relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-gray-400", children: "Thinking" }) }) }),
               /* @__PURE__ */ jsx("span", { className: "text-2xl font-black text-gray-600 w-16", children: "20%" })
             ] })
           ] })
@@ -247,19 +247,19 @@ function HowIWork() {
         /* @__PURE__ */ jsxs("div", { children: [
           /* @__PURE__ */ jsx("div", { className: "text-4xl font-black bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent mb-6", children: "With me" }),
           /* @__PURE__ */ jsxs("div", { className: "space-y-2", children: [
-            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
-              /* @__PURE__ */ jsx("div", { className: "flex-1 h-16 bg-gradient-to-r from-[#2D5BFF] to-[#2D5BFF]/80 rounded-lg shadow-2xl shadow-[#2D5BFF]/30 relative overflow-hidden", children: /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 flex items-center justify-between px-4", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-3", children: [
+              /* @__PURE__ */ jsx("div", { style: { width: "60%" }, className: "h-16 bg-gradient-to-r from-[#2D5BFF] to-[#2D5BFF]/80 rounded-lg shadow-2xl shadow-[#2D5BFF]/30 relative overflow-hidden", children: /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 flex items-center justify-between px-4", children: [
                 /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-white", children: "Building" }),
                 /* @__PURE__ */ jsx("span", { className: "text-xs text-[#00D4FF] font-bold", children: "+50%" })
               ] }) }),
               /* @__PURE__ */ jsx("span", { className: "text-3xl font-black text-white w-16", children: "60%" })
             ] }),
-            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
-              /* @__PURE__ */ jsx("div", { className: "flex-1 h-10 bg-gray-900/50 rounded-lg opacity-40 relative overflow-hidden", style: { width: "25%" }, children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-xs font-bold text-gray-600", children: "Growth" }) }) }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-3", children: [
+              /* @__PURE__ */ jsx("div", { style: { width: "10%" }, className: "h-10 bg-gray-900/50 rounded-lg opacity-40 relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-xs font-bold text-gray-600", children: "Growth" }) }) }),
               /* @__PURE__ */ jsx("span", { className: "text-xl font-black text-gray-600 w-16", children: "10%" })
             ] }),
-            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
-              /* @__PURE__ */ jsx("div", { className: "flex-1 h-16 bg-gradient-to-r from-[#00D4FF] to-[#00D4FF]/80 rounded-lg shadow-2xl shadow-[#00D4FF]/30 relative overflow-hidden", style: { width: "75%" }, children: /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 flex items-center justify-between px-4", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-3", children: [
+              /* @__PURE__ */ jsx("div", { style: { width: "30%" }, className: "h-16 bg-gradient-to-r from-[#00D4FF] to-[#00D4FF]/80 rounded-lg shadow-2xl shadow-[#00D4FF]/30 relative overflow-hidden", children: /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 flex items-center justify-between px-4", children: [
                 /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-white", children: "Thinking" }),
                 /* @__PURE__ */ jsx("span", { className: "text-xs text-[#2D5BFF] font-bold", children: "+50%" })
               ] }) }),
@@ -334,9 +334,9 @@ function WhyNow() {
           /* @__PURE__ */ jsx("div", { className: "absolute top-4 right-4 text-xs font-bold text-[#00D4FF] uppercase", children: "Now" }),
           /* @__PURE__ */ jsx("div", { className: "text-4xl font-black bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent mb-8", children: "Faster iteration" }),
           /* @__PURE__ */ jsxs("div", { className: "space-y-4 text-white text-lg font-medium", children: [
-            /* @__PURE__ */ jsx("div", { children: "Better feedback loops" }),
-            /* @__PURE__ */ jsx("div", { children: "AI removes friction" }),
-            /* @__PURE__ */ jsx("div", { children: "Vision matters most" })
+            /* @__PURE__ */ jsx("div", { children: "Ship faster" }),
+            /* @__PURE__ */ jsx("div", { children: "Learn from users quicker" }),
+            /* @__PURE__ */ jsx("div", { children: "Iterate continuously" })
           ] })
         ] })
       ] }) }),

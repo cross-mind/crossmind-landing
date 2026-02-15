@@ -42,9 +42,9 @@ export default function WhyNow() {
                 Faster iteration
               </div>
               <div className="space-y-4 text-white text-lg font-medium">
-                <div>Better feedback loops</div>
-                <div>AI removes friction</div>
-                <div>Vision matters most</div>
+                <div>Ship faster</div>
+                <div>Learn from users quicker</div>
+                <div>Iterate continuously</div>
               </div>
             </div>
           </div>

@@ -28,24 +28,24 @@ export default function HowIWork() {
             <div>
               <div className="text-4xl font-black text-gray-700 mb-6">Before</div>
               <div className="space-y-2">
-                <div className="flex items-center gap-3">
-                  <div className="flex-1 h-14 bg-gray-800 rounded-lg relative overflow-hidden">
+                <div className="flex items-start gap-3">
+                  <div style={{width: '40%'}} className="h-14 bg-gray-800 rounded-lg relative overflow-hidden">
                     <div className="absolute inset-0 flex items-center px-4">
                       <span className="text-sm font-bold text-gray-400">Building</span>
                     </div>
                   </div>
                   <span className="text-2xl font-black text-gray-600 w-16">40%</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex-1 h-14 bg-red-900/30 rounded-lg border border-red-500/30 relative overflow-hidden">
+                <div className="flex items-start gap-3">
+                  <div style={{width: '40%'}} className="h-14 bg-red-900/30 rounded-lg border border-red-500/30 relative overflow-hidden">
                     <div className="absolute inset-0 flex items-center px-4">
                       <span className="text-sm font-bold text-red-400">Growth work</span>
                     </div>
                   </div>
                   <span className="text-2xl font-black text-red-400 w-16">40%</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex-1 h-14 bg-gray-800 rounded-lg relative overflow-hidden" style={{width: '50%'}}>
+                <div className="flex items-start gap-3">
+                  <div style={{width: '20%'}} className="h-14 bg-gray-800 rounded-lg relative overflow-hidden">
                     <div className="absolute inset-0 flex items-center px-4">
                       <span className="text-sm font-bold text-gray-400">Thinking</span>
                     </div>
@@ -59,8 +59,8 @@ export default function HowIWork() {
             <div>
               <div className="text-4xl font-black bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent mb-6">With me</div>
               <div className="space-y-2">
-                <div className="flex items-center gap-3">
-                  <div className="flex-1 h-16 bg-gradient-to-r from-[#2D5BFF] to-[#2D5BFF]/80 rounded-lg shadow-2xl shadow-[#2D5BFF]/30 relative overflow-hidden">
+                <div className="flex items-start gap-3">
+                  <div style={{width: '60%'}} className="h-16 bg-gradient-to-r from-[#2D5BFF] to-[#2D5BFF]/80 rounded-lg shadow-2xl shadow-[#2D5BFF]/30 relative overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-between px-4">
                       <span className="text-sm font-bold text-white">Building</span>
                       <span className="text-xs text-[#00D4FF] font-bold">+50%</span>
@@ -68,16 +68,16 @@ export default function HowIWork() {
                   </div>
                   <span className="text-3xl font-black text-white w-16">60%</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex-1 h-10 bg-gray-900/50 rounded-lg opacity-40 relative overflow-hidden" style={{width: '25%'}}>
+                <div className="flex items-start gap-3">
+                  <div style={{width: '10%'}} className="h-10 bg-gray-900/50 rounded-lg opacity-40 relative overflow-hidden">
                     <div className="absolute inset-0 flex items-center px-4">
                       <span className="text-xs font-bold text-gray-600">Growth</span>
                     </div>
                   </div>
                   <span className="text-xl font-black text-gray-600 w-16">10%</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="flex-1 h-16 bg-gradient-to-r from-[#00D4FF] to-[#00D4FF]/80 rounded-lg shadow-2xl shadow-[#00D4FF]/30 relative overflow-hidden" style={{width: '75%'}}>
+                <div className="flex items-start gap-3">
+                  <div style={{width: '30%'}} className="h-16 bg-gradient-to-r from-[#00D4FF] to-[#00D4FF]/80 rounded-lg shadow-2xl shadow-[#00D4FF]/30 relative overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-between px-4">
                       <span className="text-sm font-bold text-white">Thinking</span>
                       <span className="text-xs text-[#2D5BFF] font-bold">+50%</span>
