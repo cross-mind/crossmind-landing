@@ -1,43 +1,35 @@
 const scenarios = [
   {
     label: '01',
-    title: 'Build in Public Without the Grind',
-    hook: 'It\'s Tuesday 9am.',
-    story: [
-      'I\'ve already pulled your latest commits, matched your voice, and queued 3 posts for review.',
-      'You shipped email verification Friday—by Monday I\'ve turned it into a tweet thread with metrics from beta feedback.'
-    ],
-    highlight: 'Content on autopilot, in your voice'
+    title: 'Build in Public',
+    problem: 'Content consistency is hard',
+    visual: 'commits',
+    result: 'Tue 9am → 3 posts ready',
+    example: 'Your Friday commit became Monday\'s tweet thread'
   },
   {
     label: '02',
-    title: 'Competitor Research That Stays Current',
-    hook: 'Your competitor dropped their Team plan from $99→$79 yesterday.',
-    story: [
-      'I noticed.',
-      'I\'ve drafted a comparison update for your docs and flagged 3 positioning opportunities you can use this week.'
-    ],
-    highlight: 'Market intelligence, delivered'
+    title: 'Competitor Intel',
+    problem: 'Markets move fast',
+    visual: 'price-change',
+    result: '$99→$79 noticed in 2hrs',
+    example: 'Comparison doc + 3 positioning moves drafted'
   },
   {
     label: '03',
-    title: 'User Feedback That Doesn\'t Pile Up',
-    hook: '8 interview requests in your inbox from last month.',
-    story: [
-      'I booked 5 for next week (filtered out tire-kickers), prepared questions based on your roadmap.',
-      'When a user mentions "export is clunky" 3 times, I create a feature request linked to 4 similar complaints, calculate it affects 23% of power users, move it to Next Sprint.'
-    ],
-    highlight: 'From feedback to roadmap, automatically'
+    title: 'User Feedback',
+    problem: '8 interviews piling up',
+    visual: 'feedback-loop',
+    result: '5 booked, questions ready',
+    example: '"Export clunky" × 3 → feature request created, 23% users affected'
   },
   {
     label: '04',
-    title: 'The Docs You Keep Postponing',
-    hook: 'Your Privacy Policy doesn\'t mention new EU users.',
-    story: [
-      'I\'ve drafted GDPR-compliant updates, flagged 3 sections you need to review (data retention), formatted for /legal.',
-      'You added Stripe? I updated Section 4, added it to processors list, created changelog so users know what changed.'
-    ],
-    highlight: 'Compliance handled, users informed'
+    title: 'Compliance Docs',
+    problem: 'Privacy policy outdated',
+    visual: 'docs',
+    result: 'GDPR update drafted',
+    example: 'You added Stripe → Section 4 updated, changelog posted'
   }
 ];
 
@@ -67,65 +59,104 @@ export default function Features() {
           </p>
         </div>
 
-        {/* Asymmetric scenario cards */}
-        <div className="space-y-32">
-          {scenarios.map((scenario, index) => (
+        {/* Compact visual cards */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {scenarios.map((scenario) => (
             <div
               key={scenario.label}
-              className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-start ${
-                index % 2 === 1 ? 'lg:grid-flow-dense' : ''
-              }`}
+              className="group relative p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-[#00D4FF]/50 transition-all duration-300"
             >
-              {/* Content side */}
-              <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                <div className="flex items-center gap-4 mb-6">
-                  <span className="text-6xl font-black text-gray-900">{scenario.label}</span>
-                  <div className="h-px flex-1 bg-gradient-to-r from-gray-800 to-transparent"></div>
-                </div>
+              {/* Glow effect */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#2D5BFF]/0 to-[#00D4FF]/0 group-hover:from-[#2D5BFF]/10 group-hover:to-[#00D4FF]/10 transition-all duration-300"></div>
 
-                <h3 className="text-4xl sm:text-5xl font-black text-white mb-8 leading-tight">
-                  {scenario.title}
-                </h3>
-
-                {/* Story blocks */}
-                <div className="space-y-6">
-                  {/* Hook - attention grabber */}
-                  <div className="p-6 rounded-2xl bg-gradient-to-br from-[#2D5BFF]/20 to-[#00D4FF]/10 border border-[#00D4FF]/30">
-                    <p className="text-xl text-white font-medium leading-relaxed">
-                      {scenario.hook}
-                    </p>
-                  </div>
-
-                  {/* Story progression */}
-                  {scenario.story.map((line, i) => (
-                    <div key={i} className="pl-6 border-l-2 border-gray-800">
-                      <p className="text-lg text-gray-300 leading-relaxed">
-                        {line}
-                      </p>
+              <div className="relative">
+                {/* Header with number */}
+                <div className="flex items-start justify-between mb-6">
+                  <div>
+                    <div className="text-sm font-bold text-[#00D4FF] uppercase tracking-wider mb-2">
+                      {scenario.label}
                     </div>
-                  ))}
-                </div>
-
-                {/* Highlight badge */}
-                <div className="mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
-                  <div className="w-2 h-2 rounded-full bg-[#00D4FF] shadow-lg shadow-[#00D4FF]/50"></div>
-                  <span className="text-sm font-bold text-gray-400 uppercase tracking-wide">
-                    {scenario.highlight}
-                  </span>
-                </div>
-              </div>
-
-              {/* Visual side - large number or graphic */}
-              <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''} flex items-center justify-center`}>
-                <div className="relative">
-                  {/* Giant decorative number */}
-                  <div className="text-[20rem] sm:text-[25rem] font-black leading-none opacity-5 bg-gradient-to-br from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent select-none">
-                    {scenario.label}
+                    <h3 className="text-3xl font-black text-white mb-2">
+                      {scenario.title}
+                    </h3>
+                    <p className="text-gray-500 text-sm">{scenario.problem}</p>
                   </div>
-
-                  {/* Floating accent */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-gradient-to-br from-[#2D5BFF]/20 to-[#00D4FF]/20 blur-3xl"></div>
                 </div>
+
+                {/* Visual diagram */}
+                <div className="my-8 p-6 rounded-2xl bg-black/40 border border-white/5">
+                  {scenario.visual === 'commits' && (
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full bg-gray-700"></div>
+                        <div className="text-xs text-gray-600 font-mono">git commit -m "Add email verification"</div>
+                      </div>
+                      <div className="pl-5 border-l-2 border-[#2D5BFF]/30 ml-1 py-2">
+                        <div className="text-xs text-[#00D4FF]">AI extracts value</div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full bg-[#00D4FF] shadow-lg shadow-[#00D4FF]/50"></div>
+                        <div className="text-xs text-white font-medium">3 posts queued for review</div>
+                      </div>
+                    </div>
+                  )}
+
+                  {scenario.visual === 'price-change' && (
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <div className="text-2xl font-black text-gray-700 line-through">$99</div>
+                        <div className="text-xs text-gray-600">→</div>
+                        <div className="text-2xl font-black text-[#00D4FF]">$79</div>
+                      </div>
+                      <div className="h-px bg-gradient-to-r from-transparent via-[#00D4FF]/30 to-transparent"></div>
+                      <div className="text-xs text-white">Alert sent in 2 hours</div>
+                    </div>
+                  )}
+
+                  {scenario.visual === 'feedback-loop' && (
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-2">
+                        <div className="flex-1 h-8 rounded bg-gray-800 flex items-center px-3">
+                          <div className="text-xs text-gray-500">8 requests</div>
+                        </div>
+                      </div>
+                      <div className="text-xs text-[#00D4FF] text-center">↓ Filter & Schedule</div>
+                      <div className="flex gap-2">
+                        {[1,2,3,4,5].map(i => (
+                          <div key={i} className="flex-1 h-6 rounded bg-[#2D5BFF]/30 border border-[#2D5BFF]"></div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {scenario.visual === 'docs' && (
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full bg-red-500"></div>
+                        <div className="text-xs text-gray-500 line-through">Privacy v2.0 (2024)</div>
+                      </div>
+                      <div className="pl-5 border-l-2 border-[#00D4FF]/30 ml-1 py-2">
+                        <div className="text-xs text-[#00D4FF]">GDPR compliance check</div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full bg-[#00D4FF] shadow-lg shadow-[#00D4FF]/50"></div>
+                        <div className="text-xs text-white">Privacy v3.0 ready</div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Result highlight */}
+                <div className="p-4 rounded-xl bg-gradient-to-r from-[#2D5BFF]/10 to-[#00D4FF]/10 border border-[#00D4FF]/20 mb-4">
+                  <div className="text-lg font-bold text-white mb-1">
+                    {scenario.result}
+                  </div>
+                </div>
+
+                {/* Example */}
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {scenario.example}
+                </p>
               </div>
             </div>
           ))}

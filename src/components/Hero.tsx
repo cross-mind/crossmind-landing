@@ -22,22 +22,17 @@ export default function Hero() {
           </div>
 
           {/* Bold statement headline */}
-          <h1 className="text-5xl sm:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tight">
-            I know you built
-            <br />
-            something{' '}
+          <h1 className="text-6xl sm:text-8xl font-black text-white mb-6 leading-[0.95] tracking-tight max-w-5xl mx-auto">
+            Your AI co-founder for{' '}
             <span className="bg-gradient-to-r from-[#2D5BFF] via-[#00D4FF] to-[#2D5BFF] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-              great
+              growth
             </span>
           </h1>
 
-          {/* Impactful subheadline */}
-          <p className="text-xl sm:text-2xl text-gray-400 mb-4 max-w-3xl mx-auto font-light leading-relaxed">
-            And you're really good at it.
-          </p>
-          <p className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            But growing your product? There are always things you're not used to doing.
-            <span className="block mt-4 text-white font-medium text-2xl sm:text-3xl">Let me handle growth while you build.</span>
+          {/* Simple subheadline */}
+          <p className="text-2xl sm:text-3xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+            I handle content, competitors, users.
+            <span className="block mt-2 text-white font-bold">You focus on building.</span>
           </p>
 
           {/* Strong CTA */}

@@ -60,17 +60,14 @@ function Hero() {
         ] }),
         /* @__PURE__ */ jsx("span", { className: "text-gray-300 text-sm font-medium tracking-wide", children: "BETA ACCESS AVAILABLE" })
       ] }),
-      /* @__PURE__ */ jsxs("h1", { className: "text-5xl sm:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tight", children: [
-        "I know you built",
-        /* @__PURE__ */ jsx("br", {}),
-        "something",
+      /* @__PURE__ */ jsxs("h1", { className: "text-6xl sm:text-8xl font-black text-white mb-6 leading-[0.95] tracking-tight max-w-5xl mx-auto", children: [
+        "Your AI co-founder for",
         " ",
-        /* @__PURE__ */ jsx("span", { className: "bg-gradient-to-r from-[#2D5BFF] via-[#00D4FF] to-[#2D5BFF] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient", children: "great" })
+        /* @__PURE__ */ jsx("span", { className: "bg-gradient-to-r from-[#2D5BFF] via-[#00D4FF] to-[#2D5BFF] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient", children: "growth" })
       ] }),
-      /* @__PURE__ */ jsx("p", { className: "text-xl sm:text-2xl text-gray-400 mb-4 max-w-3xl mx-auto font-light leading-relaxed", children: "And you're really good at it." }),
-      /* @__PURE__ */ jsxs("p", { className: "text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed", children: [
-        "But growing your product? There are always things you're not used to doing.",
-        /* @__PURE__ */ jsx("span", { className: "block mt-4 text-white font-medium text-2xl sm:text-3xl", children: "Let me handle growth while you build." })
+      /* @__PURE__ */ jsxs("p", { className: "text-2xl sm:text-3xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed", children: [
+        "I handle content, competitors, users.",
+        /* @__PURE__ */ jsx("span", { className: "block mt-2 text-white font-bold", children: "You focus on building." })
       ] }),
       /* @__PURE__ */ jsx("div", { className: "flex flex-col sm:flex-row gap-4 justify-center items-center mb-16", children: /* @__PURE__ */ jsxs(
         "a",
@@ -105,43 +102,35 @@ function Hero() {
 const scenarios = [
   {
     label: "01",
-    title: "Build in Public Without the Grind",
-    hook: "It's Tuesday 9am.",
-    story: [
-      "I've already pulled your latest commits, matched your voice, and queued 3 posts for review.",
-      "You shipped email verification Friday—by Monday I've turned it into a tweet thread with metrics from beta feedback."
-    ],
-    highlight: "Content on autopilot, in your voice"
+    title: "Build in Public",
+    problem: "Content consistency is hard",
+    visual: "commits",
+    result: "Tue 9am → 3 posts ready",
+    example: "Your Friday commit became Monday's tweet thread"
   },
   {
     label: "02",
-    title: "Competitor Research That Stays Current",
-    hook: "Your competitor dropped their Team plan from $99→$79 yesterday.",
-    story: [
-      "I noticed.",
-      "I've drafted a comparison update for your docs and flagged 3 positioning opportunities you can use this week."
-    ],
-    highlight: "Market intelligence, delivered"
+    title: "Competitor Intel",
+    problem: "Markets move fast",
+    visual: "price-change",
+    result: "$99→$79 noticed in 2hrs",
+    example: "Comparison doc + 3 positioning moves drafted"
   },
   {
     label: "03",
-    title: "User Feedback That Doesn't Pile Up",
-    hook: "8 interview requests in your inbox from last month.",
-    story: [
-      "I booked 5 for next week (filtered out tire-kickers), prepared questions based on your roadmap.",
-      'When a user mentions "export is clunky" 3 times, I create a feature request linked to 4 similar complaints, calculate it affects 23% of power users, move it to Next Sprint.'
-    ],
-    highlight: "From feedback to roadmap, automatically"
+    title: "User Feedback",
+    problem: "8 interviews piling up",
+    visual: "feedback-loop",
+    result: "5 booked, questions ready",
+    example: '"Export clunky" × 3 → feature request created, 23% users affected'
   },
   {
     label: "04",
-    title: "The Docs You Keep Postponing",
-    hook: "Your Privacy Policy doesn't mention new EU users.",
-    story: [
-      "I've drafted GDPR-compliant updates, flagged 3 sections you need to review (data retention), formatted for /legal.",
-      "You added Stripe? I updated Section 4, added it to processors list, created changelog so users know what changed."
-    ],
-    highlight: "Compliance handled, users informed"
+    title: "Compliance Docs",
+    problem: "Privacy policy outdated",
+    visual: "docs",
+    result: "GDPR update drafted",
+    example: "You added Stripe → Section 4 updated, changelog posted"
   }
 ];
 function Features() {
@@ -163,30 +152,59 @@ function Features() {
           /* @__PURE__ */ jsx("span", { className: "block mt-2 text-white", children: "I do it while you build." })
         ] })
       ] }),
-      /* @__PURE__ */ jsx("div", { className: "space-y-32", children: scenarios.map((scenario, index) => /* @__PURE__ */ jsxs(
+      /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-2 gap-8", children: scenarios.map((scenario) => /* @__PURE__ */ jsxs(
         "div",
         {
-          className: `grid lg:grid-cols-2 gap-12 lg:gap-20 items-start ${index % 2 === 1 ? "lg:grid-flow-dense" : ""}`,
+          className: "group relative p-8 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10 hover:border-[#00D4FF]/50 transition-all duration-300",
           children: [
-            /* @__PURE__ */ jsxs("div", { className: index % 2 === 1 ? "lg:col-start-2" : "", children: [
-              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4 mb-6", children: [
-                /* @__PURE__ */ jsx("span", { className: "text-6xl font-black text-gray-900", children: scenario.label }),
-                /* @__PURE__ */ jsx("div", { className: "h-px flex-1 bg-gradient-to-r from-gray-800 to-transparent" })
+            /* @__PURE__ */ jsx("div", { className: "absolute inset-0 rounded-3xl bg-gradient-to-br from-[#2D5BFF]/0 to-[#00D4FF]/0 group-hover:from-[#2D5BFF]/10 group-hover:to-[#00D4FF]/10 transition-all duration-300" }),
+            /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+              /* @__PURE__ */ jsx("div", { className: "flex items-start justify-between mb-6", children: /* @__PURE__ */ jsxs("div", { children: [
+                /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-[#00D4FF] uppercase tracking-wider mb-2", children: scenario.label }),
+                /* @__PURE__ */ jsx("h3", { className: "text-3xl font-black text-white mb-2", children: scenario.title }),
+                /* @__PURE__ */ jsx("p", { className: "text-gray-500 text-sm", children: scenario.problem })
+              ] }) }),
+              /* @__PURE__ */ jsxs("div", { className: "my-8 p-6 rounded-2xl bg-black/40 border border-white/5", children: [
+                scenario.visual === "commits" && /* @__PURE__ */ jsxs("div", { className: "space-y-3", children: [
+                  /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+                    /* @__PURE__ */ jsx("div", { className: "w-2 h-2 rounded-full bg-gray-700" }),
+                    /* @__PURE__ */ jsx("div", { className: "text-xs text-gray-600 font-mono", children: 'git commit -m "Add email verification"' })
+                  ] }),
+                  /* @__PURE__ */ jsx("div", { className: "pl-5 border-l-2 border-[#2D5BFF]/30 ml-1 py-2", children: /* @__PURE__ */ jsx("div", { className: "text-xs text-[#00D4FF]", children: "AI extracts value" }) }),
+                  /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+                    /* @__PURE__ */ jsx("div", { className: "w-2 h-2 rounded-full bg-[#00D4FF] shadow-lg shadow-[#00D4FF]/50" }),
+                    /* @__PURE__ */ jsx("div", { className: "text-xs text-white font-medium", children: "3 posts queued for review" })
+                  ] })
+                ] }),
+                scenario.visual === "price-change" && /* @__PURE__ */ jsxs("div", { className: "space-y-3", children: [
+                  /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between", children: [
+                    /* @__PURE__ */ jsx("div", { className: "text-2xl font-black text-gray-700 line-through", children: "$99" }),
+                    /* @__PURE__ */ jsx("div", { className: "text-xs text-gray-600", children: "→" }),
+                    /* @__PURE__ */ jsx("div", { className: "text-2xl font-black text-[#00D4FF]", children: "$79" })
+                  ] }),
+                  /* @__PURE__ */ jsx("div", { className: "h-px bg-gradient-to-r from-transparent via-[#00D4FF]/30 to-transparent" }),
+                  /* @__PURE__ */ jsx("div", { className: "text-xs text-white", children: "Alert sent in 2 hours" })
+                ] }),
+                scenario.visual === "feedback-loop" && /* @__PURE__ */ jsxs("div", { className: "space-y-3", children: [
+                  /* @__PURE__ */ jsx("div", { className: "flex items-center gap-2", children: /* @__PURE__ */ jsx("div", { className: "flex-1 h-8 rounded bg-gray-800 flex items-center px-3", children: /* @__PURE__ */ jsx("div", { className: "text-xs text-gray-500", children: "8 requests" }) }) }),
+                  /* @__PURE__ */ jsx("div", { className: "text-xs text-[#00D4FF] text-center", children: "↓ Filter & Schedule" }),
+                  /* @__PURE__ */ jsx("div", { className: "flex gap-2", children: [1, 2, 3, 4, 5].map((i) => /* @__PURE__ */ jsx("div", { className: "flex-1 h-6 rounded bg-[#2D5BFF]/30 border border-[#2D5BFF]" }, i)) })
+                ] }),
+                scenario.visual === "docs" && /* @__PURE__ */ jsxs("div", { className: "space-y-3", children: [
+                  /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+                    /* @__PURE__ */ jsx("div", { className: "w-2 h-2 rounded-full bg-red-500" }),
+                    /* @__PURE__ */ jsx("div", { className: "text-xs text-gray-500 line-through", children: "Privacy v2.0 (2024)" })
+                  ] }),
+                  /* @__PURE__ */ jsx("div", { className: "pl-5 border-l-2 border-[#00D4FF]/30 ml-1 py-2", children: /* @__PURE__ */ jsx("div", { className: "text-xs text-[#00D4FF]", children: "GDPR compliance check" }) }),
+                  /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+                    /* @__PURE__ */ jsx("div", { className: "w-2 h-2 rounded-full bg-[#00D4FF] shadow-lg shadow-[#00D4FF]/50" }),
+                    /* @__PURE__ */ jsx("div", { className: "text-xs text-white", children: "Privacy v3.0 ready" })
+                  ] })
+                ] })
               ] }),
-              /* @__PURE__ */ jsx("h3", { className: "text-4xl sm:text-5xl font-black text-white mb-8 leading-tight", children: scenario.title }),
-              /* @__PURE__ */ jsxs("div", { className: "space-y-6", children: [
-                /* @__PURE__ */ jsx("div", { className: "p-6 rounded-2xl bg-gradient-to-br from-[#2D5BFF]/20 to-[#00D4FF]/10 border border-[#00D4FF]/30", children: /* @__PURE__ */ jsx("p", { className: "text-xl text-white font-medium leading-relaxed", children: scenario.hook }) }),
-                scenario.story.map((line, i) => /* @__PURE__ */ jsx("div", { className: "pl-6 border-l-2 border-gray-800", children: /* @__PURE__ */ jsx("p", { className: "text-lg text-gray-300 leading-relaxed", children: line }) }, i))
-              ] }),
-              /* @__PURE__ */ jsxs("div", { className: "mt-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-2 h-2 rounded-full bg-[#00D4FF] shadow-lg shadow-[#00D4FF]/50" }),
-                /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-gray-400 uppercase tracking-wide", children: scenario.highlight })
-              ] })
-            ] }),
-            /* @__PURE__ */ jsx("div", { className: `${index % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""} flex items-center justify-center`, children: /* @__PURE__ */ jsxs("div", { className: "relative", children: [
-              /* @__PURE__ */ jsx("div", { className: "text-[20rem] sm:text-[25rem] font-black leading-none opacity-5 bg-gradient-to-br from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent select-none", children: scenario.label }),
-              /* @__PURE__ */ jsx("div", { className: "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-gradient-to-br from-[#2D5BFF]/20 to-[#00D4FF]/20 blur-3xl" })
-            ] }) })
+              /* @__PURE__ */ jsx("div", { className: "p-4 rounded-xl bg-gradient-to-r from-[#2D5BFF]/10 to-[#00D4FF]/10 border border-[#00D4FF]/20 mb-4", children: /* @__PURE__ */ jsx("div", { className: "text-lg font-bold text-white mb-1", children: scenario.result }) }),
+              /* @__PURE__ */ jsx("p", { className: "text-sm text-gray-400 leading-relaxed", children: scenario.example })
+            ] })
           ]
         },
         scenario.label
@@ -203,91 +221,89 @@ function HowIWork() {
     ] }),
     /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:80px_80px]" }),
     /* @__PURE__ */ jsxs("div", { className: "relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: [
-      /* @__PURE__ */ jsxs("h2", { className: "text-7xl sm:text-9xl font-black text-white mb-32 leading-[0.85] tracking-tighter", children: [
-        "I'm not a tool.",
+      /* @__PURE__ */ jsxs("h2", { className: "text-7xl sm:text-9xl font-black text-white mb-20 leading-[0.85] tracking-tighter", children: [
+        "I optimize",
         /* @__PURE__ */ jsx("br", {}),
-        /* @__PURE__ */ jsx("span", { className: "bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent", children: "I learn." })
+        /* @__PURE__ */ jsx("span", { className: "bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent", children: "your time" })
       ] }),
-      /* @__PURE__ */ jsxs("div", { className: "mb-40", children: [
-        /* @__PURE__ */ jsx("p", { className: "text-2xl text-gray-400 mb-16 max-w-2xl", children: "Your time is the most valuable asset. Here's how I optimize it:" }),
-        /* @__PURE__ */ jsxs("div", { className: "space-y-12", children: [
-          /* @__PURE__ */ jsxs("div", { children: [
-            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4 mb-6", children: [
-              /* @__PURE__ */ jsx("span", { className: "text-6xl font-black text-gray-800", children: "Before" }),
-              /* @__PURE__ */ jsx("div", { className: "h-px flex-1 bg-gradient-to-r from-gray-800 to-transparent" })
-            ] }),
-            /* @__PURE__ */ jsxs("div", { className: "space-y-3", children: [
-              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-2/5 h-16 bg-gradient-to-r from-gray-700 to-gray-800 rounded-lg flex items-center px-6", children: /* @__PURE__ */ jsx("span", { className: "text-white font-bold", children: "Building product" }) }),
-                /* @__PURE__ */ jsx("span", { className: "text-3xl font-black text-gray-600", children: "40%" })
-              ] }),
-              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-2/5 h-16 bg-gradient-to-r from-red-900/50 to-red-800/50 rounded-lg flex items-center px-6 border border-red-500/30", children: /* @__PURE__ */ jsx("span", { className: "text-red-300 font-bold", children: "Growth grunt work" }) }),
-                /* @__PURE__ */ jsx("span", { className: "text-3xl font-black text-red-400", children: "40%" }),
-                /* @__PURE__ */ jsx("span", { className: "text-red-400 text-sm", children: "← Time drain" })
-              ] }),
-              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-1/5 h-16 bg-gradient-to-r from-gray-700 to-gray-800 rounded-lg flex items-center px-6", children: /* @__PURE__ */ jsx("span", { className: "text-white font-bold", children: "Thinking" }) }),
-                /* @__PURE__ */ jsx("span", { className: "text-3xl font-black text-gray-600", children: "20%" })
-              ] })
-            ] })
-          ] }),
-          /* @__PURE__ */ jsxs("div", { children: [
-            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4 mb-6", children: [
-              /* @__PURE__ */ jsx("span", { className: "text-6xl font-black bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent", children: "With me" }),
-              /* @__PURE__ */ jsx("div", { className: "h-px flex-1 bg-gradient-to-r from-[#00D4FF] to-transparent" })
-            ] }),
-            /* @__PURE__ */ jsxs("div", { className: "space-y-3", children: [
-              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-3/5 h-20 bg-gradient-to-r from-[#2D5BFF] to-[#2D5BFF]/80 rounded-lg flex items-center px-6 shadow-2xl shadow-[#2D5BFF]/30", children: /* @__PURE__ */ jsx("span", { className: "text-white font-bold text-lg", children: "Building product" }) }),
-                /* @__PURE__ */ jsx("span", { className: "text-4xl font-black text-white", children: "60%" }),
-                /* @__PURE__ */ jsx("span", { className: "text-[#00D4FF] text-sm font-bold", children: "+50% more" })
-              ] }),
-              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-1/12 h-12 bg-gradient-to-r from-gray-800 to-gray-900 rounded-lg flex items-center justify-center opacity-50", children: /* @__PURE__ */ jsx("span", { className: "text-gray-500 font-bold text-xs", children: "Growth" }) }),
-                /* @__PURE__ */ jsx("span", { className: "text-2xl font-black text-gray-500", children: "10%" }),
-                /* @__PURE__ */ jsx("span", { className: "text-[#00D4FF] text-sm font-bold", children: "← I handle this" })
-              ] }),
-              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-1/3 h-20 bg-gradient-to-r from-[#00D4FF] to-[#00D4FF]/80 rounded-lg flex items-center px-6 shadow-2xl shadow-[#00D4FF]/30", children: /* @__PURE__ */ jsx("span", { className: "text-white font-bold text-lg", children: "Strategic thinking" }) }),
-                /* @__PURE__ */ jsx("span", { className: "text-4xl font-black text-white", children: "30%" }),
-                /* @__PURE__ */ jsx("span", { className: "text-[#00D4FF] text-sm font-bold", children: "+50% more" })
-              ] })
-            ] })
-          ] })
-        ] })
-      ] }),
-      /* @__PURE__ */ jsxs("div", { className: "grid md:grid-cols-2 gap-20 items-start", children: [
+      /* @__PURE__ */ jsx("div", { className: "mb-40", children: /* @__PURE__ */ jsxs("div", { className: "max-w-4xl mx-auto space-y-16", children: [
         /* @__PURE__ */ jsxs("div", { children: [
-          /* @__PURE__ */ jsx("h3", { className: "text-5xl font-black text-white mb-8 leading-tight", children: "How I evolve with you" }),
-          /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-400 leading-relaxed", children: "I'm not following a script. I'm learning your workflow, your voice, your priorities. Every interaction makes me sharper." })
+          /* @__PURE__ */ jsx("div", { className: "text-4xl font-black text-gray-700 mb-6", children: "Before" }),
+          /* @__PURE__ */ jsxs("div", { className: "space-y-2", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+              /* @__PURE__ */ jsx("div", { className: "flex-1 h-14 bg-gray-800 rounded-lg relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-gray-400", children: "Building" }) }) }),
+              /* @__PURE__ */ jsx("span", { className: "text-2xl font-black text-gray-600 w-16", children: "40%" })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+              /* @__PURE__ */ jsx("div", { className: "flex-1 h-14 bg-red-900/30 rounded-lg border border-red-500/30 relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-red-400", children: "Growth work" }) }) }),
+              /* @__PURE__ */ jsx("span", { className: "text-2xl font-black text-red-400 w-16", children: "40%" })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+              /* @__PURE__ */ jsx("div", { className: "flex-1 h-14 bg-gray-800 rounded-lg relative overflow-hidden", style: { width: "50%" }, children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-gray-400", children: "Thinking" }) }) }),
+              /* @__PURE__ */ jsx("span", { className: "text-2xl font-black text-gray-600 w-16", children: "20%" })
+            ] })
+          ] })
         ] }),
-        /* @__PURE__ */ jsxs("div", { className: "space-y-8", children: [
-          /* @__PURE__ */ jsxs("div", { className: "relative pl-8 border-l-2 border-gray-800", children: [
-            /* @__PURE__ */ jsx("div", { className: "absolute -left-3 top-0 w-5 h-5 rounded-full bg-gray-700 border-4 border-black" }),
-            /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-gray-600 mb-2", children: "WEEK 1" }),
-            /* @__PURE__ */ jsx("h4", { className: "text-2xl font-bold text-white mb-2", children: "Like a junior hire" }),
-            /* @__PURE__ */ jsx("p", { className: "text-gray-400", children: "I use best practices from successful indie products. Solid baseline, no personalization yet." })
-          ] }),
-          /* @__PURE__ */ jsxs("div", { className: "relative pl-8 border-l-2 border-[#2D5BFF]/30", children: [
-            /* @__PURE__ */ jsx("div", { className: "absolute -left-3 top-0 w-5 h-5 rounded-full bg-[#2D5BFF] border-4 border-black" }),
-            /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-[#2D5BFF] mb-2", children: "WEEK 4" }),
-            /* @__PURE__ */ jsx("h4", { className: "text-2xl font-bold text-white mb-2", children: "Like a teammate" }),
-            /* @__PURE__ */ jsx("p", { className: "text-gray-400", children: "You edited my competitor analysis to focus on UI? Noted. You prefer data-driven posts? I adjust the content mix automatically." })
-          ] }),
-          /* @__PURE__ */ jsxs("div", { className: "relative pl-8 border-l-2 border-[#00D4FF]/50", children: [
-            /* @__PURE__ */ jsx("div", { className: "absolute -left-3 top-0 w-5 h-5 rounded-full bg-[#00D4FF] border-4 border-black shadow-lg shadow-[#00D4FF]/50" }),
-            /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-[#00D4FF] mb-2", children: "WEEK 12" }),
-            /* @__PURE__ */ jsx("h4", { className: "text-2xl font-bold text-white mb-2", children: "Like a co-founder" }),
-            /* @__PURE__ */ jsx("p", { className: "text-gray-400", children: "I proactively spot opportunities you'd miss. I know what you'd say yes to before you see it. We're in sync." })
+        /* @__PURE__ */ jsxs("div", { children: [
+          /* @__PURE__ */ jsx("div", { className: "text-4xl font-black bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent mb-6", children: "With me" }),
+          /* @__PURE__ */ jsxs("div", { className: "space-y-2", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+              /* @__PURE__ */ jsx("div", { className: "flex-1 h-16 bg-gradient-to-r from-[#2D5BFF] to-[#2D5BFF]/80 rounded-lg shadow-2xl shadow-[#2D5BFF]/30 relative overflow-hidden", children: /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 flex items-center justify-between px-4", children: [
+                /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-white", children: "Building" }),
+                /* @__PURE__ */ jsx("span", { className: "text-xs text-[#00D4FF] font-bold", children: "+50%" })
+              ] }) }),
+              /* @__PURE__ */ jsx("span", { className: "text-3xl font-black text-white w-16", children: "60%" })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+              /* @__PURE__ */ jsx("div", { className: "flex-1 h-10 bg-gray-900/50 rounded-lg opacity-40 relative overflow-hidden", style: { width: "25%" }, children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-xs font-bold text-gray-600", children: "Growth" }) }) }),
+              /* @__PURE__ */ jsx("span", { className: "text-xl font-black text-gray-600 w-16", children: "10%" })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+              /* @__PURE__ */ jsx("div", { className: "flex-1 h-16 bg-gradient-to-r from-[#00D4FF] to-[#00D4FF]/80 rounded-lg shadow-2xl shadow-[#00D4FF]/30 relative overflow-hidden", style: { width: "75%" }, children: /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 flex items-center justify-between px-4", children: [
+                /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-white", children: "Thinking" }),
+                /* @__PURE__ */ jsx("span", { className: "text-xs text-[#2D5BFF] font-bold", children: "+50%" })
+              ] }) }),
+              /* @__PURE__ */ jsx("span", { className: "text-3xl font-black text-white w-16", children: "30%" })
+            ] })
+          ] })
+        ] })
+      ] }) }),
+      /* @__PURE__ */ jsxs("div", { className: "max-w-4xl mx-auto", children: [
+        /* @__PURE__ */ jsx("h3", { className: "text-5xl font-black text-white mb-16 text-center", children: "I learn as we work" }),
+        /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+          /* @__PURE__ */ jsx("div", { className: "absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gray-800 via-[#2D5BFF] to-[#00D4FF]" }),
+          /* @__PURE__ */ jsxs("div", { className: "space-y-12", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-8", children: [
+              /* @__PURE__ */ jsxs("div", { className: "flex-1 text-right", children: [
+                /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-gray-600 mb-1", children: "WEEK 1" }),
+                /* @__PURE__ */ jsx("div", { className: "text-xl font-bold text-white", children: "Junior hire" })
+              ] }),
+              /* @__PURE__ */ jsx("div", { className: "relative z-10 w-4 h-4 rounded-full bg-gray-700 border-4 border-black flex-shrink-0" }),
+              /* @__PURE__ */ jsx("div", { className: "flex-1", children: /* @__PURE__ */ jsx("p", { className: "text-gray-400", children: "Best practices baseline" }) })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-8", children: [
+              /* @__PURE__ */ jsxs("div", { className: "flex-1 text-right", children: [
+                /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-[#2D5BFF] mb-1", children: "WEEK 4" }),
+                /* @__PURE__ */ jsx("div", { className: "text-xl font-bold text-white", children: "Teammate" })
+              ] }),
+              /* @__PURE__ */ jsx("div", { className: "relative z-10 w-4 h-4 rounded-full bg-[#2D5BFF] border-4 border-black flex-shrink-0 shadow-lg shadow-[#2D5BFF]/50" }),
+              /* @__PURE__ */ jsx("div", { className: "flex-1", children: /* @__PURE__ */ jsx("p", { className: "text-gray-400", children: "Knows your preferences" }) })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-8", children: [
+              /* @__PURE__ */ jsxs("div", { className: "flex-1 text-right", children: [
+                /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-[#00D4FF] mb-1", children: "WEEK 12" }),
+                /* @__PURE__ */ jsx("div", { className: "text-xl font-bold text-white", children: "Co-founder" })
+              ] }),
+              /* @__PURE__ */ jsx("div", { className: "relative z-10 w-4 h-4 rounded-full bg-[#00D4FF] border-4 border-black flex-shrink-0 shadow-lg shadow-[#00D4FF]/50" }),
+              /* @__PURE__ */ jsx("div", { className: "flex-1", children: /* @__PURE__ */ jsx("p", { className: "text-gray-400", children: "Proactive & in sync" }) })
+            ] })
           ] })
         ] })
       ] }),
-      /* @__PURE__ */ jsx("div", { className: "mt-40 max-w-4xl", children: /* @__PURE__ */ jsxs("div", { className: "p-12 rounded-3xl bg-gradient-to-br from-white/5 to-white/0 border border-white/10 backdrop-blur-sm", children: [
-        /* @__PURE__ */ jsx("h3", { className: "text-4xl font-black text-white mb-6", children: "I'm transparent, not a black box" }),
-        /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-300 leading-relaxed mb-6", children: "Check your dashboard any time: what I'm working on, what I've shipped, what I learned." }),
-        /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-300 leading-relaxed", children: `Set boundaries—tell me "never auto-publish" or "always ask before emailing users." I'll remember.` })
-      ] }) })
+      /* @__PURE__ */ jsxs("div", { className: "mt-40 max-w-3xl mx-auto text-center", children: [
+        /* @__PURE__ */ jsx("h3", { className: "text-4xl font-black text-white mb-6", children: "You're in control" }),
+        /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-400 leading-relaxed", children: "Dashboard shows what I'm doing. Set boundaries. I remember your rules." })
+      ] })
     ] })
   ] });
 }
@@ -299,78 +315,34 @@ function WhyNow() {
       /* @__PURE__ */ jsx("div", { className: "absolute bottom-1/4 right-0 w-96 h-96 bg-[#00D4FF]/20 rounded-full blur-[120px]" })
     ] }),
     /* @__PURE__ */ jsxs("div", { className: "relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: [
-      /* @__PURE__ */ jsxs("div", { className: "text-center mb-32", children: [
-        /* @__PURE__ */ jsx("p", { className: "text-2xl sm:text-3xl text-gray-400 mb-8 font-light", children: "The game changed." }),
-        /* @__PURE__ */ jsxs("h2", { className: "text-7xl sm:text-9xl font-black text-white mb-12 leading-[0.85] tracking-tighter max-w-5xl mx-auto", children: [
-          "I'm here to make sure you can",
-          " ",
-          /* @__PURE__ */ jsx("span", { className: "bg-gradient-to-r from-[#2D5BFF] via-[#00D4FF] to-[#2D5BFF] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient", children: "play it" })
-        ] })
-      ] }),
-      /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-2 gap-16 lg:gap-32", children: [
-        /* @__PURE__ */ jsxs("div", { className: "relative", children: [
-          /* @__PURE__ */ jsx("div", { className: "absolute -inset-4 bg-gradient-to-br from-red-900/10 to-transparent rounded-3xl" }),
-          /* @__PURE__ */ jsxs("div", { className: "relative", children: [
-            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4 mb-8", children: [
-              /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-red-500/50 uppercase tracking-widest", children: "Old Era" }),
-              /* @__PURE__ */ jsx("div", { className: "h-px flex-1 bg-red-500/20" })
-            ] }),
-            /* @__PURE__ */ jsx("h3", { className: "text-5xl font-black text-gray-700 mb-8 line-through decoration-red-500/30 decoration-4", children: "Bigger team wins" }),
-            /* @__PURE__ */ jsxs("div", { className: "space-y-6", children: [
-              /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-4", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-2 h-2 mt-3 rounded-full bg-gray-700 flex-shrink-0" }),
-                /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-600 line-through decoration-gray-700", children: "More engineers = more features" })
-              ] }),
-              /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-4", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-2 h-2 mt-3 rounded-full bg-gray-700 flex-shrink-0" }),
-                /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-600 line-through decoration-gray-700", children: "More funding = longer runway" })
-              ] }),
-              /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-4", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-2 h-2 mt-3 rounded-full bg-gray-700 flex-shrink-0" }),
-                /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-600 line-through decoration-gray-700", children: "Execution is scarce resource" })
-              ] })
-            ] }),
-            /* @__PURE__ */ jsx("div", { className: "mt-12 p-6 rounded-2xl bg-red-950/20 border border-red-900/30", children: /* @__PURE__ */ jsx("p", { className: "text-gray-500 italic", children: '"We need to hire 3 more people to handle growth..."' }) })
+      /* @__PURE__ */ jsx("div", { className: "text-center mb-32", children: /* @__PURE__ */ jsxs("h2", { className: "text-7xl sm:text-9xl font-black text-white mb-12 leading-[0.85] tracking-tighter max-w-5xl mx-auto", children: [
+        "The game",
+        /* @__PURE__ */ jsx("br", {}),
+        /* @__PURE__ */ jsx("span", { className: "bg-gradient-to-r from-[#2D5BFF] via-[#00D4FF] to-[#2D5BFF] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient", children: "changed" })
+      ] }) }),
+      /* @__PURE__ */ jsx("div", { className: "max-w-5xl mx-auto", children: /* @__PURE__ */ jsxs("div", { className: "grid md:grid-cols-2 gap-8", children: [
+        /* @__PURE__ */ jsxs("div", { className: "p-8 rounded-3xl bg-white/5 border border-white/10 relative overflow-hidden", children: [
+          /* @__PURE__ */ jsx("div", { className: "absolute top-4 right-4 text-xs font-bold text-gray-700 uppercase", children: "Before" }),
+          /* @__PURE__ */ jsx("div", { className: "text-4xl font-black text-gray-700 mb-8 line-through decoration-gray-800", children: "Bigger team" }),
+          /* @__PURE__ */ jsxs("div", { className: "space-y-4 text-gray-600 text-lg", children: [
+            /* @__PURE__ */ jsx("div", { children: "More engineers" }),
+            /* @__PURE__ */ jsx("div", { children: "More funding" }),
+            /* @__PURE__ */ jsx("div", { children: "More time" })
           ] })
         ] }),
-        /* @__PURE__ */ jsxs("div", { className: "relative", children: [
-          /* @__PURE__ */ jsx("div", { className: "absolute -inset-4 bg-gradient-to-br from-[#2D5BFF]/20 via-[#00D4FF]/10 to-transparent rounded-3xl" }),
-          /* @__PURE__ */ jsxs("div", { className: "relative", children: [
-            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4 mb-8", children: [
-              /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-[#00D4FF] uppercase tracking-widest", children: "New Era" }),
-              /* @__PURE__ */ jsx("div", { className: "h-px flex-1 bg-gradient-to-r from-[#00D4FF] to-transparent" })
-            ] }),
-            /* @__PURE__ */ jsx("h3", { className: "text-5xl font-black bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent mb-8", children: "Faster iteration wins" }),
-            /* @__PURE__ */ jsxs("div", { className: "space-y-6", children: [
-              /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-4", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-2 h-2 mt-3 rounded-full bg-[#2D5BFF] flex-shrink-0 shadow-lg shadow-[#2D5BFF]/50" }),
-                /* @__PURE__ */ jsx("p", { className: "text-xl text-white font-medium", children: "AI makes execution nearly infinite" })
-              ] }),
-              /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-4", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-2 h-2 mt-3 rounded-full bg-[#00D4FF] flex-shrink-0 shadow-lg shadow-[#00D4FF]/50" }),
-                /* @__PURE__ */ jsx("p", { className: "text-xl text-white font-medium", children: "Better feedback loops = better product-market fit" })
-              ] }),
-              /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-4", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-2 h-2 mt-3 rounded-full bg-[#2D5BFF] flex-shrink-0 shadow-lg shadow-[#2D5BFF]/50" }),
-                /* @__PURE__ */ jsx("p", { className: "text-xl text-white font-medium", children: "Your unique vision is the bottleneck" })
-              ] })
-            ] }),
-            /* @__PURE__ */ jsx("div", { className: "mt-12 p-6 rounded-2xl bg-gradient-to-br from-[#2D5BFF]/10 to-[#00D4FF]/10 border border-[#00D4FF]/30 backdrop-blur-sm", children: /* @__PURE__ */ jsx("p", { className: "text-[#00D4FF] font-medium", children: '"I shipped 3 experiments this week and learned what users actually want."' }) })
+        /* @__PURE__ */ jsxs("div", { className: "p-8 rounded-3xl bg-gradient-to-br from-[#2D5BFF]/20 to-[#00D4FF]/10 border border-[#00D4FF]/30 relative overflow-hidden", children: [
+          /* @__PURE__ */ jsx("div", { className: "absolute top-4 right-4 text-xs font-bold text-[#00D4FF] uppercase", children: "Now" }),
+          /* @__PURE__ */ jsx("div", { className: "text-4xl font-black bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent mb-8", children: "Faster iteration" }),
+          /* @__PURE__ */ jsxs("div", { className: "space-y-4 text-white text-lg font-medium", children: [
+            /* @__PURE__ */ jsx("div", { children: "Better feedback loops" }),
+            /* @__PURE__ */ jsx("div", { children: "AI removes friction" }),
+            /* @__PURE__ */ jsx("div", { children: "Vision matters most" })
           ] })
         ] })
-      ] }),
-      /* @__PURE__ */ jsxs("div", { className: "mt-32 max-w-4xl mx-auto text-center", children: [
-        /* @__PURE__ */ jsxs("p", { className: "text-3xl sm:text-4xl text-white font-light leading-relaxed mb-6", children: [
-          "Your bottleneck isn't",
-          " ",
-          /* @__PURE__ */ jsx("span", { className: "line-through decoration-gray-700 text-gray-600", children: '"can I build it"' })
-        ] }),
-        /* @__PURE__ */ jsx("p", { className: "text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent leading-relaxed", children: `It's "can I learn fast enough from users"` }),
-        /* @__PURE__ */ jsx("div", { className: "mt-16 p-12 rounded-3xl bg-gradient-to-br from-white/5 to-transparent border border-white/10", children: /* @__PURE__ */ jsxs("p", { className: "text-2xl text-gray-300 leading-relaxed", children: [
-          "I remove the friction between shipping and learning.",
-          /* @__PURE__ */ jsx("span", { className: "block mt-4 text-white font-medium", children: "You build, I handle the growth loop." }),
-          /* @__PURE__ */ jsx("span", { className: "block mt-4 text-white font-bold text-3xl", children: "Together we iterate faster than teams 10x your size." })
-        ] }) })
+      ] }) }),
+      /* @__PURE__ */ jsxs("div", { className: "mt-32 max-w-3xl mx-auto text-center", children: [
+        /* @__PURE__ */ jsx("p", { className: "text-3xl sm:text-4xl font-bold text-white leading-relaxed mb-8", children: "I remove friction between shipping and learning" }),
+        /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-400", children: "You build. I handle growth. We iterate faster together." })
       ] })
     ] })
   ] });
