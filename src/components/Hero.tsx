@@ -22,18 +22,22 @@ export default function Hero() {
           </div>
 
           {/* Bold statement headline */}
-          <h1 className="text-6xl sm:text-8xl font-black text-white mb-8 leading-[0.9] tracking-tight">
-            Growth on
+          <h1 className="text-5xl sm:text-7xl font-black text-white mb-8 leading-[1.1] tracking-tight">
+            I know you built
             <br />
+            something{' '}
             <span className="bg-gradient-to-r from-[#2D5BFF] via-[#00D4FF] to-[#2D5BFF] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
-              Autopilot
+              great
             </span>
           </h1>
 
           {/* Impactful subheadline */}
-          <p className="text-xl sm:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-            While you build, your AI co-founder handles content, outreach, and analytics.
-            <span className="block mt-2 text-white font-medium">Zero manual work required.</span>
+          <p className="text-xl sm:text-2xl text-gray-400 mb-4 max-w-3xl mx-auto font-light leading-relaxed">
+            And you're really good at it.
+          </p>
+          <p className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+            But growing your product? There are always things you're not used to doing.
+            <span className="block mt-4 text-white font-medium text-2xl sm:text-3xl">Let me handle growth while you build.</span>
           </p>
 
           {/* Strong CTA */}
@@ -48,18 +52,18 @@ export default function Hero() {
           </div>
 
           {/* Stats bar */}
-          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-8 border-t border-white/10">
+          <div className="grid grid-cols-3 gap-8 max-w-3xl mx-auto pt-8 border-t border-white/10">
             <div>
-              <div className="text-3xl font-bold text-white mb-1">40%</div>
-              <div className="text-sm text-gray-500 uppercase tracking-wide">Early bird discount</div>
+              <div className="text-3xl font-bold text-white mb-1">20hrs</div>
+              <div className="text-sm text-gray-400">Growth work I handle weekly</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white mb-1">24/7</div>
-              <div className="text-sm text-gray-500 uppercase tracking-wide">Automated execution</div>
+              <div className="text-3xl font-bold bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent mb-1">60%</div>
+              <div className="text-sm text-gray-400">More time for building</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white mb-1">0</div>
-              <div className="text-sm text-gray-500 uppercase tracking-wide">Manual effort</div>
+              <div className="text-3xl font-bold text-white mb-1">2wks</div>
+              <div className="text-sm text-gray-400">To learn your workflow</div>
             </div>
           </div>
         </div>

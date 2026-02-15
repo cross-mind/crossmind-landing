@@ -1,27 +1,27 @@
 const features = [
   {
     icon: '→',
-    title: 'Social Media',
-    subtitle: 'Auto-publish 24/7',
-    description: 'Research trends, generate content calendars, draft posts, publish to Twitter/LinkedIn—all while you sleep.'
+    title: 'Build in Public Without the Grind',
+    subtitle: 'I handle your content',
+    description: 'It\'s Tuesday 9am. I\'ve already pulled your latest commits, matched your voice, and queued 3 posts for review. You shipped email verification Friday—by Monday I\'ve turned it into a tweet thread with metrics from beta feedback.'
   },
   {
     icon: '→',
-    title: 'Content',
-    subtitle: 'SEO on autopilot',
-    description: 'Generate blog posts, SEO copy, and landing pages tailored to your positioning. Boost rankings effortlessly.'
+    title: 'Competitor Research That Stays Current',
+    subtitle: 'I track the market',
+    description: 'Your competitor dropped their Team plan from $99→$79 yesterday. I noticed. I\'ve drafted a comparison update for your docs and flagged 3 positioning opportunities you can use this week.'
   },
   {
     icon: '→',
-    title: 'Outreach',
-    subtitle: 'Find & convert users',
-    description: 'Identify targets on LinkedIn/Twitter/Reddit. Send personalized invites and track conversions automatically.'
+    title: 'User Feedback That Doesn\'t Pile Up',
+    subtitle: 'I close the loop',
+    description: '8 interview requests in your inbox from last month. I booked 5 for next week (filtered out tire-kickers), prepared questions based on your roadmap. When a user mentions "export is clunky" 3 times, I create a feature request linked to 4 similar complaints, calculate it affects 23% of power users, move it to Next Sprint.'
   },
   {
     icon: '→',
-    title: 'Analytics',
-    subtitle: 'Data-driven decisions',
-    description: 'Aggregate feedback, monitor competitors, track metrics. Get actionable recommendations instantly.'
+    title: 'The Docs You Keep Postponing',
+    subtitle: 'I handle compliance',
+    description: 'Your Privacy Policy doesn\'t mention new EU users. I\'ve drafted GDPR-compliant updates, flagged 3 sections you need to review (data retention), formatted for /legal. You added Stripe? I updated Section 4, added it to processors list, created changelog so users know what changed.'
   }
 ];
 
@@ -34,10 +34,10 @@ export default function Features() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-5xl sm:text-6xl font-black text-white mb-6">
-            What we automate
+            What I handle for you
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Four core growth pillars. Zero manual effort required.
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            The growth work that drains your time. I do it while you build.
           </p>
         </div>
 

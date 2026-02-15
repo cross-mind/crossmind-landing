@@ -43,10 +43,11 @@ export default function Waitlist() {
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Join the Waitlist
+            Let me handle growth while you build
           </h2>
           <p className="text-xl text-blue-100">
-            Get early access + 40% off for first 100 users
+            Join the waitlist. We'll ask: "What growth task drains your time most?"
+            <span className="block text-sm mt-2 text-blue-200">(So I know exactly where to help you first)</span>
           </p>
         </div>
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
