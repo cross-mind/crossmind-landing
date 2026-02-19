@@ -25,6 +25,9 @@ export default function Navbar() {
             <a href="#what-i-do" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
               What I do
             </a>
+            <a href="/blog" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
+              Blog
+            </a>
             <a
               href="#waitlist"
               className="bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-5 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-[#2D5BFF]/50 transition-all transform hover:scale-105"

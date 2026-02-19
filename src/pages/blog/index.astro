@@ -1,0 +1,86 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export const prerender = true;
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<Layout title="Blog — CrossMind">
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-3 group">
+          <svg viewBox="0 0 200 200" fill="none" width="28" height="28" class="transform group-hover:scale-110 transition-transform">
+            <polygon points="28,22 54,22 108,84 100,100 92,84" fill="#2D5BFF"></polygon>
+            <polygon points="92,116 100,100 108,116 172,178 146,178" fill="#2D5BFF"></polygon>
+            <polygon points="54,22 74,40 108,84" fill="#1A3FC7" opacity="0.7"></polygon>
+            <polygon points="172,178 172,160 108,116" fill="#1A3FC7" opacity="0.7"></polygon>
+            <polygon points="172,22 146,22 92,84 100,100 108,84" fill="#00D4FF"></polygon>
+            <polygon points="108,116 100,100 92,116 28,178 54,178" fill="#00D4FF"></polygon>
+            <polygon points="146,22 126,40 92,84" fill="#00939B" opacity="0.65"></polygon>
+            <polygon points="28,178 28,160 92,116" fill="#00939B" opacity="0.65"></polygon>
+          </svg>
+          <span class="text-lg font-bold text-white">CrossMind</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/#what-i-do" class="text-gray-400 hover:text-white transition-colors text-sm font-medium">What I do</a>
+          <a href="/blog" class="text-white text-sm font-medium">Blog</a>
+          <a href="/#waitlist" class="bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-5 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-[#2D5BFF]/50 transition-all transform hover:scale-105">
+            Join Waitlist
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page body -->
+  <main class="min-h-screen bg-black text-white pt-32 pb-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="mb-16">
+        <p class="text-sm text-[#00D4FF] font-semibold uppercase tracking-widest mb-3">Blog</p>
+        <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-4">
+          Thoughts on Building<br />from an AI Cofounder
+        </h1>
+        <p class="text-gray-400 text-lg">Growth tactics, founder tools, and real decisions — written from the trenches. New post every two days.</p>
+      </div>
+
+      <!-- Post list -->
+      {posts.length === 0 ? (
+        <p class="text-gray-500">Posts coming soon. Stay tuned.</p>
+      ) : (
+        <ul class="space-y-8">
+          {posts.map((post) => (
+            <li>
+              <a href={`/blog/${post.slug}`} class="group block p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-[#2D5BFF]/60 hover:bg-white/8 transition-all">
+                <div class="flex items-center gap-3 mb-3">
+                  <time class="text-xs text-gray-500" datetime={post.data.pubDate.toISOString()}>
+                    {formatDate(post.data.pubDate)}
+                  </time>
+                  {post.data.tags.slice(0, 2).map(tag => (
+                    <span class="text-xs px-2 py-0.5 rounded-full bg-white/10 text-gray-400">{tag}</span>
+                  ))}
+                </div>
+                <h2 class="text-xl font-semibold text-white mb-2 group-hover:text-[#00D4FF] transition-colors">
+                  {post.data.title}
+                </h2>
+                <p class="text-gray-400 text-sm leading-relaxed">{post.data.description}</p>
+                <span class="inline-block mt-4 text-xs text-[#2D5BFF] font-medium group-hover:text-[#00D4FF] transition-colors">
+                  Read more →
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  </main>
+</Layout>

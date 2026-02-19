@@ -1,0 +1,106 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, getEntry } from 'astro:content';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = await getEntry('blog', slug as string);
+
+if (!post) {
+  return Astro.redirect('/blog');
+}
+
+const { Content } = await post.render();
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<Layout title={`${post.data.title} — CrossMind Blog`}>
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-3 group">
+          <svg viewBox="0 0 200 200" fill="none" width="28" height="28" class="transform group-hover:scale-110 transition-transform">
+            <polygon points="28,22 54,22 108,84 100,100 92,84" fill="#2D5BFF"></polygon>
+            <polygon points="92,116 100,100 108,116 172,178 146,178" fill="#2D5BFF"></polygon>
+            <polygon points="54,22 74,40 108,84" fill="#1A3FC7" opacity="0.7"></polygon>
+            <polygon points="172,178 172,160 108,116" fill="#1A3FC7" opacity="0.7"></polygon>
+            <polygon points="172,22 146,22 92,84 100,100 108,84" fill="#00D4FF"></polygon>
+            <polygon points="108,116 100,100 92,116 28,178 54,178" fill="#00D4FF"></polygon>
+            <polygon points="146,22 126,40 92,84" fill="#00939B" opacity="0.65"></polygon>
+            <polygon points="28,178 28,160 92,116" fill="#00939B" opacity="0.65"></polygon>
+          </svg>
+          <span class="text-lg font-bold text-white">CrossMind</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/#what-i-do" class="text-gray-400 hover:text-white transition-colors text-sm font-medium">What I do</a>
+          <a href="/blog" class="text-white text-sm font-medium">Blog</a>
+          <a href="/#waitlist" class="bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-5 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-[#2D5BFF]/50 transition-all transform hover:scale-105">
+            Join Waitlist
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="min-h-screen bg-black text-white pt-32 pb-24">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6">
+
+      <!-- Back link -->
+      <a href="/blog" class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-white transition-colors mb-10" aria-label="Back to all posts">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        All posts
+      </a>
+
+      <!-- Meta -->
+      <div class="flex items-center gap-3 mb-4">
+        <time class="text-xs text-gray-500" datetime={post.data.pubDate.toISOString()}>
+          {formatDate(post.data.pubDate)}
+        </time>
+        {post.data.tags.map(tag => (
+          <span class="text-xs px-2 py-0.5 rounded-full bg-white/10 text-gray-400">{tag}</span>
+        ))}
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-3xl sm:text-4xl font-bold leading-snug mb-4">{post.data.title}</h1>
+      <p class="text-gray-400 text-base mb-2">{post.data.description}</p>
+      <p class="text-xs text-gray-600 mb-12">by {post.data.author}</p>
+
+      <hr class="border-white/10 mb-12" />
+
+      <!-- Content -->
+      <article class="prose prose-invert prose-sm sm:prose-base max-w-none
+        prose-headings:font-semibold prose-headings:text-white
+        prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-4
+        prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-5
+        prose-li:text-gray-300
+        prose-strong:text-white
+        prose-hr:border-white/10
+        prose-a:text-[#00D4FF] hover:prose-a:text-white">
+        <Content />
+      </article>
+
+      <!-- CTA -->
+      <div class="mt-16 p-6 rounded-2xl border border-[#2D5BFF]/40 bg-gradient-to-br from-[#2D5BFF]/10 to-[#00D4FF]/5 text-center">
+        <p class="text-white font-semibold mb-2">Want an AI to handle your growth work?</p>
+        <p class="text-gray-400 text-sm mb-5">CrossMind is your AI cofounder. Join the waitlist for early access.</p>
+        <a href="/#waitlist" class="inline-block bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-[#2D5BFF]/50 transition-all">
+          Join Waitlist
+        </a>
+      </div>
+
+    </div>
+  </main>
+</Layout>

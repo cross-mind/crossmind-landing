@@ -3,16 +3,17 @@ import '../styles/global.css';
 
 interface Props {
 	title: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = "CrossMind - Your AI Co-Founder for Automated Growth. Handle social media, content marketing, user acquisition, and analytics automatically." } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="CrossMind - Your AI Co-Founder for Automated Growth. Handle social media, content marketing, user acquisition, and analytics automatically." />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -35,6 +36,7 @@ const { title } = Astro.props;
 					<div class="flex flex-col md:flex-row gap-6 text-sm text-gray-400">
 						<a href="mailto:nova-yu@crossmind.io" class="hover:text-white transition">Contact</a>
 						<a href="#what-i-do" class="hover:text-white transition">What I do</a>
+						<a href="/blog" class="hover:text-white transition">Blog</a>
 					</div>
 					<p class="text-sm">&copy; 2026 CrossMind. All rights reserved.</p>
 				</div>
