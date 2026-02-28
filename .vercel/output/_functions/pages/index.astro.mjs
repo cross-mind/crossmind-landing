@@ -1,18 +1,9 @@
-import { e as createComponent, g as addAttribute, k as renderHead, l as renderSlot, r as renderTemplate, h as createAstro, n as renderComponent } from '../chunks/astro/server_BxQsOMIE.mjs';
+import { c as createComponent, r as renderComponent, a as renderTemplate } from '../chunks/astro/server_D2kg1ina.mjs';
 import 'piccolore';
-import 'clsx';
-/* empty css                                 */
+import { $ as $$Layout } from '../chunks/Layout_CBbPf6U5.mjs';
 import { jsx, jsxs } from 'react/jsx-runtime';
 import { useState } from 'react';
 export { renderers } from '../renderers.mjs';
-
-const $$Astro = createAstro();
-const $$Layout = createComponent(($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
-  Astro2.self = $$Layout;
-  const { title } = Astro2.props;
-  return renderTemplate`<html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="CrossMind - Your AI Co-Founder for Automated Growth. Handle social media, content marketing, user acquisition, and analytics automatically."><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator"${addAttribute(Astro2.generator, "content")}><title>${title}</title>${renderHead()}</head> <body class="bg-white text-gray-900 antialiased"> ${renderSlot($$result, $$slots["default"])} <footer class="bg-gray-900 text-gray-400 py-16"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex flex-col md:flex-row justify-between items-center gap-8"> <div class="flex items-center gap-2"> <svg viewBox="0 0 200 200" fill="none" width="28" height="28"> <polygon points="28,22 54,22 108,84 100,100 92,84" fill="#2D5BFF"></polygon> <polygon points="92,116 100,100 108,116 172,178 146,178" fill="#2D5BFF"></polygon> <polygon points="172,22 146,22 92,84 100,100 108,84" fill="#00D4FF"></polygon> <polygon points="108,116 100,100 92,116 28,178 54,178" fill="#00D4FF"></polygon> </svg> <span class="text-lg font-bold text-white">CrossMind</span> </div> <div class="flex flex-col md:flex-row gap-6 text-sm text-gray-400"> <a href="mailto:nova-yu@crossmind.io" class="hover:text-white transition">Contact</a> <a href="#what-i-do" class="hover:text-white transition">What I do</a> </div> <p class="text-sm">&copy; 2026 CrossMind. All rights reserved.</p> </div> </div> </footer> </body></html>`;
-}, "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/layouts/Layout.astro", void 0);
 
 function Navbar() {
   return /* @__PURE__ */ jsx("nav", { className: "fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-xl border-b border-white/10", children: /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between h-16", children: [
@@ -31,6 +22,7 @@ function Navbar() {
     ] }),
     /* @__PURE__ */ jsxs("div", { className: "hidden md:flex items-center gap-8", children: [
       /* @__PURE__ */ jsx("a", { href: "#what-i-do", className: "text-gray-400 hover:text-white transition-colors text-sm font-medium", children: "What I do" }),
+      /* @__PURE__ */ jsx("a", { href: "/blog", className: "text-gray-400 hover:text-white transition-colors text-sm font-medium", children: "Blog" }),
       /* @__PURE__ */ jsx(
         "a",
         {
@@ -236,88 +228,88 @@ function HowIWork() {
     ] }),
     /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:80px_80px]" }),
     /* @__PURE__ */ jsxs("div", { className: "relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: [
-      /* @__PURE__ */ jsxs("h2", { className: "text-7xl sm:text-9xl font-black text-white mb-20 leading-[0.85] tracking-tighter", children: [
+      /* @__PURE__ */ jsxs("h2", { className: "text-6xl sm:text-8xl font-black text-white mb-24 leading-[0.9] tracking-tight", children: [
         "I optimize",
         /* @__PURE__ */ jsx("br", {}),
         /* @__PURE__ */ jsx("span", { className: "bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent", children: "your time" })
       ] }),
-      /* @__PURE__ */ jsx("div", { className: "mb-40", children: /* @__PURE__ */ jsxs("div", { className: "max-w-4xl mx-auto space-y-16", children: [
+      /* @__PURE__ */ jsx("div", { className: "mb-32", children: /* @__PURE__ */ jsxs("div", { className: "max-w-5xl mx-auto space-y-20", children: [
         /* @__PURE__ */ jsxs("div", { children: [
-          /* @__PURE__ */ jsx("div", { className: "text-4xl font-black text-gray-700 mb-6", children: "Before" }),
-          /* @__PURE__ */ jsxs("div", { className: "space-y-2", children: [
-            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-3", children: [
-              /* @__PURE__ */ jsx("div", { style: { width: "40%" }, className: "h-14 bg-gray-800 rounded-lg relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-gray-400", children: "Building" }) }) }),
-              /* @__PURE__ */ jsx("span", { className: "text-2xl font-black text-gray-600 w-16", children: "40%" })
+          /* @__PURE__ */ jsx("div", { className: "text-3xl font-black text-gray-500 mb-8 tracking-tight", children: "Before" }),
+          /* @__PURE__ */ jsxs("div", { className: "space-y-3", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4", children: [
+              /* @__PURE__ */ jsx("div", { style: { width: "40%" }, className: "h-16 bg-gray-800/80 rounded-xl relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-5", children: /* @__PURE__ */ jsx("span", { className: "text-base font-bold text-gray-300", children: "Building" }) }) }),
+              /* @__PURE__ */ jsx("span", { className: "text-3xl font-black text-gray-500 min-w-[80px]", children: "40%" })
             ] }),
-            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-3", children: [
-              /* @__PURE__ */ jsx("div", { style: { width: "40%" }, className: "h-14 bg-red-900/30 rounded-lg border border-red-500/30 relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-red-400", children: "Growth work" }) }) }),
-              /* @__PURE__ */ jsx("span", { className: "text-2xl font-black text-red-400 w-16", children: "40%" })
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4", children: [
+              /* @__PURE__ */ jsx("div", { style: { width: "40%" }, className: "h-16 bg-red-950/40 rounded-xl border-2 border-red-900/40 relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-5", children: /* @__PURE__ */ jsx("span", { className: "text-base font-bold text-red-400/90", children: "Growth work" }) }) }),
+              /* @__PURE__ */ jsx("span", { className: "text-3xl font-black text-red-400/70 min-w-[80px]", children: "40%" })
             ] }),
-            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-3", children: [
-              /* @__PURE__ */ jsx("div", { style: { width: "20%" }, className: "h-14 bg-gray-800 rounded-lg relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-gray-400", children: "Thinking" }) }) }),
-              /* @__PURE__ */ jsx("span", { className: "text-2xl font-black text-gray-600 w-16", children: "20%" })
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4", children: [
+              /* @__PURE__ */ jsx("div", { style: { width: "20%" }, className: "h-16 bg-gray-800/80 rounded-xl relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-5", children: /* @__PURE__ */ jsx("span", { className: "text-base font-bold text-gray-300", children: "Thinking" }) }) }),
+              /* @__PURE__ */ jsx("span", { className: "text-3xl font-black text-gray-500 min-w-[80px]", children: "20%" })
             ] })
           ] })
         ] }),
         /* @__PURE__ */ jsxs("div", { children: [
-          /* @__PURE__ */ jsx("div", { className: "text-4xl font-black bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent mb-6", children: "With me" }),
-          /* @__PURE__ */ jsxs("div", { className: "space-y-2", children: [
-            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-3", children: [
-              /* @__PURE__ */ jsx("div", { style: { width: "60%" }, className: "h-16 bg-gradient-to-r from-[#2D5BFF] to-[#2D5BFF]/80 rounded-lg shadow-2xl shadow-[#2D5BFF]/30 relative overflow-hidden", children: /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 flex items-center justify-between px-4", children: [
-                /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-white", children: "Building" }),
-                /* @__PURE__ */ jsx("span", { className: "text-xs text-[#00D4FF] font-bold", children: "+50%" })
+          /* @__PURE__ */ jsx("div", { className: "text-3xl font-black bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent mb-8 tracking-tight", children: "With me" }),
+          /* @__PURE__ */ jsxs("div", { className: "space-y-3", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4", children: [
+              /* @__PURE__ */ jsx("div", { style: { width: "60%" }, className: "h-20 bg-gradient-to-r from-[#2D5BFF] to-[#2D5BFF]/90 rounded-xl shadow-2xl shadow-[#2D5BFF]/40 relative overflow-hidden border border-[#2D5BFF]/20", children: /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 flex items-center justify-between px-5", children: [
+                /* @__PURE__ */ jsx("span", { className: "text-base font-bold text-white", children: "Building" }),
+                /* @__PURE__ */ jsx("span", { className: "text-sm text-[#00D4FF] font-black", children: "+50%" })
               ] }) }),
-              /* @__PURE__ */ jsx("span", { className: "text-3xl font-black text-white w-16", children: "60%" })
+              /* @__PURE__ */ jsx("span", { className: "text-4xl font-black text-white min-w-[80px]", children: "60%" })
             ] }),
-            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-3", children: [
-              /* @__PURE__ */ jsx("div", { style: { width: "10%" }, className: "h-10 bg-gray-900/50 rounded-lg opacity-40 relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-4", children: /* @__PURE__ */ jsx("span", { className: "text-xs font-bold text-gray-600", children: "Growth" }) }) }),
-              /* @__PURE__ */ jsx("span", { className: "text-xl font-black text-gray-600 w-16", children: "10%" })
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4", children: [
+              /* @__PURE__ */ jsx("div", { style: { width: "10%" }, className: "h-12 bg-gray-900/60 rounded-xl opacity-50 relative overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "absolute inset-0 flex items-center px-5", children: /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-gray-500", children: "Growth" }) }) }),
+              /* @__PURE__ */ jsx("span", { className: "text-2xl font-black text-gray-500 min-w-[80px]", children: "10%" })
             ] }),
-            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-3", children: [
-              /* @__PURE__ */ jsx("div", { style: { width: "30%" }, className: "h-16 bg-gradient-to-r from-[#00D4FF] to-[#00D4FF]/80 rounded-lg shadow-2xl shadow-[#00D4FF]/30 relative overflow-hidden", children: /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 flex items-center justify-between px-4", children: [
-                /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-white", children: "Thinking" }),
-                /* @__PURE__ */ jsx("span", { className: "text-xs text-[#2D5BFF] font-bold", children: "+50%" })
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4", children: [
+              /* @__PURE__ */ jsx("div", { style: { width: "30%" }, className: "h-20 bg-gradient-to-r from-[#00D4FF] to-[#00D4FF]/90 rounded-xl shadow-2xl shadow-[#00D4FF]/40 relative overflow-hidden border border-[#00D4FF]/20", children: /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 flex items-center justify-between px-5", children: [
+                /* @__PURE__ */ jsx("span", { className: "text-base font-bold text-white", children: "Thinking" }),
+                /* @__PURE__ */ jsx("span", { className: "text-sm text-[#2D5BFF] font-black", children: "+50%" })
               ] }) }),
-              /* @__PURE__ */ jsx("span", { className: "text-3xl font-black text-white w-16", children: "30%" })
+              /* @__PURE__ */ jsx("span", { className: "text-4xl font-black text-white min-w-[80px]", children: "30%" })
             ] })
           ] })
         ] })
       ] }) }),
-      /* @__PURE__ */ jsxs("div", { className: "max-w-4xl mx-auto", children: [
-        /* @__PURE__ */ jsx("h3", { className: "text-5xl font-black text-white mb-16 text-center", children: "I learn as we work" }),
+      /* @__PURE__ */ jsxs("div", { className: "max-w-5xl mx-auto", children: [
+        /* @__PURE__ */ jsx("h3", { className: "text-5xl sm:text-6xl font-black text-white mb-20 text-center tracking-tight", children: "I learn as we work" }),
         /* @__PURE__ */ jsxs("div", { className: "relative", children: [
-          /* @__PURE__ */ jsx("div", { className: "absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gray-800 via-[#2D5BFF] to-[#00D4FF]" }),
-          /* @__PURE__ */ jsxs("div", { className: "space-y-12", children: [
-            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-8", children: [
-              /* @__PURE__ */ jsxs("div", { className: "flex-1 text-right", children: [
-                /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-gray-600 mb-1", children: "WEEK 1" }),
-                /* @__PURE__ */ jsx("div", { className: "text-xl font-bold text-white", children: "Junior hire" })
+          /* @__PURE__ */ jsx("div", { className: "absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-gray-800 via-[#2D5BFF] to-[#00D4FF] rounded-full" }),
+          /* @__PURE__ */ jsxs("div", { className: "space-y-16", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-6 sm:gap-12", children: [
+              /* @__PURE__ */ jsxs("div", { className: "flex-1 text-right pr-4", children: [
+                /* @__PURE__ */ jsx("div", { className: "text-xs font-black text-gray-600 mb-2 tracking-wider", children: "WEEK 1" }),
+                /* @__PURE__ */ jsx("div", { className: "text-2xl sm:text-3xl font-black text-white", children: "Junior hire" })
               ] }),
-              /* @__PURE__ */ jsx("div", { className: "relative z-10 w-4 h-4 rounded-full bg-gray-700 border-4 border-black flex-shrink-0" }),
-              /* @__PURE__ */ jsx("div", { className: "flex-1", children: /* @__PURE__ */ jsx("p", { className: "text-gray-400", children: "Best practices baseline" }) })
+              /* @__PURE__ */ jsx("div", { className: "relative z-10 w-6 h-6 rounded-full bg-gray-700 border-4 border-black flex-shrink-0 shadow-xl shadow-gray-700/50" }),
+              /* @__PURE__ */ jsx("div", { className: "flex-1 pl-4", children: /* @__PURE__ */ jsx("p", { className: "text-lg text-gray-400", children: "Best practices baseline" }) })
             ] }),
-            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-8", children: [
-              /* @__PURE__ */ jsxs("div", { className: "flex-1 text-right", children: [
-                /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-[#2D5BFF] mb-1", children: "WEEK 2" }),
-                /* @__PURE__ */ jsx("div", { className: "text-xl font-bold text-white", children: "Teammate" })
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-6 sm:gap-12", children: [
+              /* @__PURE__ */ jsxs("div", { className: "flex-1 text-right pr-4", children: [
+                /* @__PURE__ */ jsx("div", { className: "text-xs font-black text-[#2D5BFF] mb-2 tracking-wider", children: "WEEK 2" }),
+                /* @__PURE__ */ jsx("div", { className: "text-2xl sm:text-3xl font-black text-white", children: "Teammate" })
               ] }),
-              /* @__PURE__ */ jsx("div", { className: "relative z-10 w-4 h-4 rounded-full bg-[#2D5BFF] border-4 border-black flex-shrink-0 shadow-lg shadow-[#2D5BFF]/50" }),
-              /* @__PURE__ */ jsx("div", { className: "flex-1", children: /* @__PURE__ */ jsx("p", { className: "text-gray-400", children: "Knows your preferences" }) })
+              /* @__PURE__ */ jsx("div", { className: "relative z-10 w-6 h-6 rounded-full bg-[#2D5BFF] border-4 border-black flex-shrink-0 shadow-xl shadow-[#2D5BFF]/60" }),
+              /* @__PURE__ */ jsx("div", { className: "flex-1 pl-4", children: /* @__PURE__ */ jsx("p", { className: "text-lg text-gray-400", children: "Knows your preferences" }) })
             ] }),
-            /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-8", children: [
-              /* @__PURE__ */ jsxs("div", { className: "flex-1 text-right", children: [
-                /* @__PURE__ */ jsx("div", { className: "text-sm font-bold text-[#00D4FF] mb-1", children: "WEEK 3" }),
-                /* @__PURE__ */ jsx("div", { className: "text-xl font-bold text-white", children: "Co-founder" })
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-6 sm:gap-12", children: [
+              /* @__PURE__ */ jsxs("div", { className: "flex-1 text-right pr-4", children: [
+                /* @__PURE__ */ jsx("div", { className: "text-xs font-black text-[#00D4FF] mb-2 tracking-wider", children: "WEEK 3" }),
+                /* @__PURE__ */ jsx("div", { className: "text-2xl sm:text-3xl font-black text-white", children: "Co-founder" })
               ] }),
-              /* @__PURE__ */ jsx("div", { className: "relative z-10 w-4 h-4 rounded-full bg-[#00D4FF] border-4 border-black flex-shrink-0 shadow-lg shadow-[#00D4FF]/50" }),
-              /* @__PURE__ */ jsx("div", { className: "flex-1", children: /* @__PURE__ */ jsx("p", { className: "text-gray-400", children: "Proactive & in sync" }) })
+              /* @__PURE__ */ jsx("div", { className: "relative z-10 w-6 h-6 rounded-full bg-[#00D4FF] border-4 border-black flex-shrink-0 shadow-xl shadow-[#00D4FF]/60" }),
+              /* @__PURE__ */ jsx("div", { className: "flex-1 pl-4", children: /* @__PURE__ */ jsx("p", { className: "text-lg text-gray-400", children: "Proactive & in sync" }) })
             ] })
           ] })
         ] })
       ] }),
-      /* @__PURE__ */ jsxs("div", { className: "mt-40 max-w-3xl mx-auto text-center", children: [
-        /* @__PURE__ */ jsx("h3", { className: "text-4xl font-black text-white mb-6", children: "You're in control" }),
-        /* @__PURE__ */ jsx("p", { className: "text-xl text-gray-400 leading-relaxed", children: "Dashboard shows what I'm doing. Set boundaries. I remember your rules." })
+      /* @__PURE__ */ jsxs("div", { className: "mt-32 max-w-4xl mx-auto text-center", children: [
+        /* @__PURE__ */ jsx("h3", { className: "text-4xl sm:text-5xl font-black text-white mb-8 tracking-tight", children: "You're in control" }),
+        /* @__PURE__ */ jsx("p", { className: "text-xl sm:text-2xl text-gray-400 leading-relaxed", children: "Dashboard shows what I'm doing. Set boundaries. I remember your rules." })
       ] })
     ] })
   ] });
@@ -457,10 +449,10 @@ const $$file = "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/pa
 const $$url = "";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-	__proto__: null,
-	default: $$Index,
-	file: $$file,
-	url: $$url
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const page = () => _page;

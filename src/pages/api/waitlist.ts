@@ -16,7 +16,7 @@ export const POST: APIRoute = async ({ request }) => {
     const utmSource = url.searchParams.get('utm_source') || 'direct';
 
     // 保存到 CrossMind database
-    const response = await fetch('https://agent.linktion.cn/api/public/artifacts/waitlist-leads/rows', {
+    const response = await fetch('https://app.crossmind.io/api/public/artifacts/waitlist-leads/rows', {
       method: 'POST',
       headers: {
         'Authorization': 'Bearer aat_b37e65e9b430ed0f008f20ac2d23f85ee83f3bf48a1ee4bf0de04b78bec41a03',
