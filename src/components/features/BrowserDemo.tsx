@@ -53,9 +53,9 @@ export default function BrowserDemo() {
   const current = steps[step];
 
   return (
-    <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+    <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
       {/* Browser Chrome */}
-      <div className="bg-black/60 border-b border-white/10 px-4 py-3">
+      <div className="bg-black/60 px-4 py-3">
         <div className="flex items-center gap-2 mb-3">
           <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
           <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
@@ -80,7 +80,7 @@ export default function BrowserDemo() {
         {/* Simulated webpage content */}
         <div className="p-6 space-y-4">
           {/* Header */}
-          <div className="flex items-center justify-between pb-4 border-b border-white/5">
+          <div className="flex items-center justify-between pb-4">
             <div className="h-6 w-32 bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] rounded"></div>
             <div className="flex gap-2">
               <div className="h-6 w-16 bg-white/5 rounded"></div>
@@ -98,21 +98,21 @@ export default function BrowserDemo() {
           {/* Pricing cards (visible during extract step) */}
           {current.status === 'extracting' && (
             <div className="grid grid-cols-3 gap-3 pt-4">
-              <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-[#00D4FF]/30 rounded-lg p-3 relative overflow-hidden">
+              <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg p-3 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[#00D4FF]/10 animate-pulse"></div>
                 <div className="relative">
                   <div className="h-3 bg-white/20 rounded w-16 mb-2"></div>
                   <div className="h-5 bg-white/30 rounded w-20"></div>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-lg p-3 relative overflow-hidden">
+              <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg p-3 relative overflow-hidden">
                 <div className="absolute inset-0 bg-purple-400/10 animate-pulse"></div>
                 <div className="relative">
                   <div className="h-3 bg-white/20 rounded w-16 mb-2"></div>
                   <div className="h-5 bg-white/30 rounded w-20"></div>
                 </div>
               </div>
-              <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-lg p-3 relative overflow-hidden">
+              <div className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg p-3 relative overflow-hidden">
                 <div className="absolute inset-0 bg-green-400/10 animate-pulse"></div>
                 <div className="relative">
                   <div className="h-3 bg-white/20 rounded w-16 mb-2"></div>
@@ -125,7 +125,7 @@ export default function BrowserDemo() {
           {/* CAPTCHA overlay */}
           {current.status === 'captcha' && (
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center">
-              <div className="bg-gray-900 border-2 border-yellow-500/50 rounded-xl p-6 max-w-sm">
+              <div className="bg-gray-900 rounded-xl p-6 max-w-sm">
                 <div className="flex items-center gap-3 mb-4">
                   <svg className="w-8 h-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
@@ -143,7 +143,7 @@ export default function BrowserDemo() {
           {/* Success overlay */}
           {current.status === 'success' && (
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center">
-              <div className="bg-gray-900 border-2 border-green-500/50 rounded-xl p-6 max-w-sm text-center">
+              <div className="bg-gray-900 rounded-xl p-6 max-w-sm text-center">
                 <svg className="w-16 h-16 text-green-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
@@ -156,7 +156,7 @@ export default function BrowserDemo() {
       </div>
 
       {/* Status Bar */}
-      <div className="bg-black/60 border-t border-white/10 p-4">
+      <div className="bg-black/60 p-4">
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-3">
             <div className={`w-3 h-3 rounded-full ${

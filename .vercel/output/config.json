@@ -24,6 +24,10 @@
 			"dest": "_render"
 		},
 		{
+			"src": "^/features/?$",
+			"dest": "_render"
+		},
+		{
 			"src": "^/$",
 			"dest": "_render"
 		}

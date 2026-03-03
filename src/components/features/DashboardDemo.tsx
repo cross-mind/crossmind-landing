@@ -43,7 +43,7 @@ export default function DashboardDemo() {
   }, []);
 
   return (
-    <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-2xl">
+    <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-bold text-white">Task Dashboard</h3>
@@ -58,10 +58,10 @@ export default function DashboardDemo() {
         {tasks.map((task, idx) => (
           <div
             key={idx}
-            className={`bg-black/40 rounded-xl p-4 border transition-all ${
+            className={`bg-black/40 rounded-xl p-4 transition-all ${
               task.status === 'in_progress'
-                ? 'border-[#00D4FF]/30 shadow-lg shadow-[#00D4FF]/10'
-                : 'border-white/5'
+                ? 'shadow-lg shadow-[#00D4FF]/10'
+                : ''
             }`}
           >
             <div className="flex items-start justify-between mb-3">
@@ -112,7 +112,7 @@ export default function DashboardDemo() {
 
             {/* Artifact Preview (for in-progress task) */}
             {task.status === 'in_progress' && (
-              <div className="mt-3 pt-3 border-t border-white/5">
+              <div className="mt-3 pt-3">
                 <div className="grid grid-cols-3 gap-2">
                   <div className="bg-white/5 rounded-lg p-2 text-center">
                     <svg className="w-5 h-5 mx-auto mb-1 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -140,7 +140,7 @@ export default function DashboardDemo() {
       </div>
 
       {/* Session Log */}
-      <div className="bg-black/40 rounded-xl p-4 border border-white/5">
+      <div className="bg-black/40 rounded-xl p-4">
         <h4 className="text-xs font-bold text-gray-500 mb-3 uppercase tracking-wider">Session Log</h4>
         <div className="space-y-2 font-mono text-xs">
           {logs.slice(0, logIndex + 1).map((log, idx) => (
@@ -186,7 +186,7 @@ export default function DashboardDemo() {
       </div>
 
       {/* Footer Stats */}
-      <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-gray-500">
+      <div className="mt-4 pt-4 flex items-center justify-between text-xs text-gray-500">
         <span>3 active tasks</span>
         <span>8 artifacts generated</span>
       </div>

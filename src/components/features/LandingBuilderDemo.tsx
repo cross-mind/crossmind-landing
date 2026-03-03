@@ -53,9 +53,9 @@ export default function LandingBuilderDemo() {
   }, [lineCount, deployStatus]);
 
   return (
-    <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+    <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl">
       {/* Editor Header */}
-      <div className="bg-black/60 border-b border-white/10 px-4 py-3 flex items-center justify-between">
+      <div className="bg-black/60 px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
           <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
@@ -95,7 +95,7 @@ export default function LandingBuilderDemo() {
       </div>
 
       {/* Preview & Deploy Status */}
-      <div className="bg-black/60 border-t border-white/10 p-4">
+      <div className="bg-black/60 p-4">
         {deployStatus === 'idle' && lineCount === codeLines.length && (
           <div className="text-center text-gray-400 text-sm">
             <svg className="w-5 h-5 inline mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
@@ -133,7 +133,7 @@ export default function LandingBuilderDemo() {
       </div>
 
       {/* Mini Preview */}
-      <div className="bg-gradient-to-br from-slate-950 to-indigo-950 p-6 border-t border-white/10">
+      <div className="bg-gradient-to-br from-slate-950 to-indigo-950 p-6">
         <div className="text-center">
           <h3 className="text-3xl font-black mb-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Ship faster than ever

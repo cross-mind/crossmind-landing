@@ -46,7 +46,7 @@ export default function GrowthProfessionalDemo() {
   const current = strategies[activeStrategy];
 
   return (
-    <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-2xl">
+    <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-bold text-white">Growth Strategy Dashboard</h3>
@@ -65,7 +65,7 @@ export default function GrowthProfessionalDemo() {
       </div>
 
       {/* Current Strategy Card */}
-      <div className="bg-black/40 rounded-xl p-5 mb-4 border border-white/5">
+      <div className="bg-black/40 rounded-xl p-5 mb-4">
         <div className="flex items-center justify-between mb-4">
           <div>
             <h4 className="text-xl font-black text-white mb-1">{current.channel}</h4>
@@ -103,7 +103,7 @@ export default function GrowthProfessionalDemo() {
           {current.tasks.map((task, idx) => (
             <div key={idx} className="flex items-start gap-3 text-sm">
               <div className={`w-4 h-4 rounded flex-shrink-0 mt-0.5 ${
-                task.done ? 'bg-[#00D4FF]' : 'bg-gray-700 border border-gray-600'
+                task.done ? 'bg-[#00D4FF]' : 'bg-gray-700'
               } flex items-center justify-center`}>
                 {task.done && (
                   <svg className="w-3 h-3 text-black" fill="currentColor" viewBox="0 0 20 20">

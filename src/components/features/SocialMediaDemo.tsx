@@ -49,7 +49,7 @@ export default function SocialMediaDemo() {
   const current = posts[selectedPost];
 
   return (
-    <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-2xl">
+    <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-bold text-white">Content Pipeline</h3>
@@ -67,8 +67,8 @@ export default function SocialMediaDemo() {
             onClick={() => setSelectedPost(idx)}
             className={`flex-shrink-0 px-4 py-2 rounded-lg text-sm font-bold transition-all ${
               idx === selectedPost
-                ? 'bg-white/10 border border-white/20'
-                : 'bg-black/20 border border-white/5 hover:bg-white/5'
+                ? 'bg-white/10'
+                : 'bg-black/20 hover:bg-white/5'
             }`}
           >
             <div className="flex items-center gap-2">
@@ -88,7 +88,7 @@ export default function SocialMediaDemo() {
       </div>
 
       {/* Selected Post Card */}
-      <div className="bg-black/40 rounded-xl p-5 border border-white/5 mb-4">
+      <div className="bg-black/40 rounded-xl p-5 mb-4">
         <div className="flex items-start justify-between mb-4">
           <span className={`text-xs font-bold px-2 py-1 rounded ${current.statusColor}`}>
             {current.status.toUpperCase()}
@@ -99,7 +99,7 @@ export default function SocialMediaDemo() {
         <p className="text-gray-300 mb-4 leading-relaxed">{current.content}</p>
 
         {current.metrics ? (
-          <div className="grid grid-cols-3 gap-3 pb-4 mb-4 border-b border-white/5">
+          <div className="grid grid-cols-3 gap-3 pb-4 mb-4">
             <div className="text-center">
               <div className="text-xs text-gray-500 mb-1">Likes</div>
               <div className="text-lg font-bold text-pink-400">{current.metrics.likes}</div>
@@ -114,7 +114,7 @@ export default function SocialMediaDemo() {
             </div>
           </div>
         ) : (
-          <div className="pb-4 mb-4 border-b border-white/5">
+          <div className="pb-4 mb-4">
             <div className="text-sm text-gray-500 text-center py-2">
               Awaiting publish
             </div>

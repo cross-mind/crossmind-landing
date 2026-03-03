@@ -1,0 +1,228 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.tsx';
+import GrowthProfessionalDemo from '../components/features/GrowthProfessionalDemo.tsx';
+import LandingBuilderDemo from '../components/features/LandingBuilderDemo.tsx';
+import SocialMediaDemo from '../components/features/SocialMediaDemo.tsx';
+import BrowserDemo from '../components/features/BrowserDemo.tsx';
+import DashboardDemo from '../components/features/DashboardDemo.tsx';
+---
+
+<Layout title="Features - CrossMind AI Co-Founder" description="Explore CrossMind's powerful features: growth expertise, landing page generation, social media management, browser automation, and adaptive dashboards.">
+	<Navbar client:load />
+
+	<main class="bg-black text-white pt-24">
+		<!-- Hero Section -->
+		<section class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+			<h1 class="text-5xl sm:text-7xl font-black mb-6 bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] bg-clip-text text-transparent">
+				Built for execution
+			</h1>
+			<p class="text-xl sm:text-2xl text-gray-400 max-w-3xl">
+				Not another chatbot. Real capabilities that ship work.
+			</p>
+		</section>
+
+		<!-- Feature: Growth Professional -->
+		<section class="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+			<div class="max-w-7xl mx-auto">
+				<div class="grid lg:grid-cols-2 gap-16 items-center">
+					<div>
+						<h2 class="text-4xl sm:text-5xl font-black mb-6">Growth Professional</h2>
+						<p class="text-xl text-gray-400 mb-8">
+							With mature growth expertise, formulate marketing strategies to reduce exploration and friction
+						</p>
+						<ul class="space-y-4 text-gray-300">
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#00D4FF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Battle-tested growth playbooks from successful startups</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#00D4FF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Channel-specific strategies with proven templates</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#00D4FF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Automated A/B testing and performance optimization</span>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<GrowthProfessionalDemo client:load />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Feature: Landing Page Builder -->
+		<section class="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+			<div class="max-w-7xl mx-auto">
+				<div class="grid lg:grid-cols-2 gap-16 items-center">
+					<div class="order-2 lg:order-1">
+						<LandingBuilderDemo client:load />
+					</div>
+					<div class="order-1 lg:order-2">
+						<h2 class="text-4xl sm:text-5xl font-black mb-6">Build Different Landing Pages</h2>
+						<p class="text-xl text-gray-400 mb-8">
+							Highly stylized (like CrossMind's site) rather than AI-flavored, and directly deployed to your domain
+						</p>
+						<ul class="space-y-4 text-gray-300">
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#2D5BFF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Bold, modern design that stands out from cookie-cutter templates</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#2D5BFF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>One-command deployment to your custom domain</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#2D5BFF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Responsive, accessible, and optimized for conversion</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Feature: Social Media Management -->
+		<section class="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+			<div class="max-w-7xl mx-auto">
+				<div class="grid lg:grid-cols-2 gap-16 items-center">
+					<div>
+						<h2 class="text-4xl sm:text-5xl font-black mb-6">Social Media Ready</h2>
+						<p class="text-xl text-gray-400 mb-8">
+							Integrate mature calling tools for X, LinkedIn, no additional configuration needed
+						</p>
+						<ul class="space-y-4 text-gray-300">
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#00D4FF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Native X (Twitter) and LinkedIn integration via OAuth</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#00D4FF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Draft, schedule, and publish with founder approval workflow</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#00D4FF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Track engagement metrics and optimize content strategy</span>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<SocialMediaDemo client:load />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Feature: Browser & Takeover -->
+		<section class="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+			<div class="max-w-7xl mx-auto">
+				<div class="grid lg:grid-cols-2 gap-16 items-center">
+					<div class="order-2 lg:order-1">
+						<BrowserDemo client:load />
+					</div>
+					<div class="order-1 lg:order-2">
+						<h2 class="text-4xl sm:text-5xl font-black mb-6">Browser & Takeover</h2>
+						<p class="text-xl text-gray-400 mb-8">
+							Access any website just like you would, gather information, or perform automated operations as you wish
+						</p>
+						<ul class="space-y-4 text-gray-300">
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#2D5BFF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Navigate websites with full JavaScript rendering</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#2D5BFF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Human-in-the-loop takeover for CAPTCHAs and complex auth</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#2D5BFF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Extract data, submit forms, monitor changes automatically</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Feature: Adaptive Dashboard -->
+		<section class="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+			<div class="max-w-7xl mx-auto">
+				<div class="grid lg:grid-cols-2 gap-16 items-center">
+					<div>
+						<h2 class="text-4xl sm:text-5xl font-black mb-6">Adaptive Dashboard</h2>
+						<p class="text-xl text-gray-400 mb-8">
+							Agent proactively generates and adjusts the Dashboard based on reality, with process artifacts transparently visible
+						</p>
+						<ul class="space-y-4 text-gray-300">
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#00D4FF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Real-time task progress tracking and artifact preview</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#00D4FF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Dashboard adapts to your workflow automatically</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<svg class="w-6 h-6 text-[#00D4FF] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+								</svg>
+								<span>Full audit trail with session logs and decisions</span>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<DashboardDemo client:load />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+			<div class="max-w-4xl mx-auto text-center">
+				<h2 class="text-4xl sm:text-6xl font-black mb-8">
+					Stop configuring.<br />Start shipping.
+				</h2>
+				<p class="text-xl text-gray-400 mb-12">
+					Join the waitlist to get early access to CrossMind
+				</p>
+				<a
+					href="/#waitlist"
+					class="inline-block bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-2xl hover:shadow-[#2D5BFF]/50 transition-all transform hover:scale-105"
+				>
+					Join Waitlist
+				</a>
+			</div>
+		</section>
+	</main>
+</Layout>
