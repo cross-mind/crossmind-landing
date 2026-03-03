@@ -26,14 +26,14 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#what-i-do" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
-              What I do
+            <a href="/features" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
+              Features
             </a>
             <a href="/blog" className="text-gray-400 hover:text-white transition-colors text-sm font-medium">
               Blog
             </a>
             <a
-              href="#waitlist"
+              href="/#waitlist"
               className="bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-5 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-[#2D5BFF]/50 transition-all transform hover:scale-105"
             >
               Join Waitlist
@@ -63,11 +63,11 @@ export default function Navbar() {
           <div className="md:hidden py-4 border-t border-white/10">
             <div className="flex flex-col gap-4">
               <a
-                href="#what-i-do"
+                href="/features"
                 className="text-gray-400 hover:text-white transition-colors text-sm font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                What I do
+                Features
               </a>
               <a
                 href="/blog"
@@ -77,7 +77,7 @@ export default function Navbar() {
                 Blog
               </a>
               <a
-                href="#waitlist"
+                href="/#waitlist"
                 className="bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-5 py-2 rounded-full text-sm font-semibold text-center hover:shadow-lg hover:shadow-[#2D5BFF]/50 transition-all"
                 onClick={() => setIsMenuOpen(false)}
               >

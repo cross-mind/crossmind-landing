@@ -1,7 +1,7 @@
 import { c as createComponent, r as renderComponent, a as renderTemplate } from '../chunks/astro/server_D2kg1ina.mjs';
 import 'piccolore';
 import { $ as $$Layout } from '../chunks/Layout_BWFI9w-B.mjs';
-import { N as Navbar } from '../chunks/Navbar_D26A8h6k.mjs';
+import { N as Navbar } from '../chunks/Navbar_DlevzbdJ.mjs';
 import { jsxs, jsx } from 'react/jsx-runtime';
 import { useState } from 'react';
 export { renderers } from '../renderers.mjs';

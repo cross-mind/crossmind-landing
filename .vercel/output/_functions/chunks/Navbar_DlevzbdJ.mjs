@@ -19,12 +19,12 @@ function Navbar() {
         /* @__PURE__ */ jsx("span", { className: "text-lg font-bold text-white", children: "CrossMind" })
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "hidden md:flex items-center gap-8", children: [
-        /* @__PURE__ */ jsx("a", { href: "#what-i-do", className: "text-gray-400 hover:text-white transition-colors text-sm font-medium", children: "What I do" }),
+        /* @__PURE__ */ jsx("a", { href: "/features", className: "text-gray-400 hover:text-white transition-colors text-sm font-medium", children: "Features" }),
         /* @__PURE__ */ jsx("a", { href: "/blog", className: "text-gray-400 hover:text-white transition-colors text-sm font-medium", children: "Blog" }),
         /* @__PURE__ */ jsx(
           "a",
           {
-            href: "#waitlist",
+            href: "/#waitlist",
             className: "bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-5 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-[#2D5BFF]/50 transition-all transform hover:scale-105",
             children: "Join Waitlist"
           }
@@ -44,10 +44,10 @@ function Navbar() {
       /* @__PURE__ */ jsx(
         "a",
         {
-          href: "#what-i-do",
+          href: "/features",
           className: "text-gray-400 hover:text-white transition-colors text-sm font-medium py-2",
           onClick: () => setIsMenuOpen(false),
-          children: "What I do"
+          children: "Features"
         }
       ),
       /* @__PURE__ */ jsx(
@@ -62,7 +62,7 @@ function Navbar() {
       /* @__PURE__ */ jsx(
         "a",
         {
-          href: "#waitlist",
+          href: "/#waitlist",
           className: "bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-5 py-2 rounded-full text-sm font-semibold text-center hover:shadow-lg hover:shadow-[#2D5BFF]/50 transition-all",
           onClick: () => setIsMenuOpen(false),
           children: "Join Waitlist"
