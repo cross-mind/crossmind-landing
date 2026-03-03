@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import PostHogInit from '../components/PostHogInit';
 
 interface Props {
 	title: string;
@@ -20,6 +21,7 @@ const { title, description = "CrossMind - Your AI Co-Founder for Automated Growt
 		<title>{title}</title>
 	</head>
 	<body class="bg-white text-gray-900 antialiased">
+		<PostHogInit client:only="react" />
 		<slot />
 		<footer class="bg-gray-900 text-gray-400 py-16">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

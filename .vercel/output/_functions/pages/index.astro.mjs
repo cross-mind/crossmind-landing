@@ -1,6 +1,6 @@
 import { c as createComponent, r as renderComponent, a as renderTemplate } from '../chunks/astro/server_D2kg1ina.mjs';
 import 'piccolore';
-import { $ as $$Layout } from '../chunks/Layout_CBbPf6U5.mjs';
+import { $ as $$Layout } from '../chunks/Layout_CgWV7Rx7.mjs';
 import { jsx, jsxs } from 'react/jsx-runtime';
 import { useState } from 'react';
 export { renderers } from '../renderers.mjs';
