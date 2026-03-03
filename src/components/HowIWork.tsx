@@ -140,6 +140,35 @@ export default function HowIWork() {
           </div>
         </div>
 
+        {/* Product Tour Video */}
+        <div className="mt-32 max-w-6xl mx-auto">
+          <h3 className="text-5xl sm:text-6xl font-black text-white mb-12 text-center tracking-tight">
+            See it in action
+          </h3>
+
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-br from-[#2D5BFF]/10 to-[#00D4FF]/10 backdrop-blur-sm">
+            {/* Video container with aspect ratio */}
+            <div className="relative" style={{ paddingBottom: '56.25%' }}>
+              <video
+                className="absolute top-0 left-0 w-full h-full"
+                controls
+                preload="metadata"
+                poster="/product-tour-poster.jpg"
+              >
+                <source src="/product-tour.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            {/* Glow effect */}
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] opacity-20 blur-xl -z-10"></div>
+          </div>
+
+          <p className="text-center text-gray-400 mt-8 text-lg">
+            Watch how CrossMind handles growth tasks autonomously
+          </p>
+        </div>
+
         {/* Trust statement - simplified */}
         <div className="mt-32 max-w-4xl mx-auto text-center">
           <h3 className="text-4xl sm:text-5xl font-black text-white mb-8 tracking-tight">You're in control</h3>

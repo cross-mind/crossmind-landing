@@ -1,6 +1,6 @@
 import { c as createComponent, r as renderComponent, a as renderTemplate } from '../chunks/astro/server_D2kg1ina.mjs';
 import 'piccolore';
-import { $ as $$Layout } from '../chunks/Layout_CgWV7Rx7.mjs';
+import { $ as $$Layout } from '../chunks/Layout_DXh9JCf0.mjs';
 import { jsx, jsxs } from 'react/jsx-runtime';
 import { useState } from 'react';
 export { renderers } from '../renderers.mjs';
@@ -346,6 +346,26 @@ function HowIWork() {
             ] })
           ] })
         ] })
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "mt-32 max-w-6xl mx-auto", children: [
+        /* @__PURE__ */ jsx("h3", { className: "text-5xl sm:text-6xl font-black text-white mb-12 text-center tracking-tight", children: "See it in action" }),
+        /* @__PURE__ */ jsxs("div", { className: "relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-gradient-to-br from-[#2D5BFF]/10 to-[#00D4FF]/10 backdrop-blur-sm", children: [
+          /* @__PURE__ */ jsx("div", { className: "relative", style: { paddingBottom: "56.25%" }, children: /* @__PURE__ */ jsxs(
+            "video",
+            {
+              className: "absolute top-0 left-0 w-full h-full",
+              controls: true,
+              preload: "metadata",
+              poster: "/product-tour-poster.jpg",
+              children: [
+                /* @__PURE__ */ jsx("source", { src: "/product-tour.mp4", type: "video/mp4" }),
+                "Your browser does not support the video tag."
+              ]
+            }
+          ) }),
+          /* @__PURE__ */ jsx("div", { className: "absolute -inset-0.5 bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] opacity-20 blur-xl -z-10" })
+        ] }),
+        /* @__PURE__ */ jsx("p", { className: "text-center text-gray-400 mt-8 text-lg", children: "Watch how CrossMind handles growth tasks autonomously" })
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "mt-32 max-w-4xl mx-auto text-center", children: [
         /* @__PURE__ */ jsx("h3", { className: "text-4xl sm:text-5xl font-black text-white mb-8 tracking-tight", children: "You're in control" }),
