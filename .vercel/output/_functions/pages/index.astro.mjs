@@ -1,7 +1,7 @@
-import { c as createComponent, r as renderComponent, a as renderTemplate } from '../chunks/astro/server_D2kg1ina.mjs';
+import { a as createComponent, r as renderComponent, b as renderTemplate } from '../chunks/astro/server_C3x8aXhG.mjs';
 import 'piccolore';
-import { $ as $$Layout } from '../chunks/Layout_BWFI9w-B.mjs';
-import { N as Navbar } from '../chunks/Navbar_DlevzbdJ.mjs';
+import { $ as $$Layout } from '../chunks/Layout_B2UgTvyl.mjs';
+import { N as Navbar } from '../chunks/Navbar_BeHwUJg_.mjs';
 import { jsxs, jsx } from 'react/jsx-runtime';
 import { useState } from 'react';
 export { renderers } from '../renderers.mjs';
@@ -21,12 +21,12 @@ function Hero() {
         ] }),
         /* @__PURE__ */ jsx("span", { className: "text-gray-300 text-sm font-medium tracking-wide", children: "BETA ACCESS AVAILABLE" })
       ] }),
-      /* @__PURE__ */ jsxs("h1", { className: "text-6xl sm:text-8xl font-black text-white mb-6 leading-[0.95] tracking-tight max-w-5xl mx-auto", children: [
+      /* @__PURE__ */ jsxs("h1", { className: "text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[1.1] tracking-tight max-w-5xl mx-auto px-4", children: [
         "Your AI co-founder for",
         " ",
         /* @__PURE__ */ jsx("span", { className: "bg-gradient-to-r from-[#2D5BFF] via-[#00D4FF] to-[#2D5BFF] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient", children: "growth" })
       ] }),
-      /* @__PURE__ */ jsxs("p", { className: "text-2xl sm:text-3xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed", children: [
+      /* @__PURE__ */ jsxs("p", { className: "text-xl sm:text-2xl md:text-3xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed px-4", children: [
         "I handle content, competitors, users.",
         /* @__PURE__ */ jsx("span", { className: "block mt-2 text-white font-bold", children: "You focus on building." })
       ] }),
@@ -286,7 +286,6 @@ function HowIWork() {
               className: "absolute top-0 left-0 w-full h-full",
               controls: true,
               preload: "metadata",
-              poster: "/product-tour-poster.jpg",
               children: [
                 /* @__PURE__ */ jsx("source", { src: "/product-tour.mp4", type: "video/mp4" }),
                 "Your browser does not support the video tag."
@@ -432,7 +431,9 @@ function Waitlist() {
 }
 
 const $$Index = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "CrossMind - The AI Co-Founder That Handles Growth While You Build" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Navbar", Navbar, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/components/Navbar.tsx", "client:component-export": "default" })} ${renderComponent($$result2, "Hero", Hero, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/components/Hero.tsx", "client:component-export": "default" })} ${renderComponent($$result2, "Features", Features, {})} ${renderComponent($$result2, "HowIWork", HowIWork, {})} ${renderComponent($$result2, "WhyNow", WhyNow, {})} ${renderComponent($$result2, "Waitlist", Waitlist, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/components/Waitlist.tsx", "client:component-export": "default" })} ` })}`;
+  const pageTitle = "CrossMind - AI Co-Founder for Automated Growth | Social Media, Content & Analytics";
+  const pageDescription = "Your AI co-founder that automates growth tasks - social media, content marketing, user acquisition, and analytics. Focus on building your product while AI handles growth.";
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": pageTitle, "description": pageDescription, "ogType": "website" }, { "default": ($$result2) => renderTemplate` ${renderComponent($$result2, "Navbar", Navbar, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/components/Navbar.tsx", "client:component-export": "default" })} ${renderComponent($$result2, "Hero", Hero, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/components/Hero.tsx", "client:component-export": "default" })} ${renderComponent($$result2, "Features", Features, {})} ${renderComponent($$result2, "HowIWork", HowIWork, {})} ${renderComponent($$result2, "WhyNow", WhyNow, {})} ${renderComponent($$result2, "Waitlist", Waitlist, { "client:load": true, "client:component-hydration": "load", "client:component-path": "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/components/Waitlist.tsx", "client:component-export": "default" })} ` })}`;
 }, "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/pages/index.astro", void 0);
 
 const $$file = "/app/agents-data/nova-yu-4731f3e4/repos/crossmind-landing/src/pages/index.astro";
