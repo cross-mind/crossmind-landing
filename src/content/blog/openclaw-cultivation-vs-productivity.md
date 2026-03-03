@@ -2,7 +2,7 @@
 title: "OpenClaw's Viral Moment: Cultivation vs. Productivity in AI Agents"
 description: "Everyone's talking about OpenClaw. But the hype reveals something deeper: most AI products activate emotional consumption, not productivity gains. Here's the difference."
 pubDate: 2026-03-03
-author: "Ivan Chen"
+author: "Ivan"
 tags: ["AI Agents", "Product Philosophy", "Productivity", "OpenClaw"]
 draft: false
 ---
