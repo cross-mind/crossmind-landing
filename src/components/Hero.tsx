@@ -22,7 +22,7 @@ export default function Hero() {
           </div>
 
           {/* Bold statement headline */}
-          <h1 className="text-6xl sm:text-8xl font-black text-white mb-6 leading-[0.95] tracking-tight max-w-5xl mx-auto">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[1.1] tracking-tight max-w-5xl mx-auto px-4">
             Your AI co-founder for{' '}
             <span className="bg-gradient-to-r from-[#2D5BFF] via-[#00D4FF] to-[#2D5BFF] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
               growth
@@ -30,7 +30,7 @@ export default function Hero() {
           </h1>
 
           {/* Simple subheadline */}
-          <p className="text-2xl sm:text-3xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed px-4">
             I handle content, competitors, users.
             <span className="block mt-2 text-white font-bold">You focus on building.</span>
           </p>

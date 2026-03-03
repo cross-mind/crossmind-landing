@@ -8,8 +8,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-3 group">
-            <svg viewBox="0 0 200 200" fill="none" width="28" height="28" className="transform group-hover:scale-110 transition-transform">
+          <a href="/" className="flex items-center gap-3 group" aria-label="CrossMind - Home">
+            <svg viewBox="0 0 200 200" fill="none" width="28" height="28" className="transform group-hover:scale-110 transition-transform" role="img" aria-label="CrossMind logo">
               <polygon points="28,22 54,22 108,84 100,100 92,84" fill="#2D5BFF"></polygon>
               <polygon points="92,116 100,100 108,116 172,178 146,178" fill="#2D5BFF"></polygon>
               <polygon points="54,22 74,40 108,84" fill="#1A3FC7" opacity="0.7"></polygon>

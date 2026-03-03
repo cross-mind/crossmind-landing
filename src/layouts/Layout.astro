@@ -5,20 +5,112 @@ import PostHogInit from '../components/PostHogInit';
 interface Props {
 	title: string;
 	description?: string;
+	ogImage?: string;
+	ogType?: string;
+	canonicalUrl?: string;
 }
 
-const { title, description = "CrossMind - Your AI Co-Founder for Automated Growth. Handle social media, content marketing, user acquisition, and analytics automatically." } = Astro.props;
+const {
+	title,
+	description = "Your AI co-founder that automates growth tasks - social media, content marketing, user acquisition, and analytics. Focus on building your product while AI handles growth.",
+	ogImage = "/og-image.png",
+	ogType = "website",
+	canonicalUrl = Astro.url.href
+} = Astro.props;
+
+const siteUrl = "https://crossmind.io";
+const fullOgImage = new URL(ogImage, siteUrl).href;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- Primary Meta Tags -->
 		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalUrl} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={ogType} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={fullOgImage} />
+		<meta property="og:site_name" content="CrossMind" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalUrl} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={fullOgImage} />
+		<meta name="twitter:creator" content="@cestivan" />
+		<meta name="twitter:site" content="@cestivan" />
+
+		<!-- Additional SEO -->
+		<meta name="robots" content="index, follow" />
+		<meta name="googlebot" content="index, follow" />
+		<meta name="language" content="English" />
+		<meta name="revisit-after" content="7 days" />
+		<meta name="author" content="CrossMind" />
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<!-- Schema.org JSON-LD for Organization -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "CrossMind",
+			"url": siteUrl,
+			"logo": `${siteUrl}/logo.png`,
+			"description": "AI co-founder platform that automates growth tasks for startups",
+			"foundingDate": "2025",
+			"sameAs": [
+				"https://twitter.com/cestivan",
+				"https://linkedin.com/company/crossmind"
+			],
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"email": "nova-yu@crossmind.io",
+				"contactType": "Customer Support"
+			}
+		})} />
+
+		<!-- Schema.org JSON-LD for SoftwareApplication -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "SoftwareApplication",
+			"name": "CrossMind",
+			"applicationCategory": "BusinessApplication",
+			"operatingSystem": "Web",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD",
+				"description": "Usage-based pricing"
+			},
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "5.0",
+				"ratingCount": "1"
+			},
+			"description": description,
+			"url": siteUrl,
+			"screenshot": fullOgImage,
+			"featureList": [
+				"Automated social media management",
+				"Content marketing automation",
+				"User acquisition automation",
+				"Analytics and insights",
+				"24/7 autonomous execution"
+			]
+		})} />
 	</head>
 	<body class="bg-white text-gray-900 antialiased">
 		<PostHogInit client:only="react" />

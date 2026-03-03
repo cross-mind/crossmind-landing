@@ -153,7 +153,6 @@ export default function HowIWork() {
                 className="absolute top-0 left-0 w-full h-full"
                 controls
                 preload="metadata"
-                poster="/product-tour-poster.jpg"
               >
                 <source src="/product-tour.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
