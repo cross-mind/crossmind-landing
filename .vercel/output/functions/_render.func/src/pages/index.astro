@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.tsx';
+import Hero from '../components/Hero.tsx';
+import Features from '../components/Features.tsx';
+import HowIWork from '../components/HowIWork.tsx';
+import WhyNow from '../components/WhyNow.tsx';
+import Waitlist from '../components/Waitlist.tsx';
+
+const pageTitle = "CrossMind - AI Co-Founder for Automated Growth | Social Media, Content & Analytics";
+const pageDescription = "Your AI co-founder that automates growth tasks - social media, content marketing, user acquisition, and analytics. Focus on building your product while AI handles growth.";
+---
+
+<Layout
+	title={pageTitle}
+	description={pageDescription}
+	ogType="website"
+>
+	<Navbar client:load />
+	<Hero client:load />
+	<Features />
+	<HowIWork />
+	<WhyNow />
+	<Waitlist client:load />
+</Layout>
