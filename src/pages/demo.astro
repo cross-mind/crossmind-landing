@@ -129,6 +129,72 @@ const pageDescription = "Watch CrossMind automate growth operations: social medi
 	</main>
 </Layout>
 
+<script>
+	import { posthog } from '../lib/posthog';
+
+	// Track demo page view
+	posthog.capture('demo_page_viewed');
+
+	// Track video interactions
+	document.addEventListener('DOMContentLoaded', () => {
+		const video = document.querySelector('video');
+		if (video) {
+			let hasTrackedPlay = false;
+			let hasTracked25 = false;
+			let hasTracked50 = false;
+			let hasTracked75 = false;
+			let hasTrackedComplete = false;
+
+			video.addEventListener('play', () => {
+				if (!hasTrackedPlay) {
+					posthog.capture('demo_video_started');
+					hasTrackedPlay = true;
+				}
+			});
+
+			video.addEventListener('timeupdate', () => {
+				const percent = (video.currentTime / video.duration) * 100;
+
+				if (percent >= 25 && !hasTracked25) {
+					posthog.capture('demo_video_progress_25');
+					hasTracked25 = true;
+				}
+				if (percent >= 50 && !hasTracked50) {
+					posthog.capture('demo_video_progress_50');
+					hasTracked50 = true;
+				}
+				if (percent >= 75 && !hasTracked75) {
+					posthog.capture('demo_video_progress_75');
+					hasTracked75 = true;
+				}
+			});
+
+			video.addEventListener('ended', () => {
+				if (!hasTrackedComplete) {
+					posthog.capture('demo_video_completed');
+					hasTrackedComplete = true;
+				}
+			});
+		}
+
+		// Track CTA clicks
+		const waitlistCTA = document.querySelector('a[href="/#waitlist"]');
+		const featuresCTA = document.querySelector('a[href="/features"]');
+
+		if (waitlistCTA) {
+			waitlistCTA.addEventListener('click', () => {
+				posthog.capture('demo_cta_clicked', { cta_type: 'waitlist' });
+			});
+		}
+
+		if (featuresCTA) {
+			featuresCTA.addEventListener('click', () => {
+				posthog.capture('demo_cta_clicked', { cta_type: 'features' });
+			});
+		}
+	});
+</script>
+
 <style>
 	video::-webkit-media-controls-panel {
 		background-image: linear-gradient(transparent, rgba(0,0,0,0.5));

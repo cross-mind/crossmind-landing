@@ -1,12 +1,19 @@
-import { a as createComponent, r as renderComponent, b as renderTemplate } from '../chunks/astro/server_C3x8aXhG.mjs';
+import { a as createComponent, r as renderComponent, b as renderTemplate } from '../chunks/astro/server_B_is83jh.mjs';
 import 'piccolore';
-import { $ as $$Layout } from '../chunks/Layout_CJIKFj1D.mjs';
+import { $ as $$Layout } from '../chunks/Layout_DWqAh1gJ.mjs';
 import { N as Navbar } from '../chunks/Navbar_BeHwUJg_.mjs';
 import { jsxs, jsx } from 'react/jsx-runtime';
+import posthog from 'posthog-js';
 import { useState } from 'react';
 export { renderers } from '../renderers.mjs';
 
 function Hero() {
+  const handleCTAClick = () => {
+    posthog.capture("hero_cta_clicked", {
+      cta_text: "Get Early Access",
+      location: "hero_section"
+    });
+  };
   return /* @__PURE__ */ jsxs("section", { className: "relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-16", children: [
     /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 overflow-hidden", children: [
       /* @__PURE__ */ jsx("div", { className: "absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-[#2D5BFF]/20 to-transparent rounded-full blur-3xl animate-pulse" }),
@@ -34,6 +41,7 @@ function Hero() {
         "a",
         {
           href: "#waitlist",
+          onClick: handleCTAClick,
           className: "group relative px-8 py-4 bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white rounded-full font-bold text-lg hover:shadow-2xl hover:shadow-[#2D5BFF]/50 transition-all duration-300 transform hover:scale-105",
           children: [
             /* @__PURE__ */ jsx("span", { className: "relative z-10", children: "Get Early Access" }),
@@ -352,6 +360,10 @@ function Waitlist() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("loading");
+    posthog.capture("waitlist_form_submit_started", {
+      email_domain: email.split("@")[1],
+      has_name: !!name
+    });
     try {
       const response = await fetch("/api/waitlist", {
         method: "POST",
@@ -361,6 +373,16 @@ function Waitlist() {
       if (response.ok) {
         setStatus("success");
         setMessage("🎉 Success! Check your inbox for next steps.");
+        posthog.capture("waitlist_joined", {
+          email_domain: email.split("@")[1],
+          name,
+          timestamp: (/* @__PURE__ */ new Date()).toISOString()
+        });
+        posthog.identify(email, {
+          email,
+          name,
+          signup_date: (/* @__PURE__ */ new Date()).toISOString()
+        });
         setEmail("");
         setName("");
       } else {
@@ -369,6 +391,9 @@ function Waitlist() {
     } catch (error) {
       setStatus("error");
       setMessage("Oops! Please try again or email us at hello@crossmind.io");
+      posthog.capture("waitlist_form_submit_failed", {
+        error: error instanceof Error ? error.message : "Unknown error"
+      });
     }
   };
   return /* @__PURE__ */ jsxs("section", { id: "waitlist", className: "relative py-24 bg-gradient-to-br from-[#2D5BFF] to-[#1A3FC7] overflow-hidden", children: [

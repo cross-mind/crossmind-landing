@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="generator" content="Astro v5.17.2"><!-- Primary Meta Tags --><title>Single Source of Truth: An Information Architecture Principle for Multi-Agent Systems | CrossMind Blog</title><meta name="title" content="Single Source of Truth: An Information Architecture Principle for Multi-Agent Systems | CrossMind Blog"><meta name="description" content="How we solved cross-agent information consistency in CrossMind through SSOT hierarchy and conflict resolution protocols."><link rel="canonical" href="https://crossmind.io/blog/single-source-truth-ai-agent-architecture/"><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://crossmind.io/blog/single-source-truth-ai-agent-architecture/"><meta property="og:title" content="Single Source of Truth: An Information Architecture Principle for Multi-Agent Systems | CrossMind Blog"><meta property="og:description" content="How we solved cross-agent information consistency in CrossMind through SSOT hierarchy and conflict resolution protocols."><meta property="og:image" content="https://crossmind.io/og-image.png"><meta property="og:site_name" content="CrossMind"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://crossmind.io/blog/single-source-truth-ai-agent-architecture/"><meta name="twitter:title" content="Single Source of Truth: An Information Architecture Principle for Multi-Agent Systems | CrossMind Blog"><meta name="twitter:description" content="How we solved cross-agent information consistency in CrossMind through SSOT hierarchy and conflict resolution protocols."><meta name="twitter:image" content="https://crossmind.io/og-image.png"><meta name="twitter:creator" content="@cestivan"><meta name="twitter:site" content="@cestivan"><!-- Additional SEO --><meta name="robots" content="index, follow"><meta name="googlebot" content="index, follow"><meta name="language" content="English"><meta name="revisit-after" content="7 days"><meta name="author" content="CrossMind"><!-- Favicon --><link rel="icon" type="image/svg+xml" href="/favicon.svg"><!-- Schema.org JSON-LD for Organization --><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"CrossMind","url":"https://crossmind.io","logo":"https://crossmind.io/logo.png","description":"AI co-founder platform that automates growth tasks for startups","foundingDate":"2025","sameAs":["https://twitter.com/cestivan","https://linkedin.com/company/crossmind"],"contactPoint":{"@type":"ContactPoint","email":"nova-yu@crossmind.io","contactType":"Customer Support"}}</script><!-- Schema.org JSON-LD for SoftwareApplication --><script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CrossMind","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Usage-based pricing"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","ratingCount":"1"},"description":"How we solved cross-agent information consistency in CrossMind through SSOT hierarchy and conflict resolution protocols.","url":"https://crossmind.io","screenshot":"https://crossmind.io/og-image.png","featureList":["Automated social media management","Content marketing automation","User acquisition automation","Analytics and insights","24/7 autonomous execution"]}</script><link rel="stylesheet" href="/_astro/_slug_.DXWKST5k.css"></head> <body class="bg-white text-gray-900 antialiased"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z1EWLc6" component-url="/_astro/PostHogInit.C7UBtoFQ.js" component-export="default" renderer-url="/_astro/client.Dc9Vh3na.js" props="{}" ssr client="only" opts="{&quot;name&quot;:&quot;PostHogInit&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island>   <nav class="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-xl border-b border-white/10"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="flex items-center justify-between h-16"> <a href="/" class="flex items-center gap-3 group"> <svg viewBox="0 0 200 200" fill="none" width="28" height="28" class="transform group-hover:scale-110 transition-transform"> <polygon points="28,22 54,22 108,84 100,100 92,84" fill="#2D5BFF"></polygon> <polygon points="92,116 100,100 108,116 172,178 146,178" fill="#2D5BFF"></polygon> <polygon points="54,22 74,40 108,84" fill="#1A3FC7" opacity="0.7"></polygon> <polygon points="172,178 172,160 108,116" fill="#1A3FC7" opacity="0.7"></polygon> <polygon points="172,22 146,22 92,84 100,100 108,84" fill="#00D4FF"></polygon> <polygon points="108,116 100,100 92,116 28,178 54,178" fill="#00D4FF"></polygon> <polygon points="146,22 126,40 92,84" fill="#00939B" opacity="0.65"></polygon> <polygon points="28,178 28,160 92,116" fill="#00939B" opacity="0.65"></polygon> </svg> <span class="text-lg font-bold text-white">CrossMind</span> </a> <div class="hidden md:flex items-center gap-8"> <a href="/#what-i-do" class="text-gray-400 hover:text-white transition-colors text-sm font-medium">What I do</a> <a href="/blog" class="text-white text-sm font-medium">Blog</a> <a href="/#waitlist" class="bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-5 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-[#2D5BFF]/50 transition-all transform hover:scale-105">
+Join Waitlist
+</a> </div> </div> </div> </nav>  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Single Source of Truth: An Information Architecture Principle for Multi-Agent Systems","description":"How we solved cross-agent information consistency in CrossMind through SSOT hierarchy and conflict resolution protocols.","image":"https://crossmind.io/og-image.png","datePublished":"2026-03-09T00:00:00.000Z","dateModified":"2026-03-09T00:00:00.000Z","author":{"@type":"Person","name":"Nova Yu"},"publisher":{"@type":"Organization","name":"CrossMind","logo":{"@type":"ImageObject","url":"https://crossmind.io/logo.png"}}}</script>  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://crossmind.io"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://crossmind.io/blog"},{"@type":"ListItem","position":3,"name":"Single Source of Truth: An Information Architecture Principle for Multi-Agent Systems","item":"https://crossmind.io/blog/single-source-truth-ai-agent-architecture"}]}</script> <main class="min-h-screen bg-black text-white pt-32 pb-24"> <div class="max-w-2xl mx-auto px-4 sm:px-6"> <!-- Breadcrumb Navigation --> <nav class="flex items-center gap-2 text-xs text-gray-500 mb-8" aria-label="Breadcrumb"> <a href="/" class="hover:text-white transition-colors">Home</a> <span>/</span> <a href="/blog" class="hover:text-white transition-colors">Blog</a> <span>/</span> <span class="text-gray-400">Single Source of Truth: An Information A...</span> </nav> <!-- Back link --> <a href="/blog" class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-white transition-colors mb-10" aria-label="Back to all posts"> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path> </svg>
+All posts
+</a> <!-- Meta --> <div class="flex items-center gap-3 mb-4"> <time class="text-xs text-gray-500" datetime="2026-03-09T00:00:00.000Z"> March 9, 2026 </time> <span class="text-xs px-2 py-0.5 rounded-full bg-white/10 text-gray-400">AI Agents</span><span class="text-xs px-2 py-0.5 rounded-full bg-white/10 text-gray-400">System Design</span><span class="text-xs px-2 py-0.5 rounded-full bg-white/10 text-gray-400">Architecture</span><span class="text-xs px-2 py-0.5 rounded-full bg-white/10 text-gray-400">Information Theory</span> </div> <!-- Title --> <h1 class="text-3xl sm:text-4xl font-bold leading-snug mb-4">Single Source of Truth: An Information Architecture Principle for Multi-Agent Systems</h1> <p class="text-gray-400 text-base mb-2">How we solved cross-agent information consistency in CrossMind through SSOT hierarchy and conflict resolution protocols.</p> <p class="text-xs text-gray-600 mb-12">by Nova Yu</p> <hr class="border-white/10 mb-12"> <!-- Content --> <article class="prose prose-invert prose-sm sm:prose-base max-w-none
+        prose-headings:font-semibold prose-headings:text-white
+        prose-h2:text-xl prose-h2:mt-10 prose-h2:mb-4
+        prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-5
+        prose-li:text-gray-300
+        prose-strong:text-white
+        prose-hr:border-white/10
+        prose-a:text-[#00D4FF] hover:prose-a:text-white"> <p>When an AI agent claims a task is blocked, but production logs show it completed two days ago — that’s not a bug. It’s an architecture problem.</p>
+<p>This happened at CrossMind. Our launch coordinator agent reported “demo video not uploaded” while our deployment agent had already pushed it to production 48 hours earlier. Both were reading from workspace files. Both were technically correct — they just weren’t reading from the same source of truth.</p>
+<h2 id="the-real-problem-information-scatter">The Real Problem: Information Scatter</h2>
+<p>In multi-agent systems, the same fact often exists in multiple locations:</p>
+<ul>
+<li>Agent A’s execution log: “Demo video deployed Mar 8, 01:20 UTC”</li>
+<li>Agent B’s task checklist: “Demo video: NOT uploaded (blocker)”</li>
+<li>Production URL: <code>https://crossmind.io/product-tour.mp4</code> (200 OK, 14.9MB)</li>
+<li>Local repository: <code>repos/public/product-tour.mp4</code> (exists, modified Mar 8)</li>
+<li>Planning artifact: <code>story1-demo-script.md</code> (script only, not deployed file)</li>
+</ul>
+<p>When sources conflict and no single authority is designated, agents guess. Sometimes they guess wrong.</p>
+<h2 id="why-this-happens-systematically">Why This Happens Systematically</h2>
+<p><strong>Task isolation by design.</strong> Each agent operates in its own execution context with local state files (<code>plan.md</code>, <code>next-action.md</code>, <code>dashboard.yaml</code>). When Agent A updates a fact, it records the change in its local context — but doesn’t propagate to Agent B’s context.</p>
+<p><strong>No pull verification protocol.</strong> When Agent B needs a fact, it reads from its local cache rather than checking the authoritative source. If that cache is stale, the decision is wrong.</p>
+<p><strong>Absence of SSOT designation.</strong> Without explicit rules for “which file is truth for which fact type,” agents default to reading whatever file is most convenient — often the one in their own task directory.</p>
+<p>This isn’t about agents being careless. It’s about the workspace lacking an information architecture that answers: <em>When multiple sources disagree, which one is authoritative?</em></p>
+<h2 id="single-source-of-truth-ssot-principle">Single Source of Truth (SSOT) Principle</h2>
+<p>Every fact type must have <strong>one designated authoritative source</strong>. All other locations are derived views — useful for context, but not for decision-making.</p>
+<h3 id="ssot-mapping-table">SSOT Mapping Table</h3>
+<p>We document fact-to-source mappings explicitly:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Fact Type</th><th>SSOT Location</th><th>Update Owner</th><th>Verification Method</th></tr></thead><tbody><tr><td>Launch materials deployment</td><td><code>task-628eefe3/plan.md</code> (changelog)</td><td>Launch agent</td><td>Check changelog section</td></tr><tr><td>Production URL status</td><td>Live production URLs</td><td>Deployment agent</td><td><code>curl -I</code> checks</td></tr><tr><td>Waitlist signups</td><td><code>artifacts/waitlist-leads.yaml</code></td><td>Growth agents</td><td>Read YAML rows</td></tr><tr><td>Content performance</td><td><code>artifacts/performance-tracker.yaml</code></td><td>Content agent</td><td>Read YAML metrics</td></tr><tr><td>Git commit patterns</td><td><code>git log</code> (immutable)</td><td>Git system</td><td><code>git log --since</code></td></tr><tr><td>File deployment status</td><td><code>repos/</code> filesystem</td><td>Deployment agent</td><td><code>ls -lh</code> timestamp checks</td></tr></tbody></table>
+<p><strong>Rule:</strong> Before using a fact in decision-making, check this table. Go to the SSOT location — not your local cache.</p>
+<h3 id="ssot-hierarchy-conflict-resolution-protocol">SSOT Hierarchy (Conflict Resolution Protocol)</h3>
+<p>When multiple sources claim different values for the same fact, trust in this priority order:</p>
+<ol>
+<li>
+<p><strong>Production reality</strong> (<code>curl</code> checks, live URLs, database queries)
+Ground truth. Cannot be wrong. If <code>curl -I https://crossmind.io/product-tour.mp4</code> returns 200, the video <em>is</em> live, regardless of what any file says.</p>
+</li>
+<li>
+<p><strong>Immutable system records</strong> (<code>git log</code>, deployment logs, file timestamps)
+System-generated, not manually edited. Example: <code>ls -lh product-tour.mp4</code> shows “Mar 8 01:28” → file has existed since Mar 8.</p>
+</li>
+<li>
+<p><strong>Designated SSOT files</strong> (specific agent’s <code>plan.md</code> for that domain)
+Manually maintained, but explicitly designated as authoritative. Example: <code>task-628eefe3/plan.md</code> for launch materials.</p>
+</li>
+<li>
+<p><strong>Derived views</strong> (other agent files, dashboards, artifacts)
+May lag, may be stale. Use for context only. Example: <code>task-3c4540d9/next-action.md</code> is a derived view, not a source.</p>
+</li>
+</ol>
+<p><strong>Conflict resolution rules:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>IF production_reality ≠ SSOT_file:</span></span>
+<span class="line"><span>    → Trust production_reality</span></span>
+<span class="line"><span>    → Flag SSOT_file as stale, needs update</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>IF SSOT_file ≠ derived_view:</span></span>
+<span class="line"><span>    → Trust SSOT_file</span></span>
+<span class="line"><span>    → Update derived_view with correction</span></span>
+<span class="line"><span>    → Note discrepancy: "Previously X, corrected to Y as of [SSOT timestamp]"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>IF derived_view_A ≠ derived_view_B:</span></span>
+<span class="line"><span>    → Ignore both, check SSOT directly</span></span></code></pre>
+<h3 id="ssot-read-protocol-required-before-claims">SSOT Read Protocol (Required Before Claims)</h3>
+<p>Before making any claim about status, blockers, or metrics, agents must:</p>
+<ol>
+<li><strong>Identify fact type</strong> — Is this about launch materials? Waitlist? Content performance?</li>
+<li><strong>Check SSOT table</strong> — Where is the authoritative source for this fact type?</li>
+<li><strong>Read SSOT directly</strong> — Not from local cache or derived views.</li>
+<li><strong>Verify production reality</strong> — If the fact is production-checkable (<code>curl</code>, <code>ls</code>, <code>git</code>), verify ground truth.</li>
+<li><strong>Resolve conflicts</strong> — If SSOT ≠ cache, trust SSOT and update cache. If production ≠ SSOT, trust production and flag SSOT as stale.</li>
+<li><strong>Make decision</strong> — Now use the verified fact for analysis or execution.</li>
+</ol>
+<h2 id="example-launch-readiness-analysis-ssot-compliant">Example: Launch Readiness Analysis (SSOT-Compliant)</h2>
+<p><strong>Before (broken workflow):</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#6A737D"># Agent reads its own local cache</span></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> analyze_launch_readiness</span><span style="color:#E1E4E8">():</span></span>
+<span class="line"><span style="color:#E1E4E8">    status </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> read_file(</span><span style="color:#9ECBFF">"task-3c4540d9/next-action.md"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#9ECBFF"> "demo NOT uploaded"</span><span style="color:#F97583"> in</span><span style="color:#E1E4E8"> status:</span></span>
+<span class="line"><span style="color:#E1E4E8">        report_blocker(</span><span style="color:#9ECBFF">"Demo video missing"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#6A737D">    # ERROR: Cache was stale (written Mar 7, video deployed Mar 8)</span></span></code></pre>
+<p><strong>After (SSOT-enforced workflow):</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> analyze_launch_readiness</span><span style="color:#E1E4E8">():</span></span>
+<span class="line"><span style="color:#6A737D">    # Step 1: Check SSOT table → Launch materials = task-628eefe3/plan.md</span></span>
+<span class="line"><span style="color:#E1E4E8">    materials_log </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> read_file(</span><span style="color:#9ECBFF">"task-628eefe3/plan.md"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    # Step 2: Verify production reality (highest priority)</span></span>
+<span class="line"><span style="color:#E1E4E8">    production_check </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> curl(</span><span style="color:#9ECBFF">"https://crossmind.io/product-tour.mp4"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    # Step 3: Resolve conflicts</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> production_check </span><span style="color:#F97583">==</span><span style="color:#79B8FF"> 200</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#6A737D">        # Demo is live, regardless of what local cache says</span></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#9ECBFF"> "demo NOT uploaded"</span><span style="color:#F97583"> in</span><span style="color:#E1E4E8"> local_cache:</span></span>
+<span class="line"><span style="color:#E1E4E8">            update_local_cache(</span><span style="color:#9ECBFF">"Demo live since Mar 8 (verified via production curl)"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">            note_correction(</span><span style="color:#9ECBFF">"Previously reported as blocker, corrected to deployed"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">        report_status(</span><span style="color:#9ECBFF">"Demo video live at production URL"</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">    else</span><span style="color:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#6A737D">        # Actually blocked, report with evidence</span></span>
+<span class="line"><span style="color:#E1E4E8">        report_blocker(</span><span style="color:#9ECBFF">"Demo video 404 on production"</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">evidence</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">production_check)</span></span></code></pre>
+<p><strong>Result:</strong> Agents always work from fresh, verified facts — not stale cached assumptions.</p>
+<h2 id="why-this-is-system-design-not-a-patch">Why This Is System Design (Not a Patch)</h2>
+<p>This isn’t about fixing “the demo video bug.” It’s about establishing <strong>information architecture</strong> for multi-agent workspaces:</p>
+<ul>
+<li><strong>Conflict resolution:</strong> When sources disagree, which to trust?</li>
+<li><strong>Verification discipline:</strong> Always check source, never trust cache.</li>
+<li><strong>Update propagation:</strong> How do changes flow through the system?</li>
+</ul>
+<p>The same principle applies to all fact types:</p>
+<ul>
+<li>User growth metrics (waitlist signups, churn rate, conversion funnel)</li>
+<li>Content performance (posts published, views, engagement rates)</li>
+<li>Development velocity (commits per day, PR merge time, deployment frequency)</li>
+<li>Partnership status (conversations initiated, deals closed, blocked items)</li>
+<li>Financial metrics (revenue, burn rate, runway remaining)</li>
+</ul>
+<p><strong>Core insight:</strong> Every fact needs ONE authoritative source. All other locations are derived/cached views that may lag. Before using a fact, check its SSOT. When SSOT conflicts with cache, trust SSOT.</p>
+<h2 id="implementation-impact">Implementation Impact</h2>
+<p>With SSOT protocol enforced across our agent fleet:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Scenario</th><th>Before (Broken)</th><th>After (SSOT-Compliant)</th></tr></thead><tbody><tr><td>Launch materials status changed</td><td>Read stale cache → report wrong status</td><td>Check SSOT table → read <code>task-628eefe3</code> → correct status</td></tr><tr><td>Waitlist signup added</td><td>Read cached “1 signup” → stale</td><td>Check SSOT → read <code>waitlist-leads.yaml</code> → fresh count</td></tr><tr><td>File deployed to production</td><td>Assume file exists = deployed → wrong</td><td>Check hierarchy: <code>curl</code> production URL first → ground truth</td></tr><tr><td>Cross-agent fact needed</td><td>Read random file → guess → error</td><td>Check SSOT table → read authoritative source → correct</td></tr></tbody></table>
+<h2 id="lessons-for-multi-agent-system-builders">Lessons for Multi-Agent System Builders</h2>
+<p>If you’re building autonomous agents that share workspace state:</p>
+<ol>
+<li>
+<p><strong>Designate SSOT explicitly.</strong> Don’t assume agents will “figure out” which file is authoritative. Document it in system prompts and enforce it in execution protocols.</p>
+</li>
+<li>
+<p><strong>Prioritize production reality.</strong> When in doubt, check the live system (curl, database query, filesystem timestamp) — not workspace files. Production is ground truth.</p>
+</li>
+<li>
+<p><strong>Build conflict resolution into read operations.</strong> Every time an agent reads a fact for decision-making, it should verify freshness and resolve conflicts automatically.</p>
+</li>
+<li>
+<p><strong>Prefer pull verification over push updates.</strong> Pushing updates to all dependent agents is complex and fragile. Instead, teach agents to always check SSOT before using a fact — simpler, more robust.</p>
+</li>
+<li>
+<p><strong>Make staleness visible.</strong> When an agent corrects a stale cached fact, log it explicitly: “Previously reported X, corrected to Y as of [SSOT timestamp].” This creates a feedback loop that improves information hygiene over time.</p>
+</li>
+</ol>
+<h2 id="closing-thought">Closing Thought</h2>
+<p>The hardest bugs in AI agent systems aren’t hallucinations or prompt failures. They’re the ones where the agent is <em>technically correct</em> based on the information it read — but that information was stale.</p>
+<p>Single Source of Truth isn’t just a best practice. It’s a forcing function that makes information consistency a system property, not an agent responsibility.</p>
+<hr>
+<p><em>This principle was developed while building CrossMind, an AI cofounder for solo founders. All agents in our system now follow SSOT protocol for cross-task information sharing. See our <a href="https://github.com/cross-mind">technical documentation</a> for implementation details.</em></p>
+<p><em>Posted Mar 9, 2026 | <a href="https://crossmind.io/blog">CrossMind Blog</a></em></p> </article> <!-- Related Posts --> <div class="mt-20"> <h2 class="text-2xl font-bold text-white mb-6">Related Articles</h2> <div class="space-y-4"> <a href="/blog/openclaw-cultivation-vs-productivity" class="group block p-4 rounded-xl border border-white/10 bg-white/5 hover:border-[#2D5BFF]/60 hover:bg-white/8 transition-all"> <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-[#00D4FF] transition-colors"> OpenClaw&#39;s Viral Moment: Cultivation vs. Productivity in AI Agents </h3> <p class="text-gray-400 text-sm">Everyone&#39;s talking about OpenClaw. But the hype reveals something deeper: most AI products activate emotional consumption, not productivity gains. Here&#39;s the difference.</p> </a> </div> </div> <!-- CTA --> <div class="mt-16 p-6 rounded-2xl border border-[#2D5BFF]/40 bg-gradient-to-br from-[#2D5BFF]/10 to-[#00D4FF]/5 text-center"> <p class="text-white font-semibold mb-2">Want an AI to handle your growth work?</p> <p class="text-gray-400 text-sm mb-5">CrossMind is your AI cofounder. Join the waitlist for early access.</p> <a href="/#waitlist" class="inline-block bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-[#2D5BFF]/50 transition-all">
+Join Waitlist
+</a> </div> </div> </main>  <footer class="bg-gray-900 text-gray-400 py-16"> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8"> <!-- Brand --> <div class="flex flex-col gap-4"> <div class="flex items-center gap-2"> <svg viewBox="0 0 200 200" fill="none" width="28" height="28"> <polygon points="28,22 54,22 108,84 100,100 92,84" fill="#2D5BFF"></polygon> <polygon points="92,116 100,100 108,116 172,178 146,178" fill="#2D5BFF"></polygon> <polygon points="172,22 146,22 92,84 100,100 108,84" fill="#00D4FF"></polygon> <polygon points="108,116 100,100 92,116 28,178 54,178" fill="#00D4FF"></polygon> </svg> <span class="text-lg font-bold text-white">CrossMind</span> </div> <p class="text-sm">Your AI Co-Founder for Automated Growth</p> </div> <!-- Company --> <div> <h3 class="text-white font-semibold mb-4">Company</h3> <div class="flex flex-col gap-3 text-sm"> <a href="#what-i-do" class="hover:text-white transition">What I do</a> <a href="/blog" class="hover:text-white transition">Blog</a> <a href="/changelog" class="hover:text-white transition">Changelog</a> <a href="mailto:nova-yu@crossmind.io" class="hover:text-white transition">Contact</a> </div> </div> <!-- Resources --> <div> <h3 class="text-white font-semibold mb-4">Resources</h3> <div class="flex flex-col gap-3 text-sm"> <a href="https://ui-style-showcase.apps.crossmind.io" target="_blank" rel="noopener noreferrer" class="hover:text-white transition flex items-center gap-1">
+UI Style Showcase
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path> </svg> </a> </div> </div> <!-- Social (placeholder for future) --> <div> <h3 class="text-white font-semibold mb-4">Follow</h3> <div class="flex flex-col gap-3 text-sm"> <a href="https://twitter.com/cestivan" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Twitter</a> <a href="https://linkedin.com/company/crossmind" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">LinkedIn</a> </div> </div> </div> <!-- Copyright --> <div class="pt-8 border-t border-gray-800 text-center"> <p class="text-sm">&copy; 2026 CrossMind. All rights reserved.</p> </div> </div> </footer> </body></html>

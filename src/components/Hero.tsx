@@ -1,4 +1,12 @@
+import { posthog } from '../lib/posthog';
+
 export default function Hero() {
+  const handleCTAClick = () => {
+    posthog.capture('hero_cta_clicked', {
+      cta_text: 'Get Early Access',
+      location: 'hero_section'
+    });
+  };
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-16">
       {/* Animated gradient background */}
@@ -39,6 +47,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <a
               href="#waitlist"
+              onClick={handleCTAClick}
               className="group relative px-8 py-4 bg-gradient-to-r from-[#2D5BFF] to-[#00D4FF] text-white rounded-full font-bold text-lg hover:shadow-2xl hover:shadow-[#2D5BFF]/50 transition-all duration-300 transform hover:scale-105"
             >
               <span className="relative z-10">Get Early Access</span>

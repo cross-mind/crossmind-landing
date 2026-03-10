@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { posthog } from '../lib/posthog';
 
 export default function Waitlist() {
   const [email, setEmail] = useState('');
@@ -10,6 +11,12 @@ export default function Waitlist() {
     e.preventDefault();
     setStatus('loading');
 
+    // Track waitlist form submission start
+    posthog.capture('waitlist_form_submit_started', {
+      email_domain: email.split('@')[1],
+      has_name: !!name,
+    });
+
     try {
       const response = await fetch('/api/waitlist', {
         method: 'POST',
@@ -20,6 +27,21 @@ export default function Waitlist() {
       if (response.ok) {
         setStatus('success');
         setMessage('🎉 Success! Check your inbox for next steps.');
+
+        // Track successful waitlist signup
+        posthog.capture('waitlist_joined', {
+          email_domain: email.split('@')[1],
+          name: name,
+          timestamp: new Date().toISOString(),
+        });
+
+        // Identify user in PostHog
+        posthog.identify(email, {
+          email: email,
+          name: name,
+          signup_date: new Date().toISOString(),
+        });
+
         setEmail('');
         setName('');
       } else {
@@ -28,6 +50,11 @@ export default function Waitlist() {
     } catch (error) {
       setStatus('error');
       setMessage('Oops! Please try again or email us at hello@crossmind.io');
+
+      // Track failed submission
+      posthog.capture('waitlist_form_submit_failed', {
+        error: error instanceof Error ? error.message : 'Unknown error',
+      });
     }
   };
 

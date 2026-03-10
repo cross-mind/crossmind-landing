@@ -24,10 +24,6 @@
 			"dest": "_render"
 		},
 		{
-			"src": "^/demo/?$",
-			"dest": "_render"
-		},
-		{
 			"src": "^/features/?$",
 			"dest": "_render"
 		},
