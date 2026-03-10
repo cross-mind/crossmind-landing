@@ -1,4 +1,64 @@
+import { useEffect, useRef } from 'react';
+import { posthog } from '../lib/posthog';
+
 export default function HowIWork() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    let hasTrackedPlay = false;
+    let hasTracked25 = false;
+    let hasTracked50 = false;
+    let hasTracked75 = false;
+    let hasTrackedComplete = false;
+
+    const handlePlay = () => {
+      if (!hasTrackedPlay) {
+        posthog.capture('homepage_video_started', {
+          location: 'how_i_work_section'
+        });
+        hasTrackedPlay = true;
+      }
+    };
+
+    const handleTimeUpdate = () => {
+      const percent = (video.currentTime / video.duration) * 100;
+
+      if (percent >= 25 && !hasTracked25) {
+        posthog.capture('homepage_video_progress_25');
+        hasTracked25 = true;
+      }
+      if (percent >= 50 && !hasTracked50) {
+        posthog.capture('homepage_video_progress_50');
+        hasTracked50 = true;
+      }
+      if (percent >= 75 && !hasTracked75) {
+        posthog.capture('homepage_video_progress_75');
+        hasTracked75 = true;
+      }
+    };
+
+    const handleEnded = () => {
+      if (!hasTrackedComplete) {
+        posthog.capture('homepage_video_completed', {
+          location: 'how_i_work_section'
+        });
+        hasTrackedComplete = true;
+      }
+    };
+
+    video.addEventListener('play', handlePlay);
+    video.addEventListener('timeupdate', handleTimeUpdate);
+    video.addEventListener('ended', handleEnded);
+
+    return () => {
+      video.removeEventListener('play', handlePlay);
+      video.removeEventListener('timeupdate', handleTimeUpdate);
+      video.removeEventListener('ended', handleEnded);
+    };
+  }, []);
   return (
     <section className="py-40 bg-black relative overflow-hidden">
       {/* Dramatic diagonal split background */}
@@ -150,6 +210,7 @@ export default function HowIWork() {
             {/* Video container with aspect ratio */}
             <div className="relative" style={{ paddingBottom: '56.25%' }}>
               <video
+                ref={videoRef}
                 className="absolute top-0 left-0 w-full h-full"
                 controls
                 preload="metadata"

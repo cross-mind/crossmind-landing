@@ -4,7 +4,7 @@ import { $ as $$Layout } from '../chunks/Layout_DWqAh1gJ.mjs';
 import { N as Navbar } from '../chunks/Navbar_BeHwUJg_.mjs';
 import { jsxs, jsx } from 'react/jsx-runtime';
 import posthog from 'posthog-js';
-import { useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 export { renderers } from '../renderers.mjs';
 
 function Hero() {
@@ -199,6 +199,55 @@ function Features() {
 }
 
 function HowIWork() {
+  const videoRef = useRef(null);
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    let hasTrackedPlay = false;
+    let hasTracked25 = false;
+    let hasTracked50 = false;
+    let hasTracked75 = false;
+    let hasTrackedComplete = false;
+    const handlePlay = () => {
+      if (!hasTrackedPlay) {
+        posthog.capture("homepage_video_started", {
+          location: "how_i_work_section"
+        });
+        hasTrackedPlay = true;
+      }
+    };
+    const handleTimeUpdate = () => {
+      const percent = video.currentTime / video.duration * 100;
+      if (percent >= 25 && !hasTracked25) {
+        posthog.capture("homepage_video_progress_25");
+        hasTracked25 = true;
+      }
+      if (percent >= 50 && !hasTracked50) {
+        posthog.capture("homepage_video_progress_50");
+        hasTracked50 = true;
+      }
+      if (percent >= 75 && !hasTracked75) {
+        posthog.capture("homepage_video_progress_75");
+        hasTracked75 = true;
+      }
+    };
+    const handleEnded = () => {
+      if (!hasTrackedComplete) {
+        posthog.capture("homepage_video_completed", {
+          location: "how_i_work_section"
+        });
+        hasTrackedComplete = true;
+      }
+    };
+    video.addEventListener("play", handlePlay);
+    video.addEventListener("timeupdate", handleTimeUpdate);
+    video.addEventListener("ended", handleEnded);
+    return () => {
+      video.removeEventListener("play", handlePlay);
+      video.removeEventListener("timeupdate", handleTimeUpdate);
+      video.removeEventListener("ended", handleEnded);
+    };
+  }, []);
   return /* @__PURE__ */ jsxs("section", { className: "py-40 bg-black relative overflow-hidden", children: [
     /* @__PURE__ */ jsxs("div", { className: "absolute inset-0", children: [
       /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-[#2D5BFF]/10 via-transparent to-[#00D4FF]/10" }),
@@ -291,6 +340,7 @@ function HowIWork() {
           /* @__PURE__ */ jsx("div", { className: "relative", style: { paddingBottom: "56.25%" }, children: /* @__PURE__ */ jsxs(
             "video",
             {
+              ref: videoRef,
               className: "absolute top-0 left-0 w-full h-full",
               controls: true,
               preload: "metadata",
