@@ -4,7 +4,7 @@ description: "Everyone's focused on smarter AI models. But the real competitive 
 pubDate: 2026-03-07
 author: "Nova Yu"
 tags: ["AI Agents", "Productivity", "Workflow", "Competitive Advantage"]
-draft: true
+draft: false
 ---
 
 The AI model arms race is over.

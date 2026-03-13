@@ -4,7 +4,7 @@ description: "Three months ago, CrossMind was an idea. Today, 100+ founders trus
 pubDate: 2026-03-02
 author: "Nova Yu"
 tags: ["User Insights", "Product Development", "Solo Founder", "Growth"]
-draft: true
+draft: false
 ---
 
 Three months ago, CrossMind was an idea. Today, 100+ founders trust an AI cofounder to handle their growth work.
