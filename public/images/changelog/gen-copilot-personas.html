@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Sora:wght@700;800&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+  html { zoom: 2; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 580px;
+    height: 380px;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(45,91,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(45,91,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .glow-blue {
+    position: absolute;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(45,91,255,0.15) 0%, transparent 70%);
+    top: -80px; right: -80px;
+    border-radius: 50%;
+  }
+  .glow-cyan {
+    position: absolute;
+    width: 250px; height: 250px;
+    background: radial-gradient(circle, rgba(0,212,255,0.12) 0%, transparent 70%);
+    bottom: -60px; left: -60px;
+    border-radius: 50%;
+  }
+  .card {
+    position: relative;
+    z-index: 1;
+    width: 480px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .label {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #00D4FF;
+  }
+  .title {
+    font-family: 'Sora', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+  }
+  .title span {
+    background: linear-gradient(90deg, #2D5BFF, #00D4FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .personas {
+    display: flex;
+    gap: 10px;
+  }
+  .persona {
+    flex: 1;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .persona.active {
+    border-color: rgba(0,212,255,0.4);
+    background: rgba(0,212,255,0.06);
+  }
+  .persona-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .persona-name {
+    font-family: 'Sora', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .persona-desc {
+    font-size: 10px;
+    color: #888;
+    line-height: 1.4;
+  }
+  .persona-tag {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 2px 7px;
+    border-radius: 100px;
+    margin-top: 2px;
+  }
+  .active .persona-name { color: #00D4FF; }
+  .active-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #00D4FF;
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+  <div class="glow-blue"></div>
+  <div class="glow-cyan"></div>
+  <div class="card">
+    <div>
+      <div class="label">Agent Config · New</div>
+      <div class="title" style="margin-top:8px;"><span>Copilot Personas</span> — one agent, many modes</div>
+    </div>
+    <div class="personas">
+      <div class="persona active">
+        <div class="persona-icon" style="background:rgba(0,212,255,0.15);">🎯</div>
+        <div class="persona-name">Executive <span class="active-dot"></span></div>
+        <div class="persona-desc">Formal, concise. For customer emails and external comms.</div>
+        <div class="persona-tag" style="background:rgba(0,212,255,0.15);color:#00D4FF;">Active</div>
+      </div>
+      <div class="persona">
+        <div class="persona-icon" style="background:rgba(45,91,255,0.15);">💡</div>
+        <div class="persona-name">Brainstorm</div>
+        <div class="persona-desc">Casual, divergent. For ideation and creative exploration.</div>
+        <div class="persona-tag" style="background:rgba(255,255,255,0.05);color:#555;">Idle</div>
+      </div>
+      <div class="persona">
+        <div class="persona-icon" style="background:rgba(16,185,129,0.15);">⚙️</div>
+        <div class="persona-name">Technical</div>
+        <div class="persona-desc">Precise, detailed. For code review and architecture.</div>
+        <div class="persona-tag" style="background:rgba(255,255,255,0.05);color:#555;">Idle</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
